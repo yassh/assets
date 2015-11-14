@@ -1,0 +1,11 @@
+{
+  "html": {
+    "abbreviations": {
+      "!!": "!!!+html[lang=${lang}]>(head>meta[charset=${charset}]+meta[http-equiv=X-UA-Compatible][content=IE=edge]+meta[name=viewport][content=\"width=device-width, initial-scale=1\"]+title{${1:Document}})+body"
+    }
+  },
+  "variables": {
+    "lang": "ja",
+    "locale": "ja-JP"
+  }
+}

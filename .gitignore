@@ -1,3 +1,7 @@
+/dotfiles/.vim/plugged
+.netrwhist
+
+*~
 node_modules
 npm-debug.log
 

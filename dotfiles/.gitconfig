@@ -1,0 +1,28 @@
+[user]
+	name = yassh
+	email = yassh32@outlook.jp
+[core]
+	autocrlf = false
+	excludesfile = ~/.gitignore_global
+	editor = vim
+	precomposeunicode = true
+[color]
+	ui = true
+[alias]
+	logg = log --graph --decorate --date=iso
+	logo = log --graph --decorate --oneline
+	addall = add -A :/
+[help]
+	autocorrect = 1
+[http]
+	sslVerify = false
+[difftool "sourcetree"]
+	cmd = /usr/local/bin/bcomp $LOCAL $REMOTE
+	path =
+[mergetool "sourcetree"]
+	cmd = /usr/local/bin/bcomp $LOCAL $REMOTE $BASE $MERGED
+	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
