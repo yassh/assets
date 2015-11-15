@@ -4,6 +4,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "my-hello": "hello.js"
+    "my-hello": "hello.js",
+    "my-datauri": "datauri.js"
+  },
+  "devDependencies": {
+    "datauri": "^0.8.0",
+    "imagemin": "^4.0.0",
+    "temp": "^0.8.3",
+    "yargs": "^3.30.0"
   }
 }
