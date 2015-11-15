@@ -43,7 +43,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # エイリアス
 alias sudo='sudo '
-alias ls='ls -G' # `-G`は色分けするオプション
+alias ls='ls -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
 alias ll='ls -a -l -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
 alias his='history -i' # `-i`は実行日時を表示するオプション
 alias ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
