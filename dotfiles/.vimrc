@@ -318,8 +318,8 @@ let g:ctrlp_map = '<Nop>'
 nnoremap <Leader>pp :<C-u>CtrlP<CR>
 
 " ctrlsf.vim
-nmap <Leader>fr <Plug>CtrlSFPrompt
-nnoremap <Leader>ff :<C-u>CtrlSF -Q ""<Left>
+nmap <Leader>ff <Plug>CtrlSFPrompt
+nnoremap <Leader>fr :<C-u>CtrlSF -R<Space>
 nnoremap <Leader>fo :<C-u>CtrlSFOpen<CR>
 nnoremap <Leader>fc :<C-u>CtrlSFClose<CR>
 vmap <Leader>ff <Plug>CtrlSFVwordPath
