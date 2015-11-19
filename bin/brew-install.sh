@@ -1,3 +1,3 @@
 #!/bin/bash
 
-brew install nodebrew tig tidy-html5 ffmpeg youtube-dl
+brew install ack nodebrew tig tidy-html5 ffmpeg youtube-dl
