@@ -18,7 +18,7 @@
 	sslVerify = false
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/bcomp $LOCAL $REMOTE
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/bcomp $LOCAL $REMOTE $BASE $MERGED
 	trustExitCode = true
@@ -26,3 +26,5 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[include]
+	path = .gitconfig_local
