@@ -50,8 +50,13 @@ alias hisall='history -i 1' # `-i`は実行日時を表示するオプション
 alias vimr='vim -R' # `-R`はread-onlyモードで開くオプション
 alias ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
 alias ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
-alias coda='open -b com.panic.Coda2'
-alias photoshop='open -b com.adobe.Photoshop'
+case ${OSTYPE} in
+  darwin*) # for OS X
+    alias gvim='open -b org.vim.MacVim'
+    alias coda='open -b com.panic.Coda2'
+    alias photoshop='open -b com.adobe.Photoshop'
+  ;;
+esac
 
 # 拡張子とコマンドを結びつける
 alias -s txt='cat'
