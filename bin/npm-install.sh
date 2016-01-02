@@ -1,3 +1,10 @@
 #!/bin/bash
 
-npm install -g gulp browser-sync csscomb datauri imagemin-cli isutf8
+npm install -g \
+browser-sync \
+csscomb \
+datauri \
+gulp \
+imagemin-cli \
+isutf8 \
+;
