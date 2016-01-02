@@ -1,3 +1,12 @@
 #!/bin/bash
 
-brew install ack go nodebrew tig tidy-html5 ffmpeg youtube-dl
+brew install \
+ack \
+ffmpeg \
+gibo \
+go \
+nodebrew \
+tidy-html5 \
+tig \
+youtube-dl \
+;
