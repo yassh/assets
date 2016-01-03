@@ -5,11 +5,14 @@
   },
   "bin": {
     "my-hello": "hello.js",
-    "my-datauri": "datauri.js"
+    "my-datauri": "datauri.js",
+    "my-q": "q.js"
   },
   "devDependencies": {
     "datauri": "^0.8.0",
     "imagemin": "^4.0.0",
+    "jquery-param": "^0.2.0",
+    "opener": "^1.4.1",
     "temp": "^0.8.3",
     "yargs": "^3.30.0"
   }
