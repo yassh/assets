@@ -8,4 +8,5 @@ gulp \
 imagemin-cli \
 isutf8 \
 npm-run-all \
+tldr \
 ;
