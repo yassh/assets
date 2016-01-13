@@ -7,5 +7,6 @@ datauri \
 gulp \
 imagemin-cli \
 isutf8 \
+jsonlint \
 npm-run-all \
 ;
