@@ -69,6 +69,10 @@ chpwd() {
   \ls -F -G
 }
 
+# キーバインディング
+bindkey -v
+bindkey '^R' history-incremental-pattern-search-backward
+
 # Z
 _Z_CMD=j
 source ~/assets/z/z.sh
