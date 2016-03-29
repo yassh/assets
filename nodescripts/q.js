@@ -3,6 +3,7 @@
 'use strict';
 
 const argv = require('yargs')
+  .alias('s', 'service').describe('s', 'サービスを指定する')
   .boolean('q').alias('q', 'quote').describe('q', '引用符で囲む')
   .boolean('w').alias('w', 'week').describe('w', '期間指定: 1週間以内')
   .boolean('m').alias('m', 'month').describe('m', '期間指定: 1か月以内')
@@ -15,18 +16,35 @@ const argv = require('yargs')
 const param = require('jquery-param');
 const opener = require('opener');
 
-const obj = { q: argv._.join(' ') };
+const query = argv._.join(' ');
+let baseUrl = '';
+const data = {};
 
-if (argv.q) { obj.q = '"' + obj.q + '"'; }
+switch (argv.service) {
+  case 'l':
+  case 'linguee':
+    baseUrl = 'http://www.linguee.jp/search?';
 
-if (argv.w) { obj.tbs = 'qdr:w'; }
-if (argv.m) { obj.tbs = 'qdr:m'; }
-if (argv.y) { obj.tbs = 'qdr:y'; }
+    data.query = argv.quote ? `"${query}"` : query;
+  break;
 
-if (argv.j) { obj.lr = 'lang_ja'; }
-if (argv.e) { obj.lr = 'lang_en'; }
-if (argv.r) { obj.lr = 'lang_ru'; }
+  case 'g':
+  case 'google':
+  default:
+    baseUrl = 'https://www.google.co.jp/search?';
 
-const url = `https://www.google.co.jp/search?${param(obj)}`;
+    data.q = argv.quote ? `"${query}"` : query;
+
+    if (argv.week) data.tbs = 'qdr:w';
+    if (argv.month) data.tbs = 'qdr:m';
+    if (argv.year) data.tbs = 'qdr:y';
+
+    if (argv.ja) data.lr = 'lang_ja';
+    if (argv.en) data.lr = 'lang_en';
+    if (argv.ru) data.lr = 'lang_ru';
+  break;
+}
+
+const url = baseUrl + param(data);
 console.log(url);
 opener(url);
