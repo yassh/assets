@@ -12,6 +12,8 @@
 	logg = log --graph --decorate --date=iso
 	logo = log --graph --decorate --oneline
 	addall = add -A :/
+	dt = difftool
+	mt = mergetool
 [help]
 	autocorrect = 1
 [http]
@@ -28,3 +30,11 @@
 	required = true
 [include]
 	path = .gitconfig_local
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
