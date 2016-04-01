@@ -21,6 +21,17 @@ let baseUrl = '';
 const data = {};
 
 switch (argv.service) {
+  case 't':
+  case 'twitter':
+    baseUrl = 'https://twitter.com/search?';
+
+    data.q = argv.quote ? `"${query}"` : query;
+
+    if (argv.ja) data.lang = 'ja';
+    if (argv.en) data.lang = 'en';
+    if (argv.ru) data.lang = 'ru';
+  break;
+
   case 'l':
   case 'linguee':
     baseUrl = 'http://www.linguee.jp/search?';
