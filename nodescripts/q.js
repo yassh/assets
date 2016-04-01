@@ -28,6 +28,13 @@ switch (argv.service) {
     if (argv.lang) data.lang = argv.lang;
   break;
 
+  case 'r':
+  case 'realtime':
+    baseUrl = 'http://realtime.search.yahoo.co.jp/search?';
+
+    data.p = argv.quote ? `"${query}"` : query;
+  break;
+
   case 'l':
   case 'linguee':
     baseUrl = 'http://www.linguee.jp/search?';
