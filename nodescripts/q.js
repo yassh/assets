@@ -42,6 +42,12 @@ switch (argv.service) {
     data.query = argv.quote ? `"${query}"` : query;
   break;
 
+  case 'tatoeba':
+    baseUrl = 'https://tatoeba.org/sentences/search?';
+
+    data.query = argv.quote ? `"${query}"` : query;
+  break;
+
   case 'g':
   case 'google':
   default:
