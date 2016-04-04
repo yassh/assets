@@ -35,6 +35,9 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
+# コマンドラインでも`#`で始まるコメントを使用可能にする
+setopt interactivecomments
+
 # コマンドが存在せず、ディレクトリ名に一致するならcd
 setopt auto_cd
 
