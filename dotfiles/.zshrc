@@ -62,6 +62,7 @@ case ${OSTYPE} in
     alias photoshop='open -b com.adobe.Photoshop'
   ;;
 esac
+eval "$(thefuck --alias shit)"
 
 # 拡張子とコマンドを結びつける
 alias -s txt='cat'

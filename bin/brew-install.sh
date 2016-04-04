@@ -8,6 +8,7 @@ fzf \
 gibo \
 go \
 nodebrew \
+thefuck \
 tidy-html5 \
 tig \
 translate-shell \
