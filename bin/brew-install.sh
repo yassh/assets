@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "brew installを開始します。"
+
 brew install \
 ack \
 colordiff \
@@ -14,3 +16,5 @@ tig \
 translate-shell \
 youtube-dl \
 ;
+
+echo "brew installを終了します。"

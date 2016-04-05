@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "dotfilesのセットアップを開始します。"
+
 # http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
 __DIR__="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -27,6 +29,8 @@ do
     echo "~/$file に $__DIR__/$file へのシンボリックリンクを作成できませんでした。"
   fi
 done
+
+echo "dotfilesのセットアップを終了します。"
 
 # メモ
 # -e fileは、fileがシンボリックリンクとして存在した場合はその参照先のファイルが存在するかどうかをチェックするようだ。
