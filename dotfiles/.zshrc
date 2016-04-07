@@ -58,7 +58,6 @@ alias ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s
 
 case ${OSTYPE} in
   darwin*) # for OS X
-    alias gvim='open -b org.vim.MacVim'
     alias coda='open -b com.panic.Coda2'
     alias photoshop='open -b com.adobe.Photoshop'
   ;;

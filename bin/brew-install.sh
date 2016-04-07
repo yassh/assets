@@ -2,6 +2,8 @@
 
 echo "brew installを開始します。"
 
+brew install macvim --override-system-vim
+
 brew install \
 ack \
 colordiff \
