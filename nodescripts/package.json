@@ -1,14 +1,12 @@
 {
   "name": "my-nodescripts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "bin": {
     "my-hello": "hello.js",
     "my-datauri": "datauri.js",
     "my-q": "q.js"
   },
-  "devDependencies": {
+  "private": true,
+  "dependencies": {
     "datauri": "^0.8.0",
     "imagemin": "^4.0.0",
     "jquery-param": "^0.2.0",
