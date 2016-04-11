@@ -142,12 +142,20 @@ Plug 'w0ng/vim-hybrid'
 
 
 " --------------------
+" PaperColor Theme
+" https://github.com/NLKNguyen/papercolor-theme
+
+Plug 'NLKNguyen/papercolor-theme'
+
+
+" --------------------
 " lightline.vim
 " https://github.com/itchyny/lightline.vim
 
 Plug 'itchyny/lightline.vim'
 
-let g:lightline = { 'colorscheme': 'wombat' }
+"let g:lightline = { 'colorscheme': 'wombat' }
+let g:lightline = { 'colorscheme': 'PaperColor' }
 
 
 " --------------------
@@ -185,11 +193,12 @@ set mouse=a
 " ヤンク／カットしたテキストを他のアプリケーションにペーストできるようにする
 set clipboard+=unnamed
 
-" カラースキームの設定
-colorscheme hybrid
-
 " 背景色の傾向
-set background=dark
+set background=light
+
+" カラースキームの設定
+"colorscheme hybrid
+colorscheme PaperColor
 
 " シンタックスハイライト機能を有効にする
 syntax enable
@@ -272,6 +281,15 @@ function! ToggleWrap()
   endif
 endfunction
 
+" 背景色の傾向を切り替える
+function! ToggleBackground()
+  if &background == 'light'
+    set background=dark
+  else
+    set background=light
+  endif
+endfunction
+
 " Emmetの設定ファイルを読み込む
 let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/emmet/snippets.json')), "\n"))
 
@@ -286,6 +304,7 @@ nnoremap <Leader>re :<C-u>tabe ~/.vimrc<CR>
 nnoremap <Leader>rr :<C-u>source ~/.vimrc<CR>
 nnoremap <Leader>ep :<C-u>echo expand("%:p")<CR>
 nnoremap <Leader>tw :<C-u>call ToggleWrap()<CR>
+nnoremap <Leader>tb :<C-u>call ToggleBackground()<CR>
 
 " vim-autoformat
 nnoremap <Leader>af :<C-u>Autoformat<CR>
