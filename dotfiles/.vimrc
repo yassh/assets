@@ -209,6 +209,9 @@ set showcmd
 " 折り返さない
 set nowrap
 
+" 常にステータスラインを表示する
+set laststatus=2
+
 " カーソル行を中央に表示する
 "set scrolloff=999
 
