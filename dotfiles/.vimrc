@@ -176,6 +176,9 @@ call plug#end()
 
 
 
+" ファイルの編集時に考慮される文字エンコーディングのリスト
+set fileencodings=utf-8,cp932
+
 " マウスで操作できるようにする
 set mouse=a
 
