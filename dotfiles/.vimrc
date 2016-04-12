@@ -3,185 +3,108 @@ set runtimepath+=$HOME/.vim
 source $VIMRUNTIME/macros/matchit.vim " %によるマッチを拡張するプラグイン
 
 
-
-
-" ====================
-" vim-plug
+" {{{ vim-plug
 " https://github.com/junegunn/vim-plug
-
 call plug#begin('~/.vim/plugged')
 
-
-" --------------------
 " surround.vim
 " http://www.vim.org/scripts/script.php?script_id=1697
-
 Plug 'tpope/vim-surround'
 
-
-" --------------------
 " indentLine
 " https://github.com/Yggdroot/indentLine
-
 Plug 'Yggdroot/indentLine'
 
-
-" --------------------
 " vim-autoformat
 " https://github.com/Chiel92/vim-autoformat
-
 Plug 'Chiel92/vim-autoformat'
 
-
-" --------------------
 " CommentAnyWay
 " http://www.vim.org/scripts/script.php?script_id=2554
-
 Plug 'tyru/caw.vim'
 
-
-" --------------------
 " open-browser.vim
 " http://www.vim.org/scripts/script.php?script_id=3133
-
 Plug 'tyru/open-browser.vim'
 
-
-" --------------------
 " webapi-vim
 " http://www.vim.org/scripts/script.php?script_id=4019
-
 Plug 'mattn/webapi-vim'
 
-
-" --------------------
 " Emmet
 " https://github.com/mattn/emmet-vim
-
 Plug 'mattn/emmet-vim'
-
 let g:user_emmet_mode = 'iv' " インサートモードとビジュアルモードでのみ有効にする
 let g:user_emmet_leader_key = '<C-e>'
 
-
-" --------------------
 " unite.vim
 " http://www.vim.org/scripts/script.php?script_id=3396
-
 Plug 'Shougo/unite.vim'
 
-
-" --------------------
 " neomru.vim
 " https://github.com/Shougo/neomru.vim
-
 Plug 'Shougo/neomru.vim'
 
-
-" --------------------
 " Vimfiler
 " https://github.com/Shougo/vimfiler.vim
-
 Plug 'Shougo/vimfiler.vim'
-
 let g:vimfiler_as_default_explorer=1
 
-
-" --------------------
 " The NERD Tree
 " https://github.com/scrooloose/nerdtree
-
 Plug 'scrooloose/nerdtree'
-
 let g:NERDTreeChDirMode=2
 let g:NERDTreeShowBookmarks=1
 
-
-" --------------------
 " ctrlp.vim
 " http://kien.github.io/ctrlp.vim/
-
 Plug 'ctrlpvim/ctrlp.vim'
 
-
-" --------------------
 " ctrlsf.vim
 " https://github.com/dyng/ctrlsf.vim
-
 Plug 'dyng/ctrlsf.vim'
-
 let g:ctrlsf_auto_close = 0
 
-
-" --------------------
 " fugitive.vim
 " http://www.vim.org/scripts/script.php?script_id=2975
-
 Plug 'tpope/vim-fugitive'
 
-
-" --------------------
 " vim-gitgutter
 " https://github.com/airblade/vim-gitgutter
-
 Plug 'airblade/vim-gitgutter'
 
-
-" --------------------
 " syntastic
 " https://github.com/scrooloose/syntastic
-
 Plug 'scrooloose/syntastic'
 
-
-" --------------------
 " hybrid
 " https://github.com/w0ng/vim-hybrid
-
 Plug 'w0ng/vim-hybrid'
 
-
-" --------------------
 " PaperColor Theme
 " https://github.com/NLKNguyen/papercolor-theme
-
 Plug 'NLKNguyen/papercolor-theme'
 
-
-" --------------------
 " lightline.vim
 " https://github.com/itchyny/lightline.vim
-
 Plug 'itchyny/lightline.vim'
-
 "let g:lightline = { 'colorscheme': 'wombat' }
 let g:lightline = { 'colorscheme': 'PaperColor' }
 
-
-" --------------------
 " yankround.vim
 " https://github.com/LeafCage/yankround.vim
-
 Plug 'LeafCage/yankround.vim'
 
-
-" --------------------
 " copypath.vim
 " http://www.vim.org/scripts/script.php?script_id=1456
-
 Plug 'vim-scripts/copypath.vim'
 
-
-" --------------------
 " Preview
 " https://github.com/greyblake/vim-preview
-
 Plug 'greyblake/vim-preview'
 
-
 call plug#end()
-
-
+" }}} vim-plug
 
 
 " ファイルの編集時に考慮される文字エンコーディングのリスト
@@ -294,10 +217,7 @@ endfunction
 let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/emmet/snippets.json')), "\n"))
 
 
-
-" ====================
-" キーマップ
-
+" {{{ キーマップ
 let mapleader = ";"
 nnoremap <Leader>rv :<C-u>tab sview ~/.vimrc<CR>
 nnoremap <Leader>re :<C-u>tabe ~/.vimrc<CR>
@@ -314,8 +234,8 @@ nnoremap <Leader>cp :<C-u>CopyPath<CR>
 nnoremap <Leader>cn :<C-u>CopyFileName<CR>
 
 " CommentAnyWay
-nmap <Leader>ca <Plug>(caw:i:toggle)
-vmap <Leader>ca <Plug>(caw:i:toggle)
+nmap <Leader>ca <Plug>(caw:hatpos:toggle)
+vmap <Leader>ca <Plug>(caw:hatpos:toggle)
 
 " open-browser.vim
 nmap <Leader>ob <Plug>(openbrowser-smart-search)
@@ -358,3 +278,4 @@ xmap gp <Plug>(yankround-gp)
 nmap gP <Plug>(yankround-gP)
 nmap <C-p> <Plug>(yankround-prev)
 nmap <C-n> <Plug>(yankround-next)
+" }}} キーマップ
