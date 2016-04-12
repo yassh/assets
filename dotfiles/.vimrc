@@ -103,6 +103,10 @@ Plug 'vim-scripts/copypath.vim'
 " https://github.com/greyblake/vim-preview
 Plug 'greyblake/vim-preview'
 
+" vim-multiple-cursors
+" https://github.com/terryma/vim-multiple-cursors
+Plug 'terryma/vim-multiple-cursors'
+
 call plug#end()
 " }}} vim-plug
 
