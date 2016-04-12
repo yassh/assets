@@ -261,7 +261,7 @@ set hlsearch
 nmap <Esc><Esc> :noh<CR><Esc>
 
 " カレント行をハイライトする
-"set cursorline
+set cursorline
 
 " カレント行に下線を表示しない
 highlight CursorLine cterm=NONE gui=NONE
