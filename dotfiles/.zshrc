@@ -123,3 +123,5 @@ SAVEHIST=10000
   export PATH=~/assets/bin:$PATH
   export PATH=~/bin:$PATH
 }
+
+eval "$(rbenv init -)"
