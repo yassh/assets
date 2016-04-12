@@ -61,8 +61,6 @@ SAVEHIST=10000
 
 : "エイリアス" && {
   alias sudo='sudo '
-  alias q='my-q'
-  alias f='ack -g'
   alias ls='ls -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
   alias ll='ls -a -l -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
   alias his='history -i' # `-i`は実行日時を表示するオプション
@@ -70,6 +68,8 @@ SAVEHIST=10000
   alias vimr='vim -R' # `-R`はread-onlyモードで開くオプション
   alias ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
+  alias f='ack -g'
+  alias q='my-q'
   alias ie11='VBoxManage startvm "IE11 - Win7"'
 
   case ${OSTYPE} in
