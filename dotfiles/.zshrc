@@ -70,6 +70,7 @@ SAVEHIST=10000
   alias vimr='vim -R' # `-R`はread-onlyモードで開くオプション
   alias ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
+  alias ie11='VBoxManage startvm "IE11 - Win7"'
 
   case ${OSTYPE} in
     darwin*) # for OS X
