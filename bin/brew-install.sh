@@ -15,6 +15,7 @@ nodebrew \
 thefuck \
 tidy-html5 \
 tig \
+tmux \
 translate-shell \
 youtube-dl \
 ;
