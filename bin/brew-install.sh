@@ -11,6 +11,7 @@ ffmpeg \
 fzf \
 gibo \
 go \
+hub \
 nodebrew \
 thefuck \
 tidy-html5 \
