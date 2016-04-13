@@ -4,15 +4,7 @@ compinit
 autoload -U colors
 colors
 
-# vcs_infoを読み込む
-autoload -Uz vcs_info
-
-# vcs_infoの設定
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr " %F{green}[C]%f"
-zstyle ':vcs_info:git:*' unstagedstr " %F{red}[U]%f"
-zstyle ':vcs_info:*' formats " [%s] %b%c%u"
-zstyle ':vcs_info:*' actionformats  " [%s] %b%c%u %F{red}[%a]%f"
+autoload -Uz add-zsh-hook
 
 # 補完で大文字小文字を区別しない
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -22,15 +14,6 @@ setopt auto_cd
 
 # コマンドラインでも`#`で始まるコメントを使用可能にする
 setopt interactivecomments
-
-# PROMPT変数内で変数展開をする
-setopt prompt_subst
-
-# プロンプト
-PROMPT='
-%F{yellow}%d%f${vcs_info_msg_0_}
-%# '
-RPROMPT='as %F{green}%n@%m%f'
 
 # 複数端末間で履歴を共有する
 setopt share_history
@@ -43,20 +26,41 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-# https://github.com/rupa/z
-: "Z" && {
-  _Z_CMD=j
-  source ~/assets/z/z.sh
-}
-
-# https://github.com/nvbn/thefuck
-: "The Fuck" && {
-  eval "$(thefuck --alias shit)"
-}
-
 : "キーバインディング" && {
   bindkey -v
   bindkey '^R' history-incremental-pattern-search-backward
+}
+
+: "プロンプト" && {
+  # vcs_infoを読み込む
+  autoload -Uz vcs_info
+
+  zstyle ':vcs_info:git:*' check-for-changes true
+  zstyle ':vcs_info:git:*' stagedstr " %F{green}[C]%f"
+  zstyle ':vcs_info:git:*' unstagedstr " %F{red}[U]%f"
+  zstyle ':vcs_info:*' formats " [%s] %b%c%u"
+  zstyle ':vcs_info:*' actionformats  " [%s] %b%c%u %F{red}[%a]%f"
+
+  _vcs_precmd () {
+    vcs_info
+  }
+
+  # precmdフックで_vcs_precmd関数を実行する
+  #
+  # add-zsh-hook
+  # http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Manipulating-Hook-Functions
+  # precmd
+  # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
+  add-zsh-hook precmd _vcs_precmd
+
+  # PROMPT変数内で変数展開をする
+  setopt prompt_subst
+
+  # プロンプト
+  PROMPT='
+%F{yellow}%d%f${vcs_info_msg_0_}
+%# '
+  RPROMPT='as %F{green}%n@%m%f'
 }
 
 : "エイリアス" && {
@@ -87,6 +91,14 @@ SAVEHIST=10000
   alias -s py='python'
 }
 
+: "環境変数" && {
+  export GOPATH=~/Go
+  export PATH=$GOPATH/bin:$PATH
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
+  export PATH=~/assets/bin:$PATH
+  export PATH=~/bin:$PATH
+}
+
 : "関数" && {
   http() {
     if [ $1 ]; then
@@ -103,25 +115,23 @@ SAVEHIST=10000
 }
 
 : "フック関数" && {
+  # chpwd
   # "Executed whenever the current working directory is changed."
-  # -- http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
+  # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
   chpwd() {
     ls
   }
-
-  # "Executed before each prompt. ..."
-  # -- http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
-  precmd() {
-    vcs_info
-  }
 }
 
-: "環境変数" && {
-  export GOPATH=~/Go
-  export PATH=$GOPATH/bin:$PATH
-  export PATH=$HOME/.nodebrew/current/bin:$PATH
-  export PATH=~/assets/bin:$PATH
-  export PATH=~/bin:$PATH
-}
+# Z
+# https://github.com/rupa/z
+_Z_CMD=j
+source ~/assets/z/z.sh
 
+# The Fuck
+# https://github.com/nvbn/thefuck
+eval "$(thefuck --alias shit)"
+
+# rbenv
+# https://github.com/rbenv/rbenv
 eval "$(rbenv init -)"
