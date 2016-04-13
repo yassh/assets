@@ -145,6 +145,9 @@ set showcmd
 " 折り返さない
 set nowrap
 
+" ファイルを開いたときに折り畳みをしない
+set foldlevelstart=100
+
 " 常にステータスラインを表示する
 set laststatus=2
 
