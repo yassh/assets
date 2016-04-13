@@ -88,8 +88,8 @@ Plug 'NLKNguyen/papercolor-theme'
 " lightline.vim
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
-"let g:lightline = { 'colorscheme': 'wombat' }
-let g:lightline = { 'colorscheme': 'PaperColor' }
+let g:lightline = { 'colorscheme': 'wombat' }
+"let g:lightline = { 'colorscheme': 'PaperColor' }
 
 " yankround.vim
 " https://github.com/LeafCage/yankround.vim
