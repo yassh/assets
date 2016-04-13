@@ -26,12 +26,12 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-: "キーバインディング" && {
+# {{{ キーバインディング
   bindkey -v
   bindkey '^R' history-incremental-pattern-search-backward
-}
+# }}} キーバインディング
 
-: "プロンプト" && {
+# {{{ プロンプト
   # vcs_infoを読み込む
   autoload -Uz vcs_info
 
@@ -61,14 +61,13 @@ SAVEHIST=10000
   # PROMPT変数内で変数展開をする
   setopt prompt_subst
 
-  # プロンプト
   PROMPT='
 %F{yellow}%d%f${vcs_info_msg_0_}
 %# '
   RPROMPT='as %F{green}%n@%m%f'
-}
+# }}} プロンプト
 
-: "エイリアス" && {
+# {{{ エイリアス
   alias sudo='sudo '
   alias ls='ls -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
   alias ll='ls -a -l -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
@@ -87,24 +86,24 @@ SAVEHIST=10000
       alias photoshop='open -b com.adobe.Photoshop'
     ;;
   esac
-}
+# }}} エイリアス
 
-: "拡張子とコマンドを結びつける" && {
+# {{{ 拡張子とコマンドを結びつける
   alias -s txt='cat'
   alias -s js='node'
   alias -s rb='ruby'
   alias -s py='python'
-}
+# }}} 拡張子とコマンドを結びつける
 
-: "環境変数" && {
+# {{{ 環境変数
   export GOPATH=~/Go
   export PATH=$GOPATH/bin:$PATH
   export PATH=$HOME/.nodebrew/current/bin:$PATH
   export PATH=~/assets/bin:$PATH
   export PATH=~/bin:$PATH
-}
+# }}} 環境変数
 
-: "関数" && {
+# {{{ 関数
   serve() {
     if [ $1 ]; then
       browser-sync start --server --directory --port $1
@@ -117,16 +116,16 @@ SAVEHIST=10000
     local dir
     dir=$(ghq list | fzf --reverse) && cd $(ghq root)/$dir
   }
-}
+# }}} 関数
 
-: "フック関数" && {
+# {{{ フック
   # chpwd
   # "Executed whenever the current working directory is changed."
   # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
   chpwd() {
     ls
   }
-}
+# }}} フック
 
 # Z
 # https://github.com/rupa/z
