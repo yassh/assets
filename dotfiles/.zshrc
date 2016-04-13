@@ -35,11 +35,11 @@ SAVEHIST=10000
   # vcs_infoを読み込む
   autoload -Uz vcs_info
 
-  +vi-git-config-user() {
-    hook_com[misc]+=" - $(git config user.name) <$(git config user.email)>"
+  +vi-git-info() {
+    hook_com[misc]+=" ($(git rev-list --count @{u}..HEAD)-$(git rev-list --count HEAD..@{u})) $(git config user.name) <$(git config user.email)>"
   }
 
-  zstyle ':vcs_info:git+set-message:*' hooks git-config-user
+  zstyle ':vcs_info:git+set-message:*' hooks git-info
   zstyle ':vcs_info:git:*' check-for-changes true
   zstyle ':vcs_info:git:*' stagedstr " %F{green}[C]%f"
   zstyle ':vcs_info:git:*' unstagedstr " %F{red}[U]%f"
