@@ -100,7 +100,7 @@ SAVEHIST=10000
 }
 
 : "関数" && {
-  http() {
+  serve() {
     if [ $1 ]; then
       browser-sync start --server --directory --port $1
     else
