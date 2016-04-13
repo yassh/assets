@@ -1,6 +1,6 @@
 set guioptions-=T
-set columns=135
-set lines=45
-set guifont=Inconsolata:h16
-set guifontwide=VL\ Gothic:h16
-autocmd GUIEnter * if !argc() | cd ~ | endif
+set columns=120
+set lines=40
+set guifont=Inconsolata:h14
+set guifontwide=VL\ Gothic:h14
+"autocmd GUIEnter * if !argc() | cd ~ | endif
