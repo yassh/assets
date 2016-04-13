@@ -96,7 +96,7 @@ SAVEHIST=10000
     fi
   }
 
-  ghq-f() {
+  fzg() {
     local dir
     dir=$(ghq list | fzf --reverse) && cd $(ghq root)/$dir
   }
