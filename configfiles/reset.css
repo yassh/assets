@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/*!
+ * reset.css
+ *
+ * Version: 2016.04.14.00
+ */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+blockquote,
+address,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+table,
+caption,
+td,
+th,
+figure,
+figcaption,
+img,
+iframe,
+embed,
+object {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  text-align: left;
+  text-size-adjust: 100%;
+  word-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+input,
+button,
+select,
+option,
+textarea {
+  font: inherit;
+}
+
+input[type="button"]:not([disabled]),
+input[type="submit"]:not([disabled]),
+input[type="reset"]:not([disabled]),
+button:not([disabled]) {
+  cursor: pointer;
+}
