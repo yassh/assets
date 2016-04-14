@@ -96,6 +96,7 @@ SAVEHIST=10000
 # }}} 拡張子とコマンドを結びつける
 
 # {{{ 環境変数
+  export EDITOR=vim
   export GOPATH=~/Go
   export PATH=$GOPATH/bin:$PATH
   export PATH=$HOME/.nodebrew/current/bin:$PATH
