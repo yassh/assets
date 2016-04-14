@@ -178,6 +178,9 @@ set noswapfile
 " バックアップファイルの設定
 set nobackup
 
+" http://vim.wikia.com/wiki/Editing_crontab
+set backupskip=/tmp/*,/private/tmp/*
+
 " undofileの設定
 set noundofile
 
