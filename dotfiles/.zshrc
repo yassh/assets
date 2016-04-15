@@ -36,15 +36,15 @@ SAVEHIST=10000
   autoload -Uz vcs_info
 
   +vi-git-info() {
-    hook_com[misc]+=" ($(git rev-list --count @{u}..HEAD)-$(git rev-list --count HEAD..@{u})) $(git config user.name) <$(git config user.email)>"
+    hook_com[misc]+=" | $(git rev-list --count @{u}..HEAD)-$(git rev-list --count HEAD..@{u}) | $(git config user.name) <$(git config user.email)>"
   }
 
-  zstyle ':vcs_info:git+set-message:*' hooks git-info
   zstyle ':vcs_info:git:*' check-for-changes true
-  zstyle ':vcs_info:git:*' stagedstr " %F{green}[C]%f"
-  zstyle ':vcs_info:git:*' unstagedstr " %F{red}[U]%f"
-  zstyle ':vcs_info:*' formats " [%s] %b%c%u%m"
-  zstyle ':vcs_info:*' actionformats  " [%s] %b%c%u %F{red}[%a]%f%m"
+  zstyle ':vcs_info:git:*' unstagedstr " | %F{red}U%f"
+  zstyle ':vcs_info:git:*' stagedstr " | %F{green}C%f"
+  zstyle ':vcs_info:git+set-message:*' hooks git-info
+  zstyle ':vcs_info:*' formats " %s | %b%u%c%m"
+  zstyle ':vcs_info:*' actionformats  " %s | %b | %F{red}%a%f%u%c%m"
 
   _vcs_precmd() {
     vcs_info
