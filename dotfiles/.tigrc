@@ -2,7 +2,7 @@
 
 #set line-graphics = ascii
 set diff-context = 5
-set main-view = id author:display=full,width=16 date commit-title:graph=yes,refs=yes
+set main-view = id date author:display=full,width=16 commit-title:graph=yes,refs=yes
 set split-view-height = 80%
 set tab-size = 4
 set vertical-split = no
