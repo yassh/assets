@@ -107,6 +107,11 @@ Plug 'greyblake/vim-preview'
 " https://github.com/terryma/vim-multiple-cursors
 Plug 'terryma/vim-multiple-cursors'
 
+" https://github.com/mrtazz/simplenote.vim
+Plug 'mrtazz/simplenote.vim'
+source ~/.simplenoterc
+let g:SimplenoteVertical=1
+
 call plug#end()
 " }}} vim-plug
 

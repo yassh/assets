@@ -78,6 +78,7 @@ SAVEHIST=10000
   alias ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias f='ack -g'
   alias q='my-q'
+  alias sn="vim -c 'Simplenote -l'"
   alias ie11='VBoxManage startvm "IE11 - Win7"'
 
   case ${OSTYPE} in
