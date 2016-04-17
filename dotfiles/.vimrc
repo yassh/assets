@@ -12,6 +12,9 @@ call plug#begin('~/.vim/plugged')
 " https://github.com/tpope/vim-surround
 Plug 'tpope/vim-surround'
 
+" https://github.com/editorconfig/editorconfig-vim
+Plug 'editorconfig/editorconfig-vim'
+
 " https://github.com/terryma/vim-expand-region
 Plug 'terryma/vim-expand-region'
 vmap v <Plug>(expand_region_expand)
@@ -99,8 +102,8 @@ Plug 'airblade/vim-gitgutter'
 " https://github.com/scrooloose/syntastic
 Plug 'scrooloose/syntastic'
 
-" https://github.com/editorconfig/editorconfig-vim
-Plug 'editorconfig/editorconfig-vim'
+" https://github.com/jreybert/vimagit
+Plug 'jreybert/vimagit'
 
 " https://github.com/mrtazz/simplenote.vim
 Plug 'mrtazz/simplenote.vim'
