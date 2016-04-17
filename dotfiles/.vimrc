@@ -99,6 +99,9 @@ Plug 'airblade/vim-gitgutter'
 " https://github.com/scrooloose/syntastic
 Plug 'scrooloose/syntastic'
 
+" https://github.com/editorconfig/editorconfig-vim
+Plug 'editorconfig/editorconfig-vim'
+
 " https://github.com/mrtazz/simplenote.vim
 Plug 'mrtazz/simplenote.vim'
 source ~/.simplenoterc
@@ -214,7 +217,7 @@ set smartcase
 set incsearch
 set hlsearch
 
-" Esc2連打で検索結果のハイライトを解除する
+" <Esc>2連打で検索結果のハイライトを解除する
 nmap <Esc><Esc> :noh<CR><Esc>
 
 nnoremap <Leader>pp :<C-u>echo expand("%:p")<CR>
