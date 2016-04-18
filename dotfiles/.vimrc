@@ -207,6 +207,9 @@ set foldlevelstart=100
 " 左右のスクロールを1文字単位でする
 set sidescroll=1
 
+" カーソルの上または下に表示する最小限の行数
+set scrolloff=3
+
 " スワップファイルの設定
 set noswapfile
 
