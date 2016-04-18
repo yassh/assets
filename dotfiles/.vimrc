@@ -1,4 +1,8 @@
 scriptencoding utf-8
+
+" vimrcアンチパターン - rbtnn雑記
+" http://rbtnn.hateblo.jp/entry/2014/11/30/174749
+
 set fileencodings=utf-8,cp932 " ファイルの編集時に考慮される文字エンコーディングのリスト
 set runtimepath+=$HOME/.vim
 source $VIMRUNTIME/macros/matchit.vim " %によるマッチを拡張するプラグイン
