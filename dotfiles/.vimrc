@@ -2,7 +2,7 @@ scriptencoding utf-8
 set fileencodings=utf-8,cp932 " ファイルの編集時に考慮される文字エンコーディングのリスト
 set runtimepath+=$HOME/.vim
 source $VIMRUNTIME/macros/matchit.vim " %によるマッチを拡張するプラグイン
-let mapleader = ";"
+let g:mapleader = ";"
 
 
 " {{{ vim-plug
@@ -63,7 +63,7 @@ nnoremap <Leader>nf :<C-u>NERDTreeFind<CR>
 
 " https://github.com/Shougo/vimfiler.vim
 Plug 'Shougo/vimfiler.vim'
-let g:vimfiler_as_default_explorer=1
+let g:vimfiler_as_default_explorer = 1
 
 " https://github.com/Shougo/unite.vim
 " https://github.com/Shougo/neomru.vim
@@ -98,7 +98,7 @@ let g:lightline = { 'colorscheme': 'wombat' }
 " https://github.com/nathanaelkane/vim-indent-guides
 " <Leader>ig to toggle
 Plug 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_enable_on_vim_startup = 1
 
 " https://github.com/airblade/vim-gitgutter
 Plug 'airblade/vim-gitgutter'
@@ -113,7 +113,7 @@ Plug 'jreybert/vimagit'
 " https://github.com/mrtazz/simplenote.vim
 Plug 'mrtazz/simplenote.vim'
 source ~/.simplenoterc
-let g:SimplenoteVertical=1
+let g:SimplenoteVertical = 1
 nnoremap <Leader>sn :<C-u>Simplenote -l<CR>
 
 call plug#end()
@@ -156,7 +156,7 @@ colorscheme PaperColor
 syntax enable
 
 " 括弧のハイライトを無効にする
-let loaded_matchparen = 1
+let g:loaded_matchparen = 1
 
 " カレント行をハイライトする
 "set cursorline
