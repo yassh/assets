@@ -54,8 +54,8 @@ nnoremap <Leader>cf :<C-u>CopyFileName<CR>
 
 " https://github.com/tyru/open-browser.vim
 Plug 'tyru/open-browser.vim'
-nmap <Leader>ob <Plug>(openbrowser-smart-search)
-vmap <Leader>ob <Plug>(openbrowser-smart-search)
+nmap <Leader>o <Plug>(openbrowser-smart-search)
+vmap <Leader>o <Plug>(openbrowser-smart-search)
 
 " https://github.com/scrooloose/nerdtree
 Plug 'scrooloose/nerdtree'
@@ -232,8 +232,12 @@ set smartcase
 set incsearch
 set hlsearch
 
-" <Esc>2連打で検索結果のハイライトを解除する
-nmap <Esc><Esc> :noh<CR><Esc>
+" Search for visually selected text
+" http://vim.wikia.com/wiki/Search_for_visually_selected_text
+vnoremap // y/<C-r>"<CR>
+
+" 検索結果のハイライトを解除する
+nnoremap <Leader>nh :<C-u>noh<CR>
 
 nnoremap <Leader>pp :<C-u>echo expand("%:p")<CR>
 nnoremap <Leader>rv :<C-u>tab sview ~/.vimrc<CR>
