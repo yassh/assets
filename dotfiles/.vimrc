@@ -157,7 +157,7 @@ syntax enable
 let loaded_matchparen = 1
 
 " カレント行をハイライトする
-set cursorline
+"set cursorline
 
 " カレント行に下線を表示しない
 highlight CursorLine cterm=NONE gui=NONE
