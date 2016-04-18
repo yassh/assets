@@ -93,8 +93,10 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'itchyny/lightline.vim'
 let g:lightline = { 'colorscheme': 'wombat' }
 
-" https://github.com/Yggdroot/indentLine
-Plug 'Yggdroot/indentLine'
+" https://github.com/nathanaelkane/vim-indent-guides
+" <Leader>ig to toggle
+Plug 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_enable_on_vim_startup=1
 
 " https://github.com/airblade/vim-gitgutter
 Plug 'airblade/vim-gitgutter'
@@ -103,6 +105,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/syntastic'
 
 " https://github.com/jreybert/vimagit
+" <Leader>M to open Magit buffer
 Plug 'jreybert/vimagit'
 
 " https://github.com/mrtazz/simplenote.vim
@@ -193,7 +196,7 @@ function! ToggleWrap()
 endfunction
 nnoremap <Leader>tw :<C-u>call ToggleWrap()<CR>
 
-" テキスト中の印で折畳を定義する
+" テキスト中の印で折り畳みを定義する
 set foldmethod=marker
 
 " ファイルを開いたときに折り畳みをしない
