@@ -55,8 +55,9 @@ vmap <Leader>ob <Plug>(openbrowser-smart-search)
 
 " https://github.com/scrooloose/nerdtree
 Plug 'scrooloose/nerdtree'
-let g:NERDTreeChDirMode=2
-let g:NERDTreeShowBookmarks=1
+let g:NERDTreeChDirMode = 2
+let g:NERDTreeShowBookmarks = 1
+let g:NERDTreeShowHidden = 1
 nnoremap <Leader>nt :<C-u>NERDTreeToggle<CR>
 nnoremap <Leader>nf :<C-u>NERDTreeFind<CR>
 
