@@ -36,7 +36,7 @@ SAVEHIST=10000
   autoload -Uz vcs_info
 
   +vi-git-info() {
-    hook_com[misc]+=" | $(git rev-list --count @{u}..HEAD)-$(git rev-list --count HEAD..@{u}) | $(git config user.name) <$(git config user.email)>"
+    hook_com[misc]+=" | $(git rev-list --count @{u}..HEAD 2> /dev/null)-$(git rev-list --count HEAD..@{u} 2> /dev/null) | $(git config user.name) <$(git config user.email)>"
   }
 
   zstyle ':vcs_info:git:*' check-for-changes true
