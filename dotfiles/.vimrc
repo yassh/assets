@@ -219,9 +219,7 @@ set noswapfile
 
 " バックアップファイルの設定
 set nobackup
-
-" http://vim.wikia.com/wiki/Editing_crontab
-set backupskip=/tmp/*,/private/tmp/*
+set nowritebackup
 
 " undofileの設定
 set noundofile
@@ -237,7 +235,10 @@ set hlsearch
 vnoremap // y/<C-r>"<CR>
 
 " 検索結果のハイライトを解除する
-nnoremap <Leader>nh :<C-u>noh<CR>
+nnoremap <Leader><Leader> :<C-u>noh<CR>
+
+" http://www.johnhawthorn.com/2012/09/vi-escape-delays/
+set timeoutlen=1000 ttimeoutlen=0
 
 nnoremap <Leader>pp :<C-u>echo expand("%:p")<CR>
 nnoremap <Leader>rv :<C-u>tab sview ~/.vimrc<CR>
