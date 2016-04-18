@@ -72,6 +72,7 @@ nnoremap <Leader>his :<C-u>Unite file_mru<CR>
 " https://github.com/ctrlpvim/ctrlp.vim
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<Nop>'
+let g:ctrlp_show_hidden = 1
 nnoremap <Leader>fzf :<C-u>CtrlP<CR>
 
 " https://github.com/dyng/ctrlsf.vim
