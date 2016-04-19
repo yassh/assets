@@ -77,6 +77,7 @@ SAVEHIST=10000
   alias ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias gl='git log --graph --decorate --date=iso'
+  alias gf='git fetch'
   alias gs='git status'
   alias gd='git diff'
   alias gdc='git diff --cached'
