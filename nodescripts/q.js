@@ -48,6 +48,16 @@ switch (argv.service) {
     data.query = argv.quote ? `"${query}"` : query;
   break;
 
+  case 'gh':
+  case 'github':
+    baseUrl = 'https://github.com/search?';
+
+    data.type = 'Code'
+    data.q = argv.quote ? `"${query}"` : query;
+
+    if (argv.lang) data.l = argv.lang;
+  break;
+
   case 'g':
   case 'google':
   default:
