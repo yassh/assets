@@ -7,3 +7,6 @@
 [submodule "docs"]
 	path = docs
 	url = https://github.com/yassh/docs.git
+[submodule "hello"]
+	path = hello
+	url = https://github.com/yassh/hello.git
