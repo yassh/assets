@@ -117,8 +117,14 @@ Plug 'jreybert/vimagit'
 " https://github.com/mrtazz/simplenote.vim
 Plug 'mrtazz/simplenote.vim'
 source ~/.simplenoterc
-let g:SimplenoteVertical = 1
-nnoremap <Leader>sn :<C-u>Simplenote -l<CR>
+"let g:SimplenoteVertical = 1
+"let g:SimplenoteSingleWindow = 1
+"let g:SimplenoteListHeight = 30
+let g:SimplenoteFiletype = "markdown"
+let g:SimplenoteStrftime = "%Y-%m-%d %a %H:%M"
+nnoremap <Leader>sl :<C-u>Simplenote -l<CR> " list
+nnoremap <Leader>sn :<C-u>Simplenote -n<CR> " add
+nnoremap <Leader>sd :<C-u>Simplenote -d<CR> " remove
 
 call plug#end()
 " }}} vim-plug
