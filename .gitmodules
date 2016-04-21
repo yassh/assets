@@ -10,3 +10,6 @@
 [submodule "hello"]
 	path = hello
 	url = https://github.com/yassh/hello.git
+[submodule "data"]
+	path = data
+	url = https://github.com/yassh/data.git
