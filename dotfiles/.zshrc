@@ -82,6 +82,7 @@ SAVEHIST=10000
   alias gd='git diff'
   alias gdc='git diff --cached'
   alias gdt='git difftool --dir-diff --no-symlink'
+  alias h='tldr'
   alias f='ack -g'
   alias q='my-q'
   alias sn="vim -c 'Simplenote -l'"
