@@ -10,6 +10,7 @@ gitopen \
 gulp \
 imagemin-cli \
 isutf8 \
+json \
 jsonlint \
 npm-run-all \
 tldr \
