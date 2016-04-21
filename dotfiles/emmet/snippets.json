@@ -2,7 +2,8 @@
   "//": "http://docs.emmet.io/customization/snippets/",
   "html": {
     "abbreviations": {
-      "!!": "!!!+html[lang=${lang}]>(head>meta[charset=${charset}]+meta[http-equiv=X-UA-Compatible][content=IE=edge]+meta[name=viewport][content=\"width=device-width, initial-scale=1\"]+title{${1:Document}})+body"
+      "meta:vp": "meta[name=viewport][content=\"width=device-width, initial-scale=1\"]",
+      "!!": "!!!+html[lang=${lang}]>(head>meta[charset=${charset}]+meta[http-equiv=X-UA-Compatible][content=IE=edge]+meta:vp+title{${1:Document}})+body"
     }
   },
   "javascript": {
