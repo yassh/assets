@@ -27,10 +27,6 @@ vmap V <Plug>(expand_region_shrink)
 " https://github.com/terryma/vim-multiple-cursors
 Plug 'terryma/vim-multiple-cursors'
 
-" https://github.com/maxbrunsfeld/vim-yankstack
-Plug 'maxbrunsfeld/vim-yankstack'
-nmap <C-y> <Plug>yankstack_substitute_older_paste
-
 " https://github.com/mattn/webapi-vim
 " https://github.com/mattn/emmet-vim
 Plug 'mattn/webapi-vim' | Plug 'mattn/emmet-vim'
@@ -70,15 +66,23 @@ Plug 'Shougo/vimfiler.vim'
 let g:vimfiler_as_default_explorer = 1
 
 " https://github.com/Shougo/unite.vim
+Plug 'Shougo/unite.vim'
+
 " https://github.com/Shougo/neomru.vim
-Plug 'Shougo/unite.vim' | Plug 'Shougo/neomru.vim'
-nnoremap <Leader>his :<C-u>Unite file_mru<CR>
+Plug 'Shougo/neomru.vim'
+nnoremap <Leader>uh :<C-u>Unite file_mru<CR>
+
+" https://github.com/Shougo/neoyank.vim
+Plug 'Shougo/neoyank.vim'
+nnoremap <Leader>uy :<C-u>Unite history/yank<CR>
 
 " https://github.com/ctrlpvim/ctrlp.vim
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<Nop>'
 let g:ctrlp_show_hidden = 1
-nnoremap <Leader>fzf :<C-u>CtrlP<CR>
+let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|\.DS_Store|Thumbs\.db|node_modules)$'
+let g:ctrlp_working_path_mode = 'w' " begin finding a root from the current working directory
+nnoremap <Leader>fp :<C-u>CtrlP<CR>
 
 " https://github.com/dyng/ctrlsf.vim
 Plug 'dyng/ctrlsf.vim'
