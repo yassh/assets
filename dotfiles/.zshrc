@@ -43,8 +43,8 @@ SAVEHIST=10000
   zstyle ':vcs_info:git:*' unstagedstr " | %F{red}U%f"
   zstyle ':vcs_info:git:*' stagedstr " | %F{green}C%f"
   zstyle ':vcs_info:git+set-message:*' hooks git-info
-  zstyle ':vcs_info:*' formats " %s | %b%u%c%m"
-  zstyle ':vcs_info:*' actionformats  " %s | %b | %F{red}%a%f%u%c%m"
+  zstyle ':vcs_info:git:*' formats " | %b%u%c%m"
+  zstyle ':vcs_info:git:*' actionformats  " | %b | %F{red}%a%f%u%c%m"
 
   _vcs_precmd() {
     vcs_info
