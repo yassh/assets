@@ -1,9 +1,6 @@
 [submodule "z"]
 	path = z
 	url = https://github.com/rupa/z.git
-[submodule "testfiles"]
-	path = testfiles
-	url = https://github.com/yassh/testfiles.git
 [submodule "docs"]
 	path = docs
 	url = https://github.com/yassh/docs.git
