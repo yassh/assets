@@ -6,7 +6,7 @@ scriptencoding utf-8
 set fileencodings=utf-8,cp932 " ファイルの編集時に考慮される文字エンコーディングのリスト
 set runtimepath+=$HOME/.vim
 source $VIMRUNTIME/macros/matchit.vim " %によるマッチを拡張するプラグイン
-let g:mapleader = ";"
+let g:mapleader = " "
 
 
 " {{{ vim-plug
