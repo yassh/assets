@@ -101,7 +101,17 @@ Plug 'NLKNguyen/papercolor-theme'
 
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
-let g:lightline = { 'colorscheme': 'wombat' }
+let g:lightline = {
+                \   'colorscheme': 'solarized',
+                \   'active': {
+                \     'left': [ [ 'mode', 'paste' ], [], [ 'readonly', 'relativepath', 'modified' ] ],
+                \     'right': [ [ 'lineinfo' ], [], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+                \   },
+                \   'inactive': {
+                \     'left': [ [], [], [ 'readonly', 'relativepath', 'modified' ] ],
+                \     'right': [ [ 'lineinfo' ], [], [] ]
+                \   }
+                \ }
 
 " https://github.com/nathanaelkane/vim-indent-guides
 " <Leader>ig to toggle
