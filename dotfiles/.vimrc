@@ -82,16 +82,16 @@ let g:ctrlp_map = '<Nop>'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|\.DS_Store|Thumbs\.db|node_modules)$'
 let g:ctrlp_working_path_mode = 'w' " begin finding a root from the current working directory
-nnoremap <Leader>fp :<C-u>CtrlP<CR>
+nnoremap <Leader>ff :<C-u>CtrlP<CR>
 
 " https://github.com/dyng/ctrlsf.vim
 Plug 'dyng/ctrlsf.vim'
 let g:ctrlsf_auto_close = 0
-nmap <Leader>ff <Plug>CtrlSFPrompt
-vmap <Leader>ff <Plug>CtrlSFVwordPath
-nnoremap <Leader>fr :<C-u>CtrlSF -R<Space>
-nnoremap <Leader>fo :<C-u>CtrlSFOpen<CR>
-nnoremap <Leader>fc :<C-u>CtrlSFClose<CR>
+nmap <Leader>gg <Plug>CtrlSFPrompt
+vmap <Leader>gg <Plug>CtrlSFVwordPath
+nnoremap <Leader>gr :<C-u>CtrlSF -R<Space>
+nnoremap <Leader>go :<C-u>CtrlSFOpen<CR>
+nnoremap <Leader>gc :<C-u>CtrlSFClose<CR>
 
 " https://github.com/w0ng/vim-hybrid
 Plug 'w0ng/vim-hybrid'
