@@ -122,7 +122,24 @@ SAVEHIST=10000
     fi
   }
 
-  fzg() {
+  ff() {
+    local result
+
+    if [ $1 ]; then
+      result=$(ack -g $1 | fzf --reverse)
+    else
+      result=$(fzf --reverse)
+    fi
+
+    if [ -z "$result" ]; then
+      return 0
+    fi
+
+    printf $result | pbcopy # XXX
+    echo $result
+  }
+
+  g() {
     local dir
     dir=$(ghq list | fzf --reverse) && cd $(ghq root)/$dir
   }
