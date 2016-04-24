@@ -11,10 +11,10 @@ gulp \
 imagemin-cli \
 isutf8 \
 json \
+json2csv \
 jsonlint \
 npm-run-all \
 tldr \
-wunderline \
 ;
 
 echo "npm installを終了します。"

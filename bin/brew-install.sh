@@ -12,6 +12,7 @@ fzf \
 gibo \
 go \
 hub \
+jo \
 nodebrew \
 thefuck \
 tidy-html5 \
