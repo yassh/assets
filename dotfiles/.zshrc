@@ -86,6 +86,7 @@ SAVEHIST=10000
   alias t2='tree -L 2'
   alias h='tldr'
   alias q='my-q'
+  alias gol='my-gol'
   alias sn="vim -c 'Simplenote -l'"
   alias ie11='VBoxManage startvm "IE11 - Win7"'
 
