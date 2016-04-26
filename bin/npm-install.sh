@@ -6,6 +6,7 @@ npm install -g \
 browser-sync \
 csscomb \
 datauri \
+fixpack \
 gitopen \
 gulp \
 imagemin-cli \

@@ -6,7 +6,6 @@
     "my-gol": "gol.js",
     "my-q": "q.js"
   },
-  "private": true,
   "dependencies": {
     "datauri": "^0.8.0",
     "imagemin": "^4.0.0",
@@ -18,5 +17,6 @@
     "temp": "^0.8.3",
     "user-home": "^2.0.0",
     "yargs": "^3.30.0"
-  }
+  },
+  "private": true
 }
