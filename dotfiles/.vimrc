@@ -64,6 +64,7 @@ nnoremap <Leader>nf :<C-u>NERDTreeFind<CR>
 " https://github.com/Shougo/vimfiler.vim
 Plug 'Shougo/vimfiler.vim'
 let g:vimfiler_as_default_explorer = 1
+nnoremap <Leader>vf :<C-u>VimFiler<CR>
 
 " https://github.com/Shougo/unite.vim
 Plug 'Shougo/unite.vim'
