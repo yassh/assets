@@ -88,11 +88,11 @@ nnoremap <Leader>ff :<C-u>CtrlP<CR>
 " https://github.com/dyng/ctrlsf.vim
 Plug 'dyng/ctrlsf.vim'
 let g:ctrlsf_auto_close = 0
-nmap <Leader>gg <Plug>CtrlSFPrompt
-vmap <Leader>gg <Plug>CtrlSFVwordPath
-nnoremap <Leader>gr :<C-u>CtrlSF -R<Space>
-nnoremap <Leader>go :<C-u>CtrlSFOpen<CR>
-nnoremap <Leader>gc :<C-u>CtrlSFClose<CR>
+nmap <Leader>ss <Plug>CtrlSFPrompt
+vmap <Leader>ss <Plug>CtrlSFVwordPath
+nnoremap <Leader>sr :<C-u>CtrlSF -R<Space>
+nnoremap <Leader>so :<C-u>CtrlSFOpen<CR>
+nnoremap <Leader>sc :<C-u>CtrlSFClose<CR>
 
 " https://github.com/w0ng/vim-hybrid
 Plug 'w0ng/vim-hybrid'
@@ -137,9 +137,9 @@ source ~/.simplenoterc
 "let g:SimplenoteListHeight = 30
 let g:SimplenoteFiletype = "markdown"
 let g:SimplenoteStrftime = "%Y-%m-%d %a %H:%M"
-nnoremap <Leader>sl :<C-u>Simplenote -l<CR> " list
-nnoremap <Leader>sn :<C-u>Simplenote -n<CR> " add
-nnoremap <Leader>sd :<C-u>Simplenote -d<CR> " remove
+nnoremap <Leader>S :<C-u>Simplenote -l<CR> " list
+nnoremap <Leader>N :<C-u>Simplenote -n<CR> " add
+nnoremap <Leader>D :<C-u>Simplenote -d<CR> " remove
 
 call plug#end()
 " }}} vim-plug
