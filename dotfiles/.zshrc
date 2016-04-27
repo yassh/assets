@@ -85,6 +85,7 @@ SAVEHIST=10000
   alias gdcn='git diff --cached --name-only'
   alias gdt='git difftool --dir-diff --no-symlink'
   alias gc='git commit -v'
+  alias gcae='git commit --allow-empty'
   alias t2='tree -L 2'
   alias h='tldr'
   alias :en='trans :en'
