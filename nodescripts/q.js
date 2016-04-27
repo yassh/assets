@@ -14,6 +14,7 @@ const argv = require('yargs')
     'github': { alias: 'gh', type: 'boolean', describe: 'GitHubで検索する' },
     'linguee': { alias: 'lg', type: 'boolean', describe: 'Lingueeで検索する' },
     'tatoeba': { alias: 'tt', type: 'boolean', describe: 'Tatoebaで検索する' },
+    'wiktionary': { alias: 'wk', type: 'boolean', describe: 'Wiktionaryで検索する' },
     'google': { alias: 'gg', type: 'boolean', describe: 'Googleで検索する' }
   })
   .help('help').alias('help', 'h')
@@ -61,6 +62,12 @@ if (argv.tatoeba) {
   notYet = false;
   const data = { query: query };
   open('https://tatoeba.org/sentences/search?', data);
+}
+
+if (argv.wiktionary) {
+  notYet = false;
+  const data = { search: query };
+  open('https://en.wiktionary.org/w/index.php?', data);
 }
 
 if (argv.google || notYet) {
