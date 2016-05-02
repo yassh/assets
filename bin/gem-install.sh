@@ -3,7 +3,6 @@
 echo "gem installを開始します。"
 
 gem install \
-boom \
 t \
 ;
 
