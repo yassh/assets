@@ -116,10 +116,14 @@ SAVEHIST=10000
 # }}} エイリアス
 
 # {{{ 拡張子とコマンドを結びつける
-  alias -s txt='cat'
-  alias -s js='node'
-  alias -s rb='ruby'
-  alias -s py='python'
+  alias -s css='vim'
+  alias -s html='vim'
+  alias -s js='vim'
+  alias -s json='vim'
+  alias -s py='vim'
+  alias -s rb='vim'
+  alias -s scss='vim'
+  alias -s txt='vim'
 # }}} 拡張子とコマンドを結びつける
 
 # {{{ 環境変数
@@ -144,7 +148,7 @@ SAVEHIST=10000
     local result
 
     if [ $1 ]; then
-      result=$(ack -g $1 | fzf --reverse)
+      result=$(find . -name $1 | fzf --reverse)
     else
       result=$(fzf --reverse)
     fi
@@ -153,8 +157,7 @@ SAVEHIST=10000
       return 0
     fi
 
-    printf $result | pbcopy # XXX
-    echo $result
+    eval "$result"
   }
 
   g() {
