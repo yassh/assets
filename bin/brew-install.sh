@@ -20,6 +20,7 @@ tidy-html5 \
 tig \
 tmux \
 translate-shell \
+webkit2png \
 youtube-dl \
 ;
 
