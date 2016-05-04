@@ -14,6 +14,7 @@ go \
 hub \
 jo \
 nodebrew \
+pyenv \
 thefuck \
 tidy-html5 \
 tig \

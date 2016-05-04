@@ -187,3 +187,7 @@ eval "$(thefuck --alias shit)"
 # rbenv
 # https://github.com/rbenv/rbenv
 eval "$(rbenv init -)"
+
+# pyenv
+# https://github.com/yyuu/pyenv
+eval "$(pyenv init -)"
