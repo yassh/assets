@@ -15,6 +15,7 @@ json \
 json2csv \
 jsonlint \
 npm-run-all \
+snpt \
 tldr \
 ;
 
