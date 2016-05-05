@@ -7,6 +7,7 @@ brew install macvim --with-override-system-vim
 brew install \
 ack \
 colordiff \
+coreutils \
 ffmpeg \
 fzf \
 gibo \

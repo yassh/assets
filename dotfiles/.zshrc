@@ -95,6 +95,7 @@ SAVEHIST=10000
   alias gdt='git difftool --dir-diff --no-symlink'
   alias gc='git commit -v'
   alias gcae='git commit --allow-empty'
+  alias nr='npm run'
   alias t2='tree -L 2'
   alias h='tldr'
   alias :en='trans :en'
@@ -150,7 +151,7 @@ SAVEHIST=10000
       return 0
     fi
 
-    eval "$(realpath.sh $result)" # XXX
+    eval "$(realpath $result)"
   }
 
   g() {
