@@ -164,7 +164,7 @@ SAVEHIST=10000
 
   g() {
     local dir
-    dir=$(ghq list | fzf --reverse) && cd $(ghq root)/$dir
+    dir=$(ghq list | fzf -q "$1" --reverse) && cd $(ghq root)/$dir
   }
 # }}} 関数
 
