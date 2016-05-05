@@ -141,17 +141,25 @@ SAVEHIST=10000
   ff() {
     local result
 
-    if [ $1 ]; then
-      result=$(ack -g $1 | fzf --reverse)
-    else
-      result=$(ack -g '' | fzf --reverse)
-    fi
+    result=$(ack -g '' | fzf -q "$1" --reverse)
 
     if [ -z "$result" ]; then
       return 0
     fi
 
     eval "$(realpath $result)"
+  }
+
+  fd() {
+    local result
+
+    result=$(find . -type d -maxdepth 1 | fzf -q "$1" --reverse)
+
+    if [ -z "$result" ]; then
+      return 0
+    fi
+
+    cd $result
   }
 
   g() {
