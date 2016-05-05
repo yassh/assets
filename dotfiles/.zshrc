@@ -26,6 +26,15 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
+# {{{ 環境変数
+  export EDITOR=vim
+  export GOPATH=~/Go
+  export PATH=$GOPATH/bin:$PATH
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
+  export PATH=~/assets/bin:$PATH
+  export PATH=~/bin:$PATH
+# }}} 環境変数
+
 # {{{ キーバインディング
   bindkey -v
   bindkey '^R' history-incremental-pattern-search-backward
@@ -116,24 +125,8 @@ SAVEHIST=10000
 # }}} エイリアス
 
 # {{{ 拡張子とコマンドを結びつける
-  alias -s css='vim'
-  alias -s html='vim'
-  alias -s js='vim'
-  alias -s json='vim'
-  alias -s py='vim'
-  alias -s rb='vim'
-  alias -s scss='vim'
-  alias -s txt='vim'
+  alias -s {css,html,js,json,md,py,rb,scss,txt}=$EDITOR
 # }}} 拡張子とコマンドを結びつける
-
-# {{{ 環境変数
-  export EDITOR=vim
-  export GOPATH=~/Go
-  export PATH=$GOPATH/bin:$PATH
-  export PATH=$HOME/.nodebrew/current/bin:$PATH
-  export PATH=~/assets/bin:$PATH
-  export PATH=~/bin:$PATH
-# }}} 環境変数
 
 # {{{ 関数
   serve() {
@@ -148,16 +141,16 @@ SAVEHIST=10000
     local result
 
     if [ $1 ]; then
-      result=$(find . -name $1 | fzf --reverse)
+      result=$(ack -g $1 | fzf --reverse)
     else
-      result=$(fzf --reverse)
+      result=$(ack -g '' | fzf --reverse)
     fi
 
     if [ -z "$result" ]; then
       return 0
     fi
 
-    eval "$result"
+    eval "$(realpath.sh $result)" # XXX
   }
 
   g() {
