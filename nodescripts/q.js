@@ -14,6 +14,7 @@ const argv = require('yargs')
     'github': { alias: 'gh', type: 'boolean', describe: 'GitHubで検索する' },
     'linguee': { alias: 'lg', type: 'boolean', describe: 'Lingueeで検索する' },
     'tatoeba': { alias: 'tt', type: 'boolean', describe: 'Tatoebaで検索する' },
+    'forvo': { alias: 'fv', type: 'boolean', describe: 'Forvoで検索する' },
     'wiktionary': { alias: 'wk', type: 'boolean', describe: 'Wiktionaryで検索する' },
     'google': { alias: 'gg', type: 'boolean', describe: 'Googleで検索する' }
   })
@@ -22,8 +23,7 @@ const argv = require('yargs')
 const param = require('jquery-param');
 const opener = require('opener');
 
-function open(baseUrl, data) {
-  const url = baseUrl + param(data);
+function open(url) {
   console.log(url);
   opener(url);
 }
@@ -36,38 +36,43 @@ if (argv.twitter) {
   notYet = false;
   const data = { q: query };
   if (argv.lang) data.lang = argv.lang;
-  open('https://twitter.com/search?', data);
+  open(`https://twitter.com/search?${param(data)}`);
 }
 
 if (argv.realtime) {
   notYet = false;
   const data = { p: query };
-  open('http://realtime.search.yahoo.co.jp/search?', data);
+  open(`http://realtime.search.yahoo.co.jp/search?${param(data)}`);
 }
 
 if (argv.github) {
   notYet = false;
   const data = { type: 'Code', q: query };
   if (argv.lang) data.l = argv.lang;
-  open('https://github.com/search?', data);
+  open(`https://github.com/search?${param(data)}`);
 }
 
 if (argv.linguee) {
   notYet = false;
   const data = { query: query };
-  open('http://www.linguee.jp/search?', data);
+  open(`http://www.linguee.jp/search?${param(data)}`);
 }
 
 if (argv.tatoeba) {
   notYet = false;
   const data = { query: query };
-  open('https://tatoeba.org/sentences/search?', data);
+  open(`https://tatoeba.org/sentences/search?${param(data)}`);
+}
+
+if (argv.forvo) {
+  notYet = false;
+  open(`http://ja.forvo.com/search/${encodeURIComponent(query)}/`);
 }
 
 if (argv.wiktionary) {
   notYet = false;
   const data = { search: query };
-  open('https://en.wiktionary.org/w/index.php?', data);
+  open(`https://en.wiktionary.org/w/index.php?${param(data)}`);
 }
 
 if (argv.google || notYet) {
@@ -77,5 +82,5 @@ if (argv.google || notYet) {
   if (argv.month) data.tbs = 'qdr:m';
   if (argv.year) data.tbs = 'qdr:y';
   if (argv.lang) data.lr = `lang_${argv.lang}`;
-  open('https://www.google.co.jp/search?', data);
+  open(`https://www.google.co.jp/search?${param(data)}`);
 }
