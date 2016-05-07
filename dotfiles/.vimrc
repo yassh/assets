@@ -53,6 +53,10 @@ Plug 'tyru/open-browser.vim'
 nmap <Leader>o <Plug>(openbrowser-smart-search)
 vmap <Leader>o <Plug>(openbrowser-smart-search)
 
+" https://github.com/kannokanno/previm
+Plug 'kannokanno/previm'
+nnoremap <Leader>pv :<C-u>PrevimOpen<CR>
+
 " https://github.com/scrooloose/nerdtree
 Plug 'scrooloose/nerdtree'
 let g:NERDTreeChDirMode = 2
