@@ -145,6 +145,10 @@ nnoremap <Leader>S :<C-u>Simplenote -l<CR> " list
 nnoremap <Leader>N :<C-u>Simplenote -n<CR> " add
 nnoremap <Leader>D :<C-u>Simplenote -d<CR> " remove
 
+" https://github.com/pangloss/vim-javascript
+" https://github.com/mxw/vim-jsx
+Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
+
 call plug#end()
 " }}} vim-plug
 
