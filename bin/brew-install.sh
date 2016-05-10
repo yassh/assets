@@ -16,6 +16,7 @@ hub \
 jo \
 nodebrew \
 pyenv \
+the_silver_searcher \
 thefuck \
 tidy-html5 \
 tig \
