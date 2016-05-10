@@ -141,7 +141,7 @@ SAVEHIST=10000
   ff() {
     local result
 
-    result=$(ag --hidden --ignore .git -g '' | fzf -q "$1" --reverse)
+    result=$(ag --hidden -g '' | fzf -q "$1" --reverse)
 
     if [ -z "$result" ]; then
       return 0
