@@ -12,6 +12,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # コマンドが存在せず、ディレクトリ名に一致するならcd
 setopt auto_cd
 
+# -[タブキー]でこれまでに移動したディレクトリが一覧表示されるようにする
+setopt auto_pushd
+
 # コマンドラインでも`#`で始まるコメントを使用可能にする
 setopt interactivecomments
 
