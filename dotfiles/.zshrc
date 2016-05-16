@@ -124,6 +124,7 @@ SAVEHIST=10000
     darwin*) # for OS X
       alias coda='open -b com.panic.Coda2'
       alias photoshop='open -b com.adobe.Photoshop'
+      alias term='open -b com.googlecode.iterm2'
     ;;
   esac
 # }}} エイリアス
