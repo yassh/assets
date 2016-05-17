@@ -11,6 +11,7 @@ gitopen \
 gulp \
 imagemin-cli \
 isutf8 \
+jscs \
 json \
 json2csv \
 jsonlint \
