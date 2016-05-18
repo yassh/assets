@@ -145,32 +145,32 @@ SAVEHIST=10000
 
   :ff() {
     local result
-    result=$(ag --hidden -g '' | :fzf) && eval "$(realpath $result)"
+    result=$(ag --hidden -g '' | :fzf "$1") && eval "$(realpath $result)"
   }
 
   :cd() {
     local result
-    result=$(find . -type d -maxdepth 1 | :fzf) && cd $result
+    result=$(find . -type d -maxdepth 1 | :fzf "$1") && cd $result
   }
 
   :b() {
     local result
-    result=$(cat ~/*.favurl | :fzf) && open-url $result
+    result=$(cat ~/*.favurl | :fzf "$1") && open-url $result
   }
 
   :c() {
     local result
-    result=$(cat ~/*.favcommand | :fzf) && eval $result
+    result=$(cat ~/*.favcommand | :fzf "$1") && eval $result
   }
 
   :d() {
     local result
-    result=$(cat ~/*.favdir | :fzf) && eval $result
+    result=$(cat ~/*.favdir | :fzf "$1") && eval $result
   }
 
   :g() {
     local result
-    result=$(ghq list | :fzf) && cd $(ghq root)/$result
+    result=$(ghq list | :fzf "$1") && cd $(ghq root)/$result
   }
 # }}} 関数
 
