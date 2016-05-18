@@ -133,9 +133,9 @@ SAVEHIST=10000
 # {{{ 関数
   :serve() {
     if [ $1 ]; then
-      browser-sync start --server --directory --port $1
+      http-server -o -p $1
     else
-      browser-sync start --server --directory
+      http-server -o
     fi
   }
 
