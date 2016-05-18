@@ -83,42 +83,39 @@ SAVEHIST=10000
   alias sudo='sudo '
   alias ls='ls -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
   alias ll='ls -a -l -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
-  alias his='history -i' # `-i`は実行日時を表示するオプション
-  alias hisall='history -i 1' # `-i`は実行日時を表示するオプション
-  alias vimr='vim -R' # `-R`はread-onlyモードで開くオプション
-  alias ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
-  alias ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
-  alias gl='git log --graph --decorate --date=iso'
-  alias gf='git fetch'
-  alias gs='git status'
-  alias gd='git diff'
-  alias gdn='git diff --name-only'
-  alias gdc='git diff --cached'
-  alias gdcn='git diff --cached --name-only'
-  alias gdt='git difftool --dir-diff --no-symlink'
-  alias gc='git commit -v'
-  alias gcae='git commit --allow-empty'
-  alias nr='npm run'
-  alias t2='tree -L 2'
-  alias h='tldr'
+  alias :his='history -i' # `-i`は実行日時を表示するオプション
+  alias :hisall='history -i 1' # `-i`は実行日時を表示するオプション
+  alias :h='tldr'
+  alias :t2='tree -L 2'
+  alias :vv='vim -R' # `-R`はread-onlyモードで開くオプション
+  alias :sn="vim -c 'Simplenote -l'"
+  alias :ie11='VBoxManage startvm "IE11 - Win7"'
+
+  alias :q='my-q'
+  alias :gol='my-gol'
+
+  alias :ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
+  alias :ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
+
+  alias :gl='git log --graph --decorate --date=iso'
+  alias :gf='git fetch'
+  alias :gs='git status'
+  alias :gd='git diff'
+  alias :gdn='git diff --name-only'
+  alias :gdc='git diff --cached'
+  alias :gdcn='git diff --cached --name-only'
+  alias :gdt='git difftool --dir-diff --no-symlink'
+  alias :gc='git commit -v'
+
   alias :en='trans :en'
   alias :ja='trans :ja'
   alias :ru='trans :ru'
-  alias :vi='trans :vi'
   alias en:ja='trans en:ja'
   alias en:ru='trans en:ru'
-  alias en:vi='trans en:vi'
   alias ja:en='trans ja:en'
   alias ja:ru='trans ja:ru'
-  alias ja:vi='trans ja:vi'
   alias ru:en='trans ru:en'
   alias ru:ja='trans ru:ja'
-  alias vi:en='trans vi:en'
-  alias vi:ja='trans vi:ja'
-  alias q='my-q'
-  alias gol='my-gol'
-  alias sn="vim -c 'Simplenote -l'"
-  alias ie11='VBoxManage startvm "IE11 - Win7"'
 
   case ${OSTYPE} in
     darwin*) # for OS X
@@ -134,7 +131,7 @@ SAVEHIST=10000
 # }}} 拡張子とコマンドを結びつける
 
 # {{{ 関数
-  serve() {
+  :serve() {
     if [ $1 ]; then
       browser-sync start --server --directory --port $1
     else
@@ -142,48 +139,38 @@ SAVEHIST=10000
     fi
   }
 
-  ff() {
-    local result
-
-    result=$(ag --hidden -g '' | fzf -q "$1" --reverse)
-
-    if [ -z "$result" ]; then
-      return 0
-    fi
-
-    eval "$(realpath $result)"
+  :fzf() {
+    fzf -q "$1" --reverse
   }
 
-  fd() {
+  :ff() {
     local result
+    result=$(ag --hidden -g '' | :fzf) && eval "$(realpath $result)"
+  }
 
-    result=$(find . -type d -maxdepth 1 | fzf -q "$1" --reverse)
-
-    if [ -z "$result" ]; then
-      return 0
-    fi
-
-    cd $result
+  :cd() {
+    local result
+    result=$(find . -type d -maxdepth 1 | :fzf) && cd $result
   }
 
   :b() {
     local result
-    result=$(cat ~/*.favurl | fzf -q "$1" --reverse) && open-url $result
+    result=$(cat ~/*.favurl | :fzf) && open-url $result
   }
 
   :c() {
     local result
-    result=$(cat ~/*.favcommand | fzf -q "$1" --reverse) && eval $result
+    result=$(cat ~/*.favcommand | :fzf) && eval $result
   }
 
   :d() {
     local result
-    result=$(cat ~/*.favdir | fzf -q "$1" --reverse) && eval $result
+    result=$(cat ~/*.favdir | :fzf) && eval $result
   }
 
   :g() {
     local result
-    result=$(ghq list | fzf -q "$1" --reverse) && cd $(ghq root)/$result
+    result=$(ghq list | :fzf) && cd $(ghq root)/$result
   }
 # }}} 関数
 
