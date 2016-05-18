@@ -8,7 +8,6 @@ csscomb \
 datauri \
 fixpack \
 gitopen \
-gulp \
 imagemin-cli \
 isutf8 \
 jscs \
