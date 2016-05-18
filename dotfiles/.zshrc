@@ -166,9 +166,24 @@ SAVEHIST=10000
     cd $result
   }
 
-  g() {
-    local dir
-    dir=$(ghq list | fzf -q "$1" --reverse) && cd $(ghq root)/$dir
+  :b() {
+    local result
+    result=$(cat ~/*.favurl | fzf -q "$1" --reverse) && open-url $result
+  }
+
+  :c() {
+    local result
+    result=$(cat ~/*.favcommand | fzf -q "$1" --reverse) && eval $result
+  }
+
+  :d() {
+    local result
+    result=$(cat ~/*.favdir | fzf -q "$1" --reverse) && eval $result
+  }
+
+  :g() {
+    local result
+    result=$(ghq list | fzf -q "$1" --reverse) && cd $(ghq root)/$result
   }
 # }}} 関数
 
