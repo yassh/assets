@@ -168,6 +168,11 @@ SAVEHIST=10000
     result=$(cat ~/*.favdir | :fzf "$1") && eval $result
   }
 
+  :p() {
+    local result
+    result=$(cat ~/*.favphrase | :fzf "$1") && echo $result && echo $result | gocopy
+  }
+
   :g() {
     local result
     result=$(ghq list | :fzf "$1") && cd $(ghq root)/$result

@@ -3,6 +3,8 @@
 echo "go getを開始します。"
 
 go get \
+github.com/atotto/clipboard/cmd/gocopy \
+github.com/atotto/clipboard/cmd/gopaste \
 github.com/motemen/ghq \
 ;
 
