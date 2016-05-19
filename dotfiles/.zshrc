@@ -31,11 +31,11 @@ SAVEHIST=10000
 
 # {{{ 環境変数
   export EDITOR=vim
-  export GOPATH=~/Go
+  export GOPATH=$HOME/.go
   export PATH=$GOPATH/bin:$PATH
   export PATH=$HOME/.nodebrew/current/bin:$PATH
-  export PATH=~/assets/bin:$PATH
-  export PATH=~/bin:$PATH
+  export PATH=$HOME/assets/bin:$PATH
+  export PATH=$HOME/bin:$PATH
 # }}} 環境変数
 
 # {{{ キーバインディング
