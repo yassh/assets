@@ -188,11 +188,6 @@ SAVEHIST=10000
   }
 # }}} フック
 
-# Z
-# https://github.com/rupa/z
-_Z_CMD=j
-source ~/assets/z/z.sh
-
 # The Fuck
 # https://github.com/nvbn/thefuck
 eval "$(thefuck --alias shit)"
