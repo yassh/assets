@@ -83,13 +83,12 @@ SAVEHIST=10000
   alias sudo='sudo '
   alias ls='ls -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
   alias ll='ls -a -l -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
+  alias :tac='tail -r' # 入力したすべての行を逆順に表示する。
   alias :his='history -i' # `-i`は実行日時を表示するオプション
   alias :hisall='history -i 1' # `-i`は実行日時を表示するオプション
-  alias :h='tldr'
-  alias :t2='tree -L 2'
+  alias :t='tldr'
   alias :vv='vim -R' # `-R`はread-onlyモードで開くオプション
   alias :sn="vim -c 'Simplenote -l'"
-  alias :ie11='VBoxManage startvm "IE11 - Win7"'
 
   alias :q='my-q'
   alias :gol='my-gol'
@@ -116,6 +115,8 @@ SAVEHIST=10000
   alias ja:ru='trans ja:ru'
   alias ru:en='trans ru:en'
   alias ru:ja='trans ru:ja'
+
+  alias ie11='VBoxManage startvm "IE11 - Win7"'
 
   case ${OSTYPE} in
     darwin*) # for OS X
@@ -178,6 +179,11 @@ SAVEHIST=10000
     local result
     result=$(ghq list | :fzf "$1") && cd $(ghq root)/$result
   }
+
+  :h() {
+    local result
+    result=$(cat ~/.cd_history | :tac | :fzf "$1") && cd $result
+  }
 # }}} 関数
 
 # {{{ フック
@@ -186,6 +192,7 @@ SAVEHIST=10000
   # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
   chpwd() {
     ls
+    echo $(realpath .) >> ~/.cd_history
   }
 # }}} フック
 
