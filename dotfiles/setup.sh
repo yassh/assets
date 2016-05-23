@@ -5,7 +5,7 @@ echo "dotfilesのセットアップを開始します。"
 # http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
 __DIR__="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-DOT_FILES=( .agignore .gitconfig .gitignore_global .gvimrc .jshintrc .tigrc .vim .vimrc .zshrc emmet pub.favcommand pub.favdir pub.favurl pub.favphrase )
+DOT_FILES=( .agignore .gitconfig .gitignore_global .gvimrc .jshintrc .tigrc .vim .vimrc .zshrc emmet pub.favcmd pub.favdir pub.favurl pub.favphrase )
 
 for file in ${DOT_FILES[@]}
 do

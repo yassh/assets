@@ -159,7 +159,7 @@ setopt interactivecomments
 
   :favcmd() {
     local result
-    result=$(cat ~/*.favcommand | :fzf "$1") && eval $result
+    result=$(cat ~/*.favcmd | :fzf "$1") && eval $result
   }
 
   :favdir() {
