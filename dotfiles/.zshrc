@@ -142,14 +142,14 @@ setopt interactivecomments
     result=$(find . -type d -maxdepth 1 | :fzf "$1") && cd $result
   }
 
-  :c() {
-    local result
-    result=$(cat ~/.cmd_history | :tac | :fzf "$1") && eval $result
-  }
-
   :d() {
     local result
     result=$(cat ~/.cd_history | :tac | :fzf "$1") && cd $result
+  }
+
+  :e() {
+    local result
+    result=$(cat ~/.cmd_history | :tac | :fzf "$1") && echo $result && eval $result
   }
 
   :g() {
@@ -179,19 +179,19 @@ setopt interactivecomments
 # }}} 関数
 
 # {{{ フック
-  # preexec
-  # "Executed just after a command has been read and is about to be executed."
-  # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
-  preexec() {
-    echo $1 >> ~/.cmd_history
-  }
-
   # chpwd
   # "Executed whenever the current working directory is changed."
   # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
   chpwd() {
     ls
     echo $(realpath .) >> ~/.cd_history
+  }
+
+  # preexec
+  # "Executed just after a command has been read and is about to be executed."
+  # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
+  preexec() {
+    echo $1 >> ~/.cmd_history
   }
 # }}} フック
 
