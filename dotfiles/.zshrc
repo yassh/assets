@@ -155,26 +155,6 @@ SAVEHIST=10000
     result=$(find . -type d -maxdepth 1 | :fzf "$1") && cd $result
   }
 
-  :favurl() {
-    local result
-    result=$(cat ~/*.favurl | :fzf "$1") && open-url $result
-  }
-
-  :favcmd() {
-    local result
-    result=$(cat ~/*.favcommand | :fzf "$1") && eval $result
-  }
-
-  :favdir() {
-    local result
-    result=$(cat ~/*.favdir | :fzf "$1") && eval $result
-  }
-
-  :favphrase() {
-    local result
-    result=$(cat ~/*.favphrase | :fzf "$1") && echo $result && echo $result | gocopy
-  }
-
   :c() {
     local result
     result=$(cat ~/.cmd_history | :tac | :fzf "$1") && eval $result
@@ -188,6 +168,26 @@ SAVEHIST=10000
   :g() {
     local result
     result=$(ghq list 2> /dev/null | :fzf "$1") && cd $(ghq root)/$result
+  }
+
+  :favcmd() {
+    local result
+    result=$(cat ~/*.favcommand | :fzf "$1") && eval $result
+  }
+
+  :favdir() {
+    local result
+    result=$(cat ~/*.favdir | :fzf "$1") && eval $result
+  }
+
+  :favurl() {
+    local result
+    result=$(cat ~/*.favurl | :fzf "$1") && open-url $result
+  }
+
+  :favphrase() {
+    local result
+    result=$(cat ~/*.favphrase | :fzf "$1") && echo $result && echo $result | gocopy
   }
 # }}} 関数
 
