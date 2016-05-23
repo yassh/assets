@@ -177,7 +177,7 @@ SAVEHIST=10000
 
   :g() {
     local result
-    result=$(ghq list | :fzf "$1") && cd $(ghq root)/$result
+    result=$(ghq list 2> /dev/null | :fzf "$1") && cd $(ghq root)/$result
   }
 
   :h() {
