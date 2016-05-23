@@ -155,38 +155,50 @@ SAVEHIST=10000
     result=$(find . -type d -maxdepth 1 | :fzf "$1") && cd $result
   }
 
-  :b() {
+  :favurl() {
     local result
     result=$(cat ~/*.favurl | :fzf "$1") && open-url $result
   }
 
-  :c() {
+  :favcmd() {
     local result
     result=$(cat ~/*.favcommand | :fzf "$1") && eval $result
   }
 
-  :d() {
+  :favdir() {
     local result
     result=$(cat ~/*.favdir | :fzf "$1") && eval $result
   }
 
-  :p() {
+  :favphrase() {
     local result
     result=$(cat ~/*.favphrase | :fzf "$1") && echo $result && echo $result | gocopy
+  }
+
+  :c() {
+    local result
+    result=$(cat ~/.cmd_history | :tac | :fzf "$1") && eval $result
+  }
+
+  :d() {
+    local result
+    result=$(cat ~/.cd_history | :tac | :fzf "$1") && cd $result
   }
 
   :g() {
     local result
     result=$(ghq list 2> /dev/null | :fzf "$1") && cd $(ghq root)/$result
   }
-
-  :h() {
-    local result
-    result=$(cat ~/.cd_history | :tac | :fzf "$1") && cd $result
-  }
 # }}} 関数
 
 # {{{ フック
+  # preexec
+  # "Executed just after a command has been read and is about to be executed."
+  # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
+  preexec() {
+    echo $1 >> ~/.cmd_history
+  }
+
   # chpwd
   # "Executed whenever the current working directory is changed."
   # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
