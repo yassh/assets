@@ -18,17 +18,6 @@ setopt auto_pushd
 # コマンドラインでも`#`で始まるコメントを使用可能にする
 setopt interactivecomments
 
-# 複数端末間で履歴を共有する
-setopt share_history
-
-# 同じコマンド続けて履歴に加えない
-setopt hist_ignore_dups
-
-# 履歴
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-
 # {{{ 環境変数
   export EDITOR=vim
   export GOPATH=$HOME/.go
@@ -84,8 +73,6 @@ SAVEHIST=10000
   alias ls='ls -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
   alias ll='ls -a -l -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
   alias :tac='tail -r' # 入力したすべての行を逆順に表示する。
-  alias :his='history -i' # `-i`は実行日時を表示するオプション
-  alias :hisall='history -i 1' # `-i`は実行日時を表示するオプション
   alias :t='tldr'
   alias :vv='vim -R' # `-R`はread-onlyモードで開くオプション
   alias :sn="vim -c 'Simplenote -l'"
