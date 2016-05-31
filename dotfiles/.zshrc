@@ -122,6 +122,14 @@ setopt interactivecomments
 # }}} 拡張子とコマンドを結びつける
 
 # {{{ 関数
+  :copy() {
+    if [ $# -eq 0 ]; then
+      gocopy
+    else
+      echo -n "$@" | gocopy && echo "copied: $@"
+    fi
+  }
+
   :serve() {
     if [ $1 ]; then
       http-server -o -p $1
@@ -136,7 +144,7 @@ setopt interactivecomments
 
   :ff() {
     local result
-    result=$(ag --hidden -g '' | :fzf "$1") && eval "$(realpath $result)"
+    result=$(ag --hidden -g '' | :fzf "$1") && :copy "$(realpath $result)"
   }
 
   :cd() {
@@ -185,7 +193,7 @@ setopt interactivecomments
 
   :favphrase() {
     local result
-    result=$(cat ~/*.favphrase | :fzf "$1") && echo $result && echo $result | gocopy
+    result=$(cat ~/*.favphrase | :fzf "$1") && :copy $result
   }
 # }}} 関数
 
@@ -195,7 +203,7 @@ setopt interactivecomments
   # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
   chpwd() {
     ls
-    echo $(realpath .) >> ~/.cd_history
+    echo "$(realpath .)" >> ~/.cd_history
   }
 
   # preexec
