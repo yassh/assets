@@ -202,7 +202,10 @@ setopt interactivecomments
   # "Executed just after a command has been read and is about to be executed."
   # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
   preexec() {
-    echo $1 >> ~/.cmd_history
+    if [[ $1 =~ "^\s*:e(\s.*)?$" ]]; then
+      return
+    fi
+    echo $3 >> ~/.cmd_history
   }
 # }}} フック
 
