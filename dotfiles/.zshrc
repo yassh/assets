@@ -159,6 +159,15 @@ setopt interactivecomments
     result=$(ghq list 2> /dev/null | :fzf "$1") && cd $(ghq root)/$result
   }
 
+  # https://github.com/junegunn/fzf/wiki/examples#git
+  :gco() {
+    local branches branch
+    branches=$(git branch --all | grep -v HEAD) &&
+    branch=$(echo "$branches" |
+             fzf -q "$1" --reverse -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+    git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+  }
+
   :favcmd() {
     local result
     result=$(cat ~/*.favcmd | :fzf "$1") && eval $result
