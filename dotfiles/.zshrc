@@ -126,7 +126,7 @@ setopt interactivecomments
     if [ $# -eq 0 ]; then
       gocopy
     else
-      echo -n "$@" | gocopy && echo "copied: $@"
+      echo -n "$@" | gocopy && echo "Copied: $@"
     fi
   }
 
@@ -159,7 +159,7 @@ setopt interactivecomments
 
   :e() {
     local result
-    result=$(cat ~/.cmd_history | :tac | :fzf "$1") && echo $result && eval $result
+    result=$(cat ~/.cmd_history | :tac | :fzf "$1") && echo $result >> ~/.cmd_history && echo $result && eval $result
   }
 
   :g() {
