@@ -43,6 +43,11 @@ vmap <Leader>tc <Plug>(caw:hatpos:toggle)
 Plug 'Chiel92/vim-autoformat'
 nnoremap <Leader>af :<C-u>Autoformat<CR>
 
+" https://github.com/tpope/vim-abolish
+" Press crs (coerce to snake_case). MixedCase (crm), camelCase (crc),
+" snake_case (crs), and UPPER_CASE (cru) are all just 3 keystrokes away.
+Plug 'tpope/vim-abolish'
+
 " https://github.com/vim-scripts/copypath.vim
 Plug 'vim-scripts/copypath.vim'
 nnoremap <Leader>cp :<C-u>CopyPath<CR>
