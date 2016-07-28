@@ -44,9 +44,16 @@ Plug 'Chiel92/vim-autoformat'
 nnoremap <Leader>af :<C-u>Autoformat<CR>
 
 " https://github.com/tpope/vim-abolish
-" Press crs (coerce to snake_case). MixedCase (crm), camelCase (crc),
-" snake_case (crs), and UPPER_CASE (cru) are all just 3 keystrokes away.
 Plug 'tpope/vim-abolish'
+" crc: camelCase
+" crm: MixedCase
+" cr_: snake_case
+" crs: snake_case
+" cru: SNAKE_UPPERCASE
+" crU: SNAKE_UPPERCASE
+" cr-: dash-case
+" crk: kebab-case
+" cr.: dot.case
 
 " https://github.com/vim-scripts/copypath.vim
 Plug 'vim-scripts/copypath.vim'
