@@ -75,7 +75,6 @@ setopt interactivecomments
   alias :tac='tail -r' # 入力したすべての行を逆順に表示する。
   alias :t='tldr'
   alias :vv='vim -R' # `-R`はread-onlyモードで開くオプション
-  alias :sn="vim -c 'Simplenote -l'"
 
   alias :q='my-q'
   alias :gol='my-gol'

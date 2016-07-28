@@ -138,18 +138,6 @@ Plug 'scrooloose/syntastic'
 " <Leader>M to open Magit buffer
 Plug 'jreybert/vimagit'
 
-" https://github.com/mrtazz/simplenote.vim
-Plug 'mrtazz/simplenote.vim'
-source ~/.simplenoterc
-"let g:SimplenoteVertical = 1
-"let g:SimplenoteSingleWindow = 1
-"let g:SimplenoteListHeight = 30
-let g:SimplenoteFiletype = "markdown"
-let g:SimplenoteStrftime = "%Y-%m-%d %a %H:%M"
-nnoremap <Leader>S :<C-u>Simplenote -l<CR> " list
-nnoremap <Leader>N :<C-u>Simplenote -n<CR> " add
-nnoremap <Leader>D :<C-u>Simplenote -d<CR> " remove
-
 " https://github.com/pangloss/vim-javascript
 " https://github.com/mxw/vim-jsx
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
