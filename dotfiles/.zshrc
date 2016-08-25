@@ -28,8 +28,8 @@ setopt interactivecomments
 # }}} 環境変数
 
 # {{{ キーバインディング
-  bindkey -v
-  bindkey '^R' history-incremental-pattern-search-backward
+  #bindkey -v # vi mode
+  #bindkey '^R' history-incremental-pattern-search-backward
 # }}} キーバインディング
 
 # {{{ プロンプト
@@ -146,26 +146,6 @@ setopt interactivecomments
     result=$(ag --hidden -g '' | :fzf "$1") && :copy "$(realpath $result)"
   }
 
-  :cd() {
-    local result
-    result=$(find . -type d -maxdepth 1 | :fzf "$1") && cd $result
-  }
-
-  :d() {
-    local result
-    result=$(cat ~/.cd_history | :tac | :fzf "$1") && cd $result
-  }
-
-  :e() {
-    local result
-    result=$(cat ~/.cmd_history | :tac | :fzf "$1") && echo $result >> ~/.cmd_history && echo $result && eval $result
-  }
-
-  :g() {
-    local result
-    result=$(ghq list 2> /dev/null | :fzf "$1") && cd $(ghq root)/$result
-  }
-
   # https://github.com/junegunn/fzf/wiki/examples#git
   :gco() {
     local branches branch
@@ -175,22 +155,42 @@ setopt interactivecomments
     git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
   }
 
-  :favcmd() {
+  :cd() {
     local result
-    result=$(cat ~/*.favcmd | :fzf "$1") && eval $result
+    result=$(find . -type d -maxdepth 1 | :fzf "$1") && cd $result
   }
 
-  :favdir() {
+  :g() {
     local result
-    result=$(cat ~/*.favdir | :fzf "$1") && eval $result
+    result=$(ghq list 2> /dev/null | :fzf "$1") && cd $(ghq root)/$result
   }
 
-  :favurl() {
+  :c() {
+    local result
+    result=$(cat ~/.cmd_history | :tac | :fzf "$1") && print -z $result
+  }
+
+  :d() {
+    local result
+    result=$(cat ~/.cd_history | :tac | :fzf "$1") && cd $result
+  }
+
+  :cmd() {
+    local result
+    result=$(cat ~/*.favcmd | :fzf "$1") && print -z $result
+  }
+
+  :dir() {
+    local result
+    result=$(cat ~/*.favdir | :fzf "$1") && cd $result
+  }
+
+  :url() {
     local result
     result=$(cat ~/*.favurl | :fzf "$1") && open-url $result
   }
 
-  :favphrase() {
+  :phrase() {
     local result
     result=$(cat ~/*.favphrase | :fzf "$1") && :copy $result
   }
@@ -205,14 +205,11 @@ setopt interactivecomments
     echo "$(realpath .)" >> ~/.cd_history
   }
 
-  # preexec
-  # "Executed just after a command has been read and is about to be executed."
+  # zshaddhistory
+  # "Executed when a history line has been read interactively, but before it is executed."
   # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
-  preexec() {
-    if [[ $1 =~ "^\s*:e(\s.*)?$" ]]; then
-      return
-    fi
-    echo $3 >> ~/.cmd_history
+  zshaddhistory() {
+    echo $(echo $1) >> ~/.cmd_history # 改行を潰して保存する
   }
 # }}} フック
 
