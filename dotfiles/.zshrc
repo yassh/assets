@@ -92,6 +92,8 @@ setopt interactivecomments
   alias :gdt='git difftool --dir-diff --no-symlink'
   alias :gc='git commit -v'
 
+  alias :n='npm run'
+
   alias :en='trans :en'
   alias :ja='trans :ja'
   alias :ru='trans :ru'
@@ -153,6 +155,11 @@ setopt interactivecomments
     branch=$(echo "$branches" |
              fzf -q "$1" --reverse -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
     git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+  }
+
+  :ns() {
+    local script
+    script=$(npm run | grep "^  \S" | sed -e "s/^  //g" | :fzf "$1") && npm run $script
   }
 
   :cd() {
