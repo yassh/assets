@@ -119,7 +119,7 @@ setopt interactivecomments
 # }}} エイリアス
 
 # {{{ 拡張子とコマンドを結びつける
-  alias -s {css,html,js,json,md,py,rb,scss,txt}=$EDITOR
+  #alias -s {css,html,js,json,md,py,rb,scss,txt}=$EDITOR # 実行可能なファイルもエディタで開いてしまう問題がある。
 # }}} 拡張子とコマンドを結びつける
 
 # {{{ 関数
