@@ -6,6 +6,7 @@ npm install -g \
 browser-sync \
 csscomb \
 datauri \
+dev-ip \
 fixpack \
 gitopen \
 http-server \
