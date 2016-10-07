@@ -157,6 +157,11 @@ setopt interactivecomments
     git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
   }
 
+  :ios() {
+    local device
+    device=$(xcrun instruments -s | grep "\(Simulator\)" | :fzf "$1") && xcrun instruments -w $device
+  }
+
   :ns() {
     local script
     script=$(npm run | grep "^  \S" | sed -e "s/^  //g" | :fzf "$1") && npm run $script
