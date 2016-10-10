@@ -110,14 +110,8 @@ nnoremap <Leader>sr :<C-u>CtrlSF -R<Space>
 nnoremap <Leader>so :<C-u>CtrlSFOpen<CR>
 nnoremap <Leader>sc :<C-u>CtrlSFClose<CR>
 
-" https://github.com/w0ng/vim-hybrid
-Plug 'w0ng/vim-hybrid'
-
 " https://github.com/NLKNguyen/papercolor-theme
 Plug 'NLKNguyen/papercolor-theme'
-
-" https://github.com/flazz/vim-colorschemes
-Plug 'flazz/vim-colorschemes'
 
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
@@ -188,7 +182,6 @@ endfunction
 nnoremap <Leader>tb :<C-u>call ToggleBackground()<CR>
 
 " カラースキームの設定
-"colorscheme hybrid
 colorscheme PaperColor
 
 " シンタックスハイライト機能を有効にする
