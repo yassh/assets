@@ -116,6 +116,9 @@ Plug 'w0ng/vim-hybrid'
 " https://github.com/NLKNguyen/papercolor-theme
 Plug 'NLKNguyen/papercolor-theme'
 
+" https://github.com/flazz/vim-colorschemes
+Plug 'flazz/vim-colorschemes'
+
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
