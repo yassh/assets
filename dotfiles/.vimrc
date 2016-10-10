@@ -216,7 +216,7 @@ set showcmd
 set list
 
 " 空白文字の設定
-set listchars=tab:--,eol:↵
+set listchars=tab:--,trail:·
 
 " タブを表示するときの幅の設定
 set tabstop=4
