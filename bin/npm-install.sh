@@ -7,6 +7,9 @@ browser-sync \
 csscomb \
 datauri \
 dev-ip \
+eslint \
+eslint-config-airbnb-base \
+eslint-plugin-import \
 fixpack \
 gitopen \
 http-server \

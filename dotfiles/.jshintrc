@@ -1,5 +1,0 @@
-{
-  // This option suppresses warnings about comma-first coding style.
-  // http://www.jshint.com/docs/options/#laxcomma
-  "laxcomma": true
-}

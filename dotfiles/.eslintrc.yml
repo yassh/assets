@@ -1,0 +1,10 @@
+extends: airbnb-base
+rules:
+  camelcase:
+    - off
+  strict:
+    - off
+  no-console:
+    - off
+  no-unused-vars:
+    - off
