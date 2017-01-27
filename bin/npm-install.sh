@@ -15,13 +15,11 @@ gitopen \
 http-server \
 imagemin-cli \
 isutf8 \
-jscs \
 json \
 json2csv \
 jsonlint \
 npm-run-all \
 open-url \
-snpt \
 tldr \
 ;
 
