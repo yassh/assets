@@ -77,7 +77,6 @@ setopt interactivecomments
   alias :vv='vim -R' # `-R`はread-onlyモードで開くオプション
 
   alias :q='my-q'
-  alias :gol='my-gol'
 
   alias :ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias :ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'

@@ -3,7 +3,6 @@
   "bin": {
     "my-hello": "hello.js",
     "my-datauri": "datauri.js",
-    "my-gol": "gol.js",
     "my-q": "q.js"
   },
   "dependencies": {
