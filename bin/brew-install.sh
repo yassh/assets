@@ -5,7 +5,6 @@ echo "brew installを開始します。"
 brew install macvim --with-override-system-vim
 
 brew install \
-ack \
 colordiff \
 coreutils \
 ffmpeg \
@@ -14,13 +13,10 @@ gibo \
 go \
 hub \
 jo \
-nodebrew \
-pyenv \
 the_silver_searcher \
 thefuck \
 tidy-html5 \
 tig \
-tmux \
 translate-shell \
 webkit2png \
 youtube-dl \

@@ -166,11 +166,6 @@ setopt interactivecomments
     script=$(npm run | grep "^  \S" | sed -e "s/^  //g" | :fzf "$1") && npm run $script
   }
 
-  :nb() {
-    local version
-    version=$(nodebrew ls | grep "^v\d" | :tac | :fzf "$1") && nodebrew use $version
-  }
-
   :cd() {
     local result
     result=$(find . -type d -maxdepth 1 | :fzf "$1") && cd $result
