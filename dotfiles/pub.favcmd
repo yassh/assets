@@ -1,3 +1,4 @@
+sudo browser-sync start --port 80 --open external --no-ghost-mode --proxy "localhost:8080"
 git submodule init && git submodule update && git submodule foreach "git checkout master && git pull"
 npm ls --depth=0 -g # グローバルインストールされたnpmモジュールのリストを表示する
 npm outdated -g # 古くなったグローバルインストールされたnpmパッケージがないか、チェックする
