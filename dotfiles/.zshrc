@@ -22,7 +22,7 @@ setopt interactivecomments
   export EDITOR=vim
   export GOPATH=$HOME/.go
   export PATH=$GOPATH/bin:$PATH
-  export PATH=$HOME/.nodebrew/current/bin:$PATH
+  export PATH=$HOME/.anyenv/bin:$PATH
   export PATH=$HOME/assets/bin:$PATH
   export PATH=$HOME/bin:$PATH
 # }}} 環境変数
@@ -233,13 +233,9 @@ setopt interactivecomments
 # https://github.com/nvbn/thefuck
 eval "$(thefuck --alias shit)"
 
-# rbenv
-# https://github.com/rbenv/rbenv
-eval "$(rbenv init -)"
-
-# pyenv
-# https://github.com/yyuu/pyenv
-eval "$(pyenv init -)"
+# anyenv
+# https://github.com/riywo/anyenv
+eval "$(anyenv init -)"
 
 ###-begin-npm-completion-###
 #
