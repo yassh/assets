@@ -186,24 +186,9 @@ setopt interactivecomments
     result=$(cat ~/.cd_history | :tac | :fzf "$1") && cd $result
   }
 
-  :cmd() {
+  :fav() {
     local result
-    result=$(cat ~/*.favcmd | :fzf "$1") && print -z $result
-  }
-
-  :dir() {
-    local result
-    result=$(cat ~/*.favdir | :fzf "$1") && cd $result
-  }
-
-  :url() {
-    local result
-    result=$(cat ~/*.favurl | :fzf "$1") && open-url $result
-  }
-
-  :phrase() {
-    local result
-    result=$(cat ~/*.favphrase | :fzf "$1") && :copy $result
+    result=$(cat ~/.fav_* | :fzf "$1") && print -z $result
   }
 # }}} 関数
 

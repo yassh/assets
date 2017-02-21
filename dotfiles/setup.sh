@@ -8,6 +8,7 @@ __DIR__="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DOT_FILES=(
   .agignore
   .eslintrc.yml
+  .fav_global
   .gitconfig
   .gitignore_global
   .gvimrc
@@ -16,10 +17,6 @@ DOT_FILES=(
   .vimrc
   .zshrc
   emmet
-  pub.favcmd
-  pub.favdir
-  pub.favphrase
-  pub.favurl
 )
 
 for file in ${DOT_FILES[@]}
