@@ -24,9 +24,6 @@ Plug 'terryma/vim-expand-region'
 vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
 
-" https://github.com/terryma/vim-multiple-cursors
-Plug 'terryma/vim-multiple-cursors'
-
 " https://github.com/mattn/webapi-vim
 " https://github.com/mattn/emmet-vim
 Plug 'mattn/webapi-vim' | Plug 'mattn/emmet-vim'
@@ -110,22 +107,12 @@ nnoremap <Leader>sr :<C-u>CtrlSF -R<Space>
 nnoremap <Leader>so :<C-u>CtrlSFOpen<CR>
 nnoremap <Leader>sc :<C-u>CtrlSFClose<CR>
 
-" https://github.com/NLKNguyen/papercolor-theme
-Plug 'NLKNguyen/papercolor-theme'
+" https://github.com/rakr/vim-one
+Plug 'rakr/vim-one'
 
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
-let g:lightline = {
-                \   'colorscheme': 'solarized',
-                \   'active': {
-                \     'left': [ [ 'mode', 'paste' ], [], [ 'readonly', 'relativepath', 'modified' ] ],
-                \     'right': [ [ 'lineinfo' ], [], [ 'fileformat', 'fileencoding', 'filetype' ] ]
-                \   },
-                \   'inactive': {
-                \     'left': [ [], [], [ 'readonly', 'relativepath', 'modified' ] ],
-                \     'right': [ [ 'lineinfo' ], [], [] ]
-                \   }
-                \ }
+let g:lightline = { 'colorscheme': 'one' }
 
 " https://github.com/nathanaelkane/vim-indent-guides
 Plug 'nathanaelkane/vim-indent-guides'
@@ -134,9 +121,6 @@ nmap <Leader>ti <Plug>IndentGuidesToggle
 
 " https://github.com/airblade/vim-gitgutter
 Plug 'airblade/vim-gitgutter'
-
-" https://github.com/scrooloose/syntastic
-Plug 'scrooloose/syntastic'
 
 " https://github.com/jreybert/vimagit
 " <Leader>M to open Magit buffer
@@ -168,6 +152,9 @@ set backspace=indent,eol,start
 " ヤンク／カットしたテキストを他のアプリケーションにペーストできるようにする
 set clipboard+=unnamed
 
+" カラースキームの設定
+colorscheme one
+
 " 背景色の傾向
 set background=light
 
@@ -181,9 +168,6 @@ function! ToggleBackground()
 endfunction
 nnoremap <Leader>tb :<C-u>call ToggleBackground()<CR>
 
-" カラースキームの設定
-colorscheme PaperColor
-
 " シンタックスハイライト機能を有効にする
 syntax enable
 
@@ -191,7 +175,7 @@ syntax enable
 let g:loaded_matchparen = 1
 
 " カレント行をハイライトする
-"set cursorline
+set cursorline
 
 " カレント行に下線を表示しない
 highlight CursorLine cterm=NONE gui=NONE
@@ -251,6 +235,16 @@ set nowritebackup
 
 " undofileの設定
 set noundofile
+
+" 外部のエディタで編集中のファイルが変更されたら、自動的に読み直す
+set autoread
+
+" ウィンドウを移動する度にチェックを行う
+" http://vim-jp.org/vim-users-jp/2011/03/12/Hack-206.html
+augroup vimrc-checktime
+  autocmd!
+  autocmd WinEnter * checktime
+augroup END
 
 " 検索の設定
 set ignorecase
