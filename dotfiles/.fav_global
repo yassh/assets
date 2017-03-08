@@ -3,3 +3,4 @@ git submodule init && git submodule update && git submodule foreach "git checkou
 npm ls --depth=0 -g # グローバルインストールされたnpmモジュールのリストを表示する
 npm outdated -g # 古くなったグローバルインストールされたnpmパッケージがないか、チェックする
 npm update -g # グローバルインストールされたnpmパッケージをすべてアップデートする
+ag --hidden -g ''
