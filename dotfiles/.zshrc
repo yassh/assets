@@ -70,13 +70,15 @@ setopt interactivecomments
 
 # {{{ エイリアス
   alias sudo='sudo '
+
   alias ls='ls -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
   alias ll='ls -a -l -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
   alias ro='vim -R' # `-R`はread-onlyモードで開くオプション
-  alias :tac='tail -r' # 入力したすべての行を逆順に表示する。
-  alias :t='tldr'
 
-  alias :q='my-q'
+  alias :tac='tail -r' # 入力したすべての行を逆順に表示する。
+
+  alias :gitignore='cp ~/assets/configfiles/gitignore ./.gitignore' # FIXME: ~/assets/configfiles/gitignoreを相対パスで記述できないか？
+  alias :editorconfig='cp ~/assets/configfiles/editorconfig ./.editorconfig' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
 
   alias :ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias :ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
@@ -92,6 +94,8 @@ setopt interactivecomments
   alias :gc='git commit -v'
 
   alias :n='npm run'
+  alias :t='tldr'
+  alias :q='my-q'
 
   alias :en='trans :en'
   alias :ja='trans :ja'
