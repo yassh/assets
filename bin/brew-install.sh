@@ -2,9 +2,9 @@
 
 echo "brew installを開始します。"
 
-brew install macvim --with-override-system-vim
+brew upgrade macvim --with-override-system-vim
 
-brew install \
+brew upgrade \
 colordiff \
 coreutils \
 ffmpeg \
