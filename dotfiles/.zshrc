@@ -72,9 +72,9 @@ setopt interactivecomments
   alias sudo='sudo '
   alias ls='ls -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
   alias ll='ls -a -l -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
+  alias ro='vim -R' # `-R`はread-onlyモードで開くオプション
   alias :tac='tail -r' # 入力したすべての行を逆順に表示する。
   alias :t='tldr'
-  alias :vv='vim -R' # `-R`はread-onlyモードで開くオプション
 
   alias :q='my-q'
 
