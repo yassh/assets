@@ -78,9 +78,11 @@ setopt interactivecomments
   alias :tac='tail -r' # 入力したすべての行を逆順に表示する。
 
   alias :gitignore='cat ~/assets/configfiles/gitignore' # FIXME: ~/assets/configfiles/gitignoreを相対パスで記述できないか？
-  alias :.gitignore=':gitignore > .gitignore'
   alias :editorconfig='cat ~/assets/configfiles/editorconfig' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
+  alias :eslintrc='cat ~/assets/configfiles/eslintrc.yml' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
+  alias :.gitignore=':gitignore > .gitignore'
   alias :.editorconfig=':editorconfig > .editorconfig'
+  alias :.eslintrc=':eslintrc > .eslintrc.yml'
 
   alias :ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias :ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
