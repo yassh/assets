@@ -1,6 +1,5 @@
 [user]
-	name = yassh
-	email = yassh32@outlook.jp
+	useConfigOnly = true
 [core]
 	autocrlf = false
 	excludesfile = ~/.gitignore_global
