@@ -1,0 +1,5 @@
+# 登録するときは、次のコマンドを実行せよ：
+# crontab ~/assets/dotfiles/.crontab
+
+# 分  時  日  月  曜日  コマンド
+0,30  *  *  *  *  osascript ~/assets/applescripts/time-notification.js
