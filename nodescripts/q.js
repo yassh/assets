@@ -15,6 +15,7 @@ const argv = require('yargs')
     tatoeba: { alias: 'tt', type: 'boolean', describe: 'Tatoebaで検索する' },
     forvo: { alias: 'fv', type: 'boolean', describe: 'Forvoで検索する' },
     wiktionary: { alias: 'wk', type: 'boolean', describe: 'Wiktionaryで検索する' },
+    graphemica: { alias: 'gr', type: 'boolean', describe: 'Graphemicaで検索する' },
     google: { alias: 'gg', type: 'boolean', describe: 'Googleで検索する' },
   })
   .help('help').alias('help', 'h')
@@ -72,6 +73,12 @@ if (argv.wiktionary) {
   notYet = false;
   const data = { search: query };
   open(`https://en.wiktionary.org/w/index.php?${param(data)}`);
+}
+
+if (argv.graphemica) {
+  notYet = false;
+  const data = { q: query };
+  open(`https://graphemica.com/search?${param(data)}`);
 }
 
 if (argv.google || notYet) {
