@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
-var argv = require("yargs").argv;
-var temp = require("temp");
-var Imagemin = require("imagemin");
-var datauri = require("datauri");
+const argv = require('yargs').argv;
+const temp = require('temp');
+const Imagemin = require('imagemin');
+const datauri = require('datauri');
 
 // Automatically track and cleanup files at exit
 temp.track();
 
-argv._.forEach(function(srcFile, i) {
-  var destDir = temp.mkdirSync();
-  new Imagemin().src(srcFile).dest(destDir).run(function(err, files) {
-    console.log("");
+argv._.forEach((srcFile, i) => {
+  const destDir = temp.mkdirSync();
+  new Imagemin().src(srcFile).dest(destDir).run((err, files) => {
+    console.log('');
     console.log(srcFile);
 
     if (err) {
