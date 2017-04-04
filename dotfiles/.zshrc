@@ -24,6 +24,7 @@ setopt interactivecomments
   export PATH=$GOPATH/bin:$PATH
   export PATH=$HOME/.anyenv/bin:$PATH
   export PATH=$HOME/assets/bin:$PATH
+  export PATH=$HOME/assets/nodescripts:$PATH
   export PATH=$HOME/bin:$PATH
 # }}} 環境変数
 
@@ -99,7 +100,7 @@ setopt interactivecomments
 
   alias :n='npm run'
   alias :t='tldr'
-  alias :q='my-q'
+  alias :q='q.js'
 
   alias :en='trans :en'
   alias :ja='trans :ja'

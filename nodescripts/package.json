@@ -1,11 +1,5 @@
 {
-  "name": "my-nodescripts",
-  "bin": {
-    "my-hello": "hello.js",
-    "my-datauri": "datauri.js",
-    "my-date": "date.js",
-    "my-q": "q.js"
-  },
+  "name": "nodescripts",
   "dependencies": {
     "datauri": "^0.8.0",
     "imagemin": "^4.0.0",
