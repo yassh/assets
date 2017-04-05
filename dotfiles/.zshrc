@@ -185,7 +185,7 @@ setopt interactivecomments
     result=$(ghq list 2> /dev/null | :fzf "$1") && cd $(ghq root)/$result
   }
 
-  :c() {
+  :e() {
     local result
     result=$(cat ~/.cmd_history | :tac | :fzf "$1") && print -z $result
   }
