@@ -118,6 +118,7 @@ setopt interactivecomments
 
   case ${OSTYPE} in
     darwin*) # for OS X
+      alias rm='rmtrash'
       alias coda='open -b com.panic.Coda2'
       alias libre='open -b org.libreoffice.script'
       alias photoshop='open -b com.adobe.Photoshop'

@@ -13,6 +13,7 @@ gibo \
 go \
 hub \
 jo \
+rmtrash \
 the_silver_searcher \
 thefuck \
 tidy-html5 \
