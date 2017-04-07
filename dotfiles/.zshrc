@@ -76,8 +76,6 @@ setopt interactivecomments
   alias ll='ls -a -l --time-style=long-iso'
   alias ro='vim -R' # `-R`はread-onlyモードで開くオプション
 
-  alias :tac='tail -r' # 入力したすべての行を逆順に表示する。
-
   alias :gitignore='cat ~/assets/configfiles/gitignore' # FIXME: ~/assets/configfiles/gitignoreを相対パスで記述できないか？
   alias :editorconfig='cat ~/assets/configfiles/editorconfig' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
   alias :eslintrc='cat ~/assets/configfiles/eslintrc.yml' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
@@ -192,12 +190,12 @@ setopt interactivecomments
 
   :e() {
     local result
-    result=$(cat ~/.cmd_history | :tac | :fzf "$1") && print -z $result
+    result=$(cat ~/.cmd_history | tac | :fzf "$1") && print -z $result
   }
 
   :d() {
     local result
-    result=$(cat ~/.cd_history | :tac | :fzf "$1") && cd $result
+    result=$(cat ~/.cd_history | tac | :fzf "$1") && cd $result
   }
 
   :fav() {
