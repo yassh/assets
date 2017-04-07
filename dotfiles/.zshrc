@@ -72,8 +72,8 @@ setopt interactivecomments
 # {{{ エイリアス
   alias sudo='sudo '
 
-  alias ls='ls -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
-  alias ll='ls -a -l -F -G' # `-F`は記号を付けるオプション、`-G`は色分けするオプション
+  alias ls='ls -F --color' # `-F`は記号を付けるオプション
+  alias ll='ls -a -l --time-style=long-iso'
   alias ro='vim -R' # `-R`はread-onlyモードで開くオプション
 
   alias :tac='tail -r' # 入力したすべての行を逆順に表示する。
@@ -118,6 +118,9 @@ setopt interactivecomments
 
   case ${OSTYPE} in
     darwin*) # for OS X
+      export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+      export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+
       alias rm='rmtrash'
       alias coda='open -b com.panic.Coda2'
       alias libre='open -b org.libreoffice.script'
