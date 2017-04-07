@@ -123,6 +123,7 @@ setopt interactivecomments
       alias libre='open -b org.libreoffice.script'
       alias photoshop='open -b com.adobe.Photoshop'
       alias term='open -b com.googlecode.iterm2'
+      alias e='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
     ;;
   esac
 # }}} エイリアス
