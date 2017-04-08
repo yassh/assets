@@ -3,7 +3,7 @@
 [core]
 	autocrlf = false
 	excludesfile = ~/.gitignore_global
-	editor = vim
+	editor = emacs
 	precomposeunicode = true
 [color]
 	ui = true
