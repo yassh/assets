@@ -156,7 +156,7 @@ set clipboard+=unnamed
 colorscheme one
 
 " 背景色の傾向
-set background=light
+set background=dark
 
 " 背景色の傾向を切り替える
 function! ToggleBackground()
