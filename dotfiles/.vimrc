@@ -130,6 +130,9 @@ Plug 'jreybert/vimagit'
 " https://github.com/mxw/vim-jsx
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
 
+" https://github.com/posva/vim-vue
+Plug 'posva/vim-vue'
+
 " https://github.com/digitaltoad/vim-pug
 Plug 'digitaltoad/vim-pug'
 
