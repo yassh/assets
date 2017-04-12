@@ -13,6 +13,7 @@ gibo \
 go \
 hub \
 jo \
+micro \
 rmtrash \
 the_silver_searcher \
 thefuck \
