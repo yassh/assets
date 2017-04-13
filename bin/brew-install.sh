@@ -2,12 +2,12 @@
 
 echo "brew installを開始します。"
 
+brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265
 brew install macvim --with-override-system-vim
 
 brew install \
 colordiff \
 coreutils \
-ffmpeg \
 fzf \
 gibo \
 go \
