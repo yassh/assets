@@ -12,6 +12,7 @@ DOT_FILES=(
   .gitconfig
   .gitignore_global
   .gvimrc
+  .mpv
   .tigrc
   .vim
   .vimrc
