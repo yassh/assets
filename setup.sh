@@ -10,7 +10,6 @@ if [ ! -e ~/.anyenv ]; then
 fi
 
 $__DIR__/bin/brew-install.sh
-$__DIR__/bin/gem-install.sh
 $__DIR__/bin/go-get.sh
 $__DIR__/bin/npm-install.sh
 
