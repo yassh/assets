@@ -1,3 +1,6 @@
+;; スタートアップメッセージを抑制する
+(setq inhibit-startup-message t)
+
 ;; 行番号を表示する
 (require 'linum)
 (global-linum-mode 1)
