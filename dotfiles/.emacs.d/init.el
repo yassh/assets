@@ -10,3 +10,6 @@
 (require 'whitespace)
 (setq whitespace-style '(face spaces tabs))
 (global-whitespace-mode 1)
+
+;; 対応する括弧を強調表示する
+(show-paren-mode t)
