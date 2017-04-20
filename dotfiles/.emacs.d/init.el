@@ -1,6 +1,9 @@
 ;; スタートアップメッセージを抑制する
 (setq inhibit-startup-message t)
 
+;; バックアップファイルを作成しない
+(setq make-backup-files nil)
+
 ;; 行番号を表示する
 (require 'linum)
 (global-linum-mode 1)
