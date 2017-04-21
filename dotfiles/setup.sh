@@ -43,6 +43,33 @@ do
   fi
 done
 
+DOT_FILES=(
+  fish
+)
+
+for file in ${DOT_FILES[@]}
+do
+  if [ -L ~/.config/$file ]; then
+    continue
+  fi
+
+  if [ -e ~/.config/$file ]; then
+    mv ~/.config/$file ~/.config/$file.backup
+    if [ $? = 0 ]; then
+      echo "~/.config/$file を ~/.config/$file.backup にリネームしました。"
+    else
+      echo "~/.config/$file を ~/.config/$file.backup にリネームできませんでした。"
+    fi
+  fi
+
+  ln -s $__DIR__/$file ~/.config/$file
+  if [ $? = 0 ]; then
+    echo "~/.config/$file に $__DIR__/$file へのシンボリックリンクを作成しました。"
+  else
+    echo "~/.config/$file に $__DIR__/$file へのシンボリックリンクを作成できませんでした。"
+  fi
+done
+
 echo "dotfilesのセットアップを終了します。"
 
 # メモ
