@@ -10,6 +10,7 @@ brew linkapps mpv
 brew install \
 colordiff \
 coreutils \
+fish \
 fzf \
 gibo \
 go \
