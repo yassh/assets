@@ -45,6 +45,7 @@ done
 
 DOT_FILES=(
   fish
+  ranger
 )
 
 for file in ${DOT_FILES[@]}

@@ -17,6 +17,7 @@ go \
 hub \
 jo \
 micro \
+ranger \
 rmtrash \
 the_silver_searcher \
 thefuck \
