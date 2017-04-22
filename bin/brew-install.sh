@@ -4,6 +4,8 @@ echo "brew installを開始します。"
 
 brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265
 brew install macvim --with-override-system-vim
+brew install emacs --with-cocoa --srgb
+brew linkapps emacs
 brew install mpv --with-bundle
 brew linkapps mpv
 
