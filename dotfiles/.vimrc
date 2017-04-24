@@ -71,8 +71,10 @@ Plug 'scrooloose/nerdtree'
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeShowHidden = 1
+let g:NERDTreeWinPos = "right"
 nnoremap <Leader>nt :<C-u>NERDTreeToggle<CR>
 nnoremap <Leader>nf :<C-u>NERDTreeFind<CR>
+autocmd VimEnter * if !argc() | NERDTree | endif " ファイルが指定されずにVimが起動したら、自動的にNERDTreeを開く
 
 " https://github.com/Shougo/vimfiler.vim
 Plug 'Shougo/vimfiler.vim'
