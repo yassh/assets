@@ -65,7 +65,7 @@ setopt interactivecomments
 
   PROMPT='
 %F{yellow}%d%f${vcs_info_msg_0_}
-[%T] %# '
+[%T] '
   RPROMPT='as %F{green}%n@%m%f'
 # }}} プロンプト
 
