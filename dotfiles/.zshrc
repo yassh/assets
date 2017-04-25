@@ -154,9 +154,14 @@ setopt interactivecomments
     fzf -q "$1" --reverse
   }
 
-  :ff() {
+  :f() {
     local result
     result=$(ag --hidden -g '' | :fzf "$1") && :copy "$(realpath $result)"
+  }
+
+  :s() {
+    local result
+    result=$(ag --noheading --nobreak . | :fzf "$1") && $EDITOR $(echo "$result" | perl -p -e 's/^(.*?):(\d+):(.*)$/+$2 $1/')
   }
 
   # https://github.com/junegunn/fzf/wiki/examples#git
