@@ -1,0 +1,2 @@
+# List all available versions
+ndenv install -l
