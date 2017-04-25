@@ -19,7 +19,7 @@ setopt auto_pushd
 setopt interactivecomments
 
 # {{{ 環境変数
-  export EDITOR=emacs
+  export EDITOR=vim
   export GOPATH=$HOME/.go
   export PATH=$GOPATH/bin:$PATH
   export PATH=$HOME/.anyenv/bin:$PATH
