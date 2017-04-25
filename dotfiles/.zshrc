@@ -83,11 +83,10 @@ setopt interactivecomments
   alias :.editorconfig=':editorconfig > .editorconfig'
   alias :.eslintrc=':eslintrc > .eslintrc.yml'
 
-  alias youtube-dl='youtube-dl --verbose' # --verbose: Print various debugging information
   alias :ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias :ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
 
-  alias :gl='git log --graph --decorate --date=iso'
+  alias @='git log -p --graph --decorate --date=iso'
   alias :gf='git fetch'
   alias :gs='git status'
   alias :gd='git diff'
@@ -97,8 +96,6 @@ setopt interactivecomments
   alias :gdt='git difftool --dir-diff --no-symlink'
   alias :gc='git commit -v'
 
-  alias :n='npm run'
-  alias :t='tldr'
   alias :q='q.js'
 
   alias :en='trans :en'
