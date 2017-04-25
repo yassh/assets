@@ -114,7 +114,7 @@ Plug 'rakr/vim-one'
 
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
-let g:lightline = { 'colorscheme': 'one' }
+"let g:lightline = { 'colorscheme': 'one' }
 
 " https://github.com/nathanaelkane/vim-indent-guides
 Plug 'nathanaelkane/vim-indent-guides'
@@ -233,7 +233,7 @@ set foldlevelstart=100
 set sidescroll=1
 
 " カーソルの上または下に表示する最小限の行数
-set scrolloff=3
+set scrolloff=6
 
 " スワップファイルの設定
 set noswapfile
