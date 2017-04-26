@@ -63,6 +63,28 @@ vmap <Leader>o <Plug>(openbrowser-smart-search)
 " https://github.com/kannokanno/previm
 Plug 'kannokanno/previm'
 
+" https://github.com/dyng/ctrlsf.vim
+Plug 'dyng/ctrlsf.vim'
+let g:ctrlsf_auto_close = 0
+nmap <Leader>ss <Plug>CtrlSFPrompt
+vmap <Leader>ss <Plug>CtrlSFVwordPath
+nnoremap <Leader>sr :<C-u>CtrlSF -R<Space>
+nnoremap <Leader>so :<C-u>CtrlSFOpen<CR>
+nnoremap <Leader>sc :<C-u>CtrlSFClose<CR>
+
+" https://github.com/ctrlpvim/ctrlp.vim
+Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_map = '<Nop>'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|\.DS_Store|Thumbs\.db|node_modules)$'
+let g:ctrlp_working_path_mode = 'w' " begin finding a root from the current working directory
+nnoremap <Leader>ff :<C-u>CtrlP<CR>
+
+" https://github.com/fisadev/vim-ctrlp-cmdpalette
+Plug 'fisadev/vim-ctrlp-cmdpalette'
+"let g:ctrlp_cmdpalette_execute = 1 " selected command to be executed
+nnoremap <Leader>p :<C-u>CtrlPCmdPalette<CR>
+
 " https://github.com/scrooloose/nerdtree
 Plug 'scrooloose/nerdtree'
 let g:NERDTreeChDirMode = 2
@@ -84,28 +106,6 @@ nnoremap <Leader>uh :<C-u>Unite file_mru<CR>
 Plug 'Shougo/neoyank.vim'
 nnoremap <Leader>uy :<C-u>Unite history/yank -default-action=append<CR>
 nnoremap <Leader>uY :<C-u>Unite history/yank<CR>
-
-" https://github.com/ctrlpvim/ctrlp.vim
-Plug 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_map = '<Nop>'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|\.DS_Store|Thumbs\.db|node_modules)$'
-let g:ctrlp_working_path_mode = 'w' " begin finding a root from the current working directory
-nnoremap <Leader>ff :<C-u>CtrlP<CR>
-
-" https://github.com/fisadev/vim-ctrlp-cmdpalette
-Plug 'fisadev/vim-ctrlp-cmdpalette'
-"let g:ctrlp_cmdpalette_execute = 1 " selected command to be executed
-nnoremap <Leader>p :<C-u>CtrlPCmdPalette<CR>
-
-" https://github.com/dyng/ctrlsf.vim
-Plug 'dyng/ctrlsf.vim'
-let g:ctrlsf_auto_close = 0
-nmap <Leader>ss <Plug>CtrlSFPrompt
-vmap <Leader>ss <Plug>CtrlSFVwordPath
-nnoremap <Leader>sr :<C-u>CtrlSF -R<Space>
-nnoremap <Leader>so :<C-u>CtrlSFOpen<CR>
-nnoremap <Leader>sc :<C-u>CtrlSFClose<CR>
 
 " https://github.com/rakr/vim-one
 Plug 'rakr/vim-one'
