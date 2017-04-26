@@ -54,8 +54,6 @@ Plug 'tpope/vim-abolish'
 
 " https://github.com/vim-scripts/copypath.vim
 Plug 'vim-scripts/copypath.vim'
-nnoremap <Leader>cp :<C-u>CopyPath<CR>
-nnoremap <Leader>cn :<C-u>CopyFileName<CR>
 
 " https://github.com/tyru/open-browser.vim
 Plug 'tyru/open-browser.vim'
@@ -64,7 +62,6 @@ vmap <Leader>o <Plug>(openbrowser-smart-search)
 
 " https://github.com/kannokanno/previm
 Plug 'kannokanno/previm'
-nnoremap <Leader>pv :<C-u>PrevimOpen<CR>
 
 " https://github.com/scrooloose/nerdtree
 Plug 'scrooloose/nerdtree'
@@ -75,11 +72,6 @@ let g:NERDTreeWinPos = "right"
 nnoremap <Leader>nt :<C-u>NERDTreeToggle<CR>
 nnoremap <Leader>nf :<C-u>NERDTreeFind<CR>
 autocmd VimEnter * if !argc() | NERDTree | endif " ファイルが指定されずにVimが起動したら、自動的にNERDTreeを開く
-
-" https://github.com/Shougo/vimfiler.vim
-Plug 'Shougo/vimfiler.vim'
-let g:vimfiler_as_default_explorer = 1
-nnoremap <Leader>vf :<C-u>VimFiler<CR>
 
 " https://github.com/Shougo/unite.vim
 Plug 'Shougo/unite.vim'
@@ -100,6 +92,11 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|\.DS_Store|Thumbs\.db|node_modules)$'
 let g:ctrlp_working_path_mode = 'w' " begin finding a root from the current working directory
 nnoremap <Leader>ff :<C-u>CtrlP<CR>
+
+" https://github.com/fisadev/vim-ctrlp-cmdpalette
+Plug 'fisadev/vim-ctrlp-cmdpalette'
+"let g:ctrlp_cmdpalette_execute = 1 " selected command to be executed
+nnoremap <Leader>p :<C-u>CtrlPCmdPalette<CR>
 
 " https://github.com/dyng/ctrlsf.vim
 Plug 'dyng/ctrlsf.vim'
