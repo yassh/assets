@@ -55,7 +55,7 @@ Plug 'tpope/vim-abolish'
 " https://github.com/vim-scripts/copypath.vim
 Plug 'vim-scripts/copypath.vim'
 nnoremap <Leader>cp :<C-u>CopyPath<CR>
-nnoremap <Leader>cf :<C-u>CopyFileName<CR>
+nnoremap <Leader>cn :<C-u>CopyFileName<CR>
 
 " https://github.com/tyru/open-browser.vim
 Plug 'tyru/open-browser.vim'
@@ -90,7 +90,8 @@ nnoremap <Leader>uh :<C-u>Unite file_mru<CR>
 
 " https://github.com/Shougo/neoyank.vim
 Plug 'Shougo/neoyank.vim'
-nnoremap <Leader>uy :<C-u>Unite history/yank<CR>
+nnoremap <Leader>uy :<C-u>Unite history/yank -default-action=append<CR>
+nnoremap <Leader>uY :<C-u>Unite history/yank<CR>
 
 " https://github.com/ctrlpvim/ctrlp.vim
 Plug 'ctrlpvim/ctrlp.vim'
@@ -163,16 +164,6 @@ colorscheme one
 " 背景色の傾向
 set background=dark
 
-" 背景色の傾向を切り替える
-function! ToggleBackground()
-  if &background == 'light'
-    set background=dark
-  else
-    set background=light
-  endif
-endfunction
-nnoremap <Leader>tb :<C-u>call ToggleBackground()<CR>
-
 " シンタックスハイライト機能を有効にする
 syntax enable
 
@@ -207,7 +198,7 @@ set tabstop=2
 set shiftwidth=2
 
 " タブの代わりにスペースを挿入する
-" タブはCTRL-V<Tab>で挿入できる
+" ※タブはCTRL-V<Tab>で挿入できる
 set expandtab
 
 " 折り返さない
@@ -271,7 +262,7 @@ nnoremap <Leader><Leader> :<C-u>noh<CR>
 " http://www.johnhawthorn.com/2012/09/vi-escape-delays/
 set timeoutlen=1000 ttimeoutlen=0
 
-nnoremap <Leader>pp :<C-u>echo expand("%:p")<CR>
-nnoremap <Leader>rv :<C-u>tab sview ~/.vimrc<CR>
-nnoremap <Leader>re :<C-u>tabe ~/.vimrc<CR>
-nnoremap <Leader>rr :<C-u>source ~/.vimrc<CR>
+:command! EchoPath :echo expand("%:p")
+:command! VimrcView :tab sview ~/.vimrc " http://vim-jp.org/vimdoc-ja/tabpage.html#:tab http://vim-jp.org/vimdoc-ja/windows.html#:sview
+:command! VimrcEdit :tabe ~/.vimrc " http://vim-jp.org/vimdoc-ja/tabpage.html#:tabe
+:command! VimrcReload :source ~/.vimrc
