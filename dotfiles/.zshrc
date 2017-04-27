@@ -78,6 +78,7 @@ setopt interactivecomments
 
   alias :copy='copy.sh'
   alias :fzf='fzf.sh'
+  alias :serve='serve.sh'
   alias :q='q.js'
 
   alias :gitignore='cat ~/assets/configfiles/gitignore' # FIXME: ~/assets/configfiles/gitignoreを相対パスで記述できないか？
@@ -133,14 +134,6 @@ setopt interactivecomments
 # }}} 拡張子とコマンドを結びつける
 
 # {{{ 関数
-  :serve() {
-    if [ $1 ]; then
-      http-server -o -p $1
-    else
-      http-server -o
-    fi
-  }
-
   :f() {
     local result
     result=$(ag --hidden -g '' | :fzf "$1") && :copy "$(realpath $result)"

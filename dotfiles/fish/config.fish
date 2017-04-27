@@ -8,6 +8,7 @@ alias ll='ls -a -l --time-style=long-iso'
 
 alias :copy='copy.sh'
 alias :fzf='fzf.sh'
+alias :serve='serve.sh'
 alias :q='q.js'
 
 alias :gitignore='cat ~/assets/configfiles/gitignore' # FIXME: ~/assets/configfiles/gitignoreを相対パスで記述できないか？
