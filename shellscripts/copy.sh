@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]; then
+if test $# -eq 0; then
   gocopy
 else
   echo -n "$*" | gocopy && echo "Copied: $*" # *1
