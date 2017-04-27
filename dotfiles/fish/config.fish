@@ -1,5 +1,9 @@
 # https://fishshell.com/docs/current/
 
+set __fish_git_prompt_showdirtystate yes
+set __fish_git_prompt_showuntrackedfiles yes
+set __fish_git_prompt_showcolorhints yes
+
 set PATH $HOME/.anyenv/bin $PATH
 set PATH $HOME/assets/bin $PATH
 set PATH $HOME/assets/nodescripts $PATH
