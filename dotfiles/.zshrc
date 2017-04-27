@@ -76,8 +76,9 @@ setopt interactivecomments
   alias ll='ls -a -l --time-style=long-iso'
   alias ro='vim -R' # `-R`はread-onlyモードで開くオプション
 
-  alias :q='q.js'
+  alias :copy='copy.sh'
   alias :fzf='fzf.sh'
+  alias :q='q.js'
 
   alias :gitignore='cat ~/assets/configfiles/gitignore' # FIXME: ~/assets/configfiles/gitignoreを相対パスで記述できないか？
   alias :editorconfig='cat ~/assets/configfiles/editorconfig' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
@@ -132,14 +133,6 @@ setopt interactivecomments
 # }}} 拡張子とコマンドを結びつける
 
 # {{{ 関数
-  :copy() {
-    if [ $# -eq 0 ]; then
-      gocopy
-    else
-      echo -n "$@" | gocopy && echo "Copied: $@"
-    fi
-  }
-
   :serve() {
     if [ $1 ]; then
       http-server -o -p $1

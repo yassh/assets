@@ -6,8 +6,9 @@ set PATH $HOME/assets/nodescripts $PATH
 
 alias ll='ls -a -l --time-style=long-iso'
 
-alias :q='q.js'
+alias :copy='copy.sh'
 alias :fzf='fzf.sh'
+alias :q='q.js'
 
 alias :gitignore='cat ~/assets/configfiles/gitignore' # FIXME: ~/assets/configfiles/gitignoreを相対パスで記述できないか？
 alias :editorconfig='cat ~/assets/configfiles/editorconfig' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
