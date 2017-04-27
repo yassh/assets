@@ -7,5 +7,5 @@ function fish_prompt
     echo (set_color yellow)(pwd)(set_color normal)
   end
 
-  echo "fish> "
+  echo (date +'%Y-%m-%d %H:%M')"> "
 end
