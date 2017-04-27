@@ -76,6 +76,9 @@ setopt interactivecomments
   alias ll='ls -a -l --time-style=long-iso'
   alias ro='vim -R' # `-R`はread-onlyモードで開くオプション
 
+  alias :q='q.js'
+  alias :fzf='fzf.sh'
+
   alias :gitignore='cat ~/assets/configfiles/gitignore' # FIXME: ~/assets/configfiles/gitignoreを相対パスで記述できないか？
   alias :editorconfig='cat ~/assets/configfiles/editorconfig' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
   alias :eslintrc='cat ~/assets/configfiles/eslintrc.yml' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
@@ -95,8 +98,6 @@ setopt interactivecomments
   alias :gdcn='git diff --cached --name-only'
   alias :gdt='git difftool --dir-diff --no-symlink'
   alias :gc='git commit -v'
-
-  alias :q='q.js'
 
   alias :en='trans :en'
   alias :ja='trans :ja'
@@ -145,10 +146,6 @@ setopt interactivecomments
     else
       http-server -o
     fi
-  }
-
-  :fzf() {
-    fzf -q "$1" --reverse
   }
 
   :f() {
