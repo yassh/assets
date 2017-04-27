@@ -30,8 +30,6 @@ alias :gdcn='git diff --cached --name-only'
 alias :gdt='git difftool --dir-diff --no-symlink'
 alias :gc='git commit -v'
 
-alias :q='q.js'
-
 alias :en='trans :en'
 alias :ja='trans :ja'
 alias :ru='trans :ru'
