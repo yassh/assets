@@ -1,8 +1,14 @@
 # https://fishshell.com/docs/current/
 
-set __fish_git_prompt_showdirtystate yes
-set __fish_git_prompt_showuntrackedfiles yes
+set __fish_git_prompt_show_informative_status yes
 set __fish_git_prompt_showcolorhints yes
+
+set ___fish_git_prompt_char_dirtystate 'U'
+set ___fish_git_prompt_char_stagedstate 'C'
+set ___fish_git_prompt_char_untrackedfiles 'N'
+set ___fish_git_prompt_char_upstream_behind '-'
+set ___fish_git_prompt_char_upstream_ahead '+'
+set ___fish_git_prompt_char_cleanstate '-'
 
 set PATH $HOME/.anyenv/bin $PATH
 set PATH $HOME/assets/bin $PATH
