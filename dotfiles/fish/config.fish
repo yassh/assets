@@ -8,6 +8,7 @@ alias ll='ls -a -l --time-style=long-iso'
 
 alias :copy='copy.sh'
 alias :fzf='fzf.sh'
+alias :ghq='ghq.sh'
 alias :serve='serve.sh'
 alias :q='q.js'
 
@@ -44,3 +45,7 @@ alias ru:ja='trans ru:ja'
 alias ie9='VBoxManage startvm "IE9 - Win7"'
 alias ie10='VBoxManage startvm "IE10 - Win7"'
 alias ie11='VBoxManage startvm "IE11 - Win7"'
+
+function :g
+  :ghq $argv | read --local result; and cd $result
+end

@@ -78,6 +78,7 @@ setopt interactivecomments
 
   alias :copy='copy.sh'
   alias :fzf='fzf.sh'
+  alias :ghq='ghq.sh'
   alias :serve='serve.sh'
   alias :q='q.js'
 
@@ -169,8 +170,10 @@ setopt interactivecomments
   }
 
   :g() {
-    local result
-    result=$(ghq list 2> /dev/null | :fzf "$1") && cd $(ghq root)/$result
+    local result=$(:ghq "$*")
+    if [ -n "$result" ]; then
+      cd "$result"
+    fi
   }
 
   :e() {
