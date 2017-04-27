@@ -23,7 +23,7 @@ setopt interactivecomments
   export GOPATH=$HOME/.go
   export PATH=$GOPATH/bin:$PATH
   export PATH=$HOME/.anyenv/bin:$PATH
-  export PATH=$HOME/assets/bin:$PATH
+  export PATH=$HOME/assets/shellscripts:$PATH
   export PATH=$HOME/assets/nodescripts:$PATH
   export PATH=$HOME/bin:$PATH
 # }}} 環境変数

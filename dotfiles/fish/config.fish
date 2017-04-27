@@ -11,7 +11,7 @@ set ___fish_git_prompt_char_upstream_ahead '+'
 set ___fish_git_prompt_char_cleanstate '-'
 
 set PATH $HOME/.anyenv/bin $PATH
-set PATH $HOME/assets/bin $PATH
+set PATH $HOME/assets/shellscripts $PATH
 set PATH $HOME/assets/nodescripts $PATH
 
 alias ll='ls -a -l --time-style=long-iso'
