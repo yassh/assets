@@ -74,7 +74,6 @@ setopt interactivecomments
 
   alias ls='ls -F --color' # `-F`は記号を付けるオプション
   alias ll='ls -a -l --time-style=long-iso'
-  alias ro='vim -R' # `-R`はread-onlyモードで開くオプション
 
   alias :copy='copy.sh'
   alias :fzf='fzf.sh'
