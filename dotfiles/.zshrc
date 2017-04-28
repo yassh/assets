@@ -79,6 +79,7 @@ setopt interactivecomments
   alias :copy='copy.sh'
   alias :fzf='fzf.sh'
   alias :ghq='ghq.sh'
+  alias :npm='npm.sh'
   alias :serve='serve.sh'
   alias :q='q.js'
 
@@ -157,11 +158,6 @@ setopt interactivecomments
   :ios() {
     local device
     device=$(xcrun instruments -s | grep "\(Simulator\)" | :fzf "$1") && xcrun instruments -w $device
-  }
-
-  :nr() {
-    local script
-    script=$(npm run | grep "^  \S" | sed -e "s/^  //g" | :fzf "$1") && npm run $script
   }
 
   :cd() {

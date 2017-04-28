@@ -19,6 +19,7 @@ alias ll='ls -a -l --time-style=long-iso'
 alias :copy='copy.sh'
 alias :fzf='fzf.sh'
 alias :ghq='ghq.sh'
+alias :npm='npm.sh'
 alias :serve='serve.sh'
 alias :q='q.js'
 
