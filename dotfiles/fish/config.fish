@@ -11,9 +11,13 @@ set ___fish_git_prompt_char_upstream_ahead '+'
 set ___fish_git_prompt_char_cleanstate '-'
 
 # {{{ 環境変数
-  set PATH $HOME/.anyenv/bin $PATH
-  set PATH $HOME/assets/shellscripts $PATH
-  set PATH $HOME/assets/nodescripts $PATH
+  set -x EDITOR vim
+  set -x GOPATH ~/.go
+  set -x PATH $GOPATH/bin $PATH
+  set -x PATH ~/.anyenv/bin $PATH
+  set -x PATH ~/assets/shellscripts $PATH
+  set -x PATH ~/assets/nodescripts $PATH
+  set -x PATH ~/bin $PATH
 # }}} 環境変数
 
 # {{{ エイリアス

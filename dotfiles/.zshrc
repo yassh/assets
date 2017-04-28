@@ -20,12 +20,12 @@ setopt interactivecomments
 
 # {{{ 環境変数
   export EDITOR=vim
-  export GOPATH=$HOME/.go
+  export GOPATH=~/.go
   export PATH=$GOPATH/bin:$PATH
-  export PATH=$HOME/.anyenv/bin:$PATH
-  export PATH=$HOME/assets/shellscripts:$PATH
-  export PATH=$HOME/assets/nodescripts:$PATH
-  export PATH=$HOME/bin:$PATH
+  export PATH=~/.anyenv/bin:$PATH
+  export PATH=~/assets/shellscripts:$PATH
+  export PATH=~/assets/nodescripts:$PATH
+  export PATH=~/bin:$PATH
 # }}} 環境変数
 
 # {{{ キーバインディング
