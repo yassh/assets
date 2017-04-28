@@ -70,3 +70,20 @@ set ___fish_git_prompt_char_cleanstate '-'
     :ghq $argv | read --local result; and cd $result
   end
 # }}} 関数
+
+# {{{ イベントハンドラ
+  # 実行されたコマンドを~/.cmd_historyに記録する
+  function on_fish_postexec --on-event fish_postexec
+    # 空なら記録しない
+    if test -z $argv
+      return
+    end
+
+    # 2行以上なら記録しない
+    if test (echo $argv | wc -l) -ge 2
+      return
+    end
+
+    echo $argv >> ~/.cmd_history
+  end
+# }}} イベントハンドラ
