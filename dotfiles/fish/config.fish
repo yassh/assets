@@ -66,8 +66,20 @@ set ___fish_git_prompt_char_cleanstate '-'
 # }}} エイリアス
 
 # {{{ 関数
+  function :cd
+    find . -type d -maxdepth 1 | :fzf $argv | read --local result; and cd $result
+  end
+
   function :g
     :ghq $argv | read --local result; and cd $result
+  end
+
+  function :e
+    cat ~/.cmd_history | tac | :fzf $argv | read --local result; and commandline $result
+  end
+
+  function :d
+    cat ~/.cd_history | tac | :fzf $argv | read --local result; and cd $result
   end
 # }}} 関数
 
