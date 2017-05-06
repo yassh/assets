@@ -65,7 +65,7 @@ setopt interactivecomments
 
   PROMPT='
 %F{yellow}%d%f${vcs_info_msg_0_}
-%D{%Y-%m-%d %H:%M}> '
+%D{%Y-%m-%d %H:%M} zsh> '
   RPROMPT='as %F{green}%n@%m%f'
 # }}} プロンプト
 
