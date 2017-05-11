@@ -10,8 +10,6 @@
 	addall = add -A :/
 [help]
 	autocorrect = 1
-[http]
-	sslVerify = false
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
