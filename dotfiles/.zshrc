@@ -19,7 +19,7 @@ setopt auto_pushd
 setopt interactivecomments
 
 # {{{ 環境変数
-  export EDITOR=vim
+  export EDITOR='emacs -nw'
   export GOPATH=~/.go
   export PATH=$GOPATH/bin:$PATH
   export PATH=~/.anyenv/bin:$PATH
@@ -27,11 +27,6 @@ setopt interactivecomments
   export PATH=~/assets/nodescripts:$PATH
   export PATH=~/bin:$PATH
 # }}} 環境変数
-
-# {{{ キーバインディング
-  #bindkey -v # vi mode
-  #bindkey '^R' history-incremental-pattern-search-backward
-# }}} キーバインディング
 
 # {{{ プロンプト
   # vcs_infoを読み込む
@@ -75,12 +70,14 @@ setopt interactivecomments
   alias ls='ls -F --color' # `-F`は記号を付けるオプション
   alias ll='ls -a -l --time-style=long-iso'
 
+  alias e=$EDITOR
+  alias q='q.js'
+
   alias :copy='copy.sh'
   alias :fzf='fzf.sh'
   alias :ghq='ghq.sh'
   alias :npm='npm.sh'
   alias :serve='serve.sh'
-  alias :q='q.js'
 
   alias :gitignore='cat ~/assets/configfiles/gitignore' # FIXME: ~/assets/configfiles/gitignoreを相対パスで記述できないか？
   alias :editorconfig='cat ~/assets/configfiles/editorconfig' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
