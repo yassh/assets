@@ -95,6 +95,10 @@ set ___fish_git_prompt_char_cleanstate '-'
   function :d
     cat ~/.cd_history | tac | :fzf $argv | read --local result; and cd $result
   end
+
+  function :fav
+    cat ~/.fav_* | tac | :fzf $argv | read --local result; and commandline $result
+  end
 # }}} 関数
 
 # {{{ イベントハンドラ
