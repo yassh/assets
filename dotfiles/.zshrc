@@ -26,6 +26,11 @@ setopt interactivecomments
   export PATH=~/assets/shellscripts:$PATH
   export PATH=~/assets/nodescripts:$PATH
   export PATH=~/bin:$PATH
+
+  if test $(uname) = 'Darwin'; then
+    export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+    export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+  fi
 # }}} 環境変数
 
 # {{{ プロンプト
@@ -113,16 +118,10 @@ setopt interactivecomments
   alias ie10='VBoxManage startvm "IE10 - Win7"'
   alias ie11='VBoxManage startvm "IE11 - Win7"'
 
-  case ${OSTYPE} in
-    darwin*) # for OS X
-      export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-      export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
-
-      alias rm='rmtrash'
-      alias photoshop='open -b com.adobe.Photoshop'
-      alias term='open -b com.googlecode.iterm2'
-    ;;
-  esac
+  if test $(uname) = 'Darwin'; then
+    alias rm='rmtrash'
+    alias photoshop='open -b com.adobe.Photoshop'
+  fi
 # }}} エイリアス
 
 # {{{ 拡張子とコマンドを結びつける

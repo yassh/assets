@@ -18,9 +18,15 @@ set ___fish_git_prompt_char_cleanstate '-'
   set -x PATH ~/assets/shellscripts $PATH
   set -x PATH ~/assets/nodescripts $PATH
   set -x PATH ~/bin $PATH
+
+  if test (uname) = "Darwin"
+    set -x PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
+    set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
+  end
 # }}} 環境変数
 
 # {{{ エイリアス
+  alias ls='ls -F --color' # `-F`は記号を付けるオプション
   alias ll='ls -a -l --time-style=long-iso'
 
   alias e=$EDITOR
@@ -66,6 +72,11 @@ set ___fish_git_prompt_char_cleanstate '-'
   alias ie9='VBoxManage startvm "IE9 - Win7"'
   alias ie10='VBoxManage startvm "IE10 - Win7"'
   alias ie11='VBoxManage startvm "IE11 - Win7"'
+
+  if test (uname) = 'Darwin'
+    alias rm='rmtrash'
+    alias photoshop='open -b com.adobe.Photoshop'
+  end
 # }}} エイリアス
 
 # {{{ 関数
