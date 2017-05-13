@@ -33,42 +33,6 @@ setopt interactivecomments
   fi
 # }}} 環境変数
 
-# {{{ プロンプト
-  # vcs_infoを読み込む
-  autoload -Uz vcs_info
-
-  +vi-git-info() {
-    hook_com[misc]+=" | $(git rev-list --count @{u}..HEAD 2> /dev/null)-$(git rev-list --count HEAD..@{u} 2> /dev/null) | $(git config user.name) <$(git config user.email)>"
-  }
-
-  zstyle ':vcs_info:git:*' check-for-changes true
-  zstyle ':vcs_info:git:*' unstagedstr " | %F{red}U%f"
-  zstyle ':vcs_info:git:*' stagedstr " | %F{green}C%f"
-  zstyle ':vcs_info:git+set-message:*' hooks git-info
-  zstyle ':vcs_info:git:*' formats " %b%u%c%m"
-  zstyle ':vcs_info:git:*' actionformats  " %b | %F{red}%a%f%u%c%m"
-
-  _vcs_precmd() {
-    vcs_info
-  }
-
-  # precmdフックで_vcs_precmd関数を実行する
-  #
-  # add-zsh-hook
-  # http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Manipulating-Hook-Functions
-  # precmd
-  # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
-  add-zsh-hook precmd _vcs_precmd
-
-  # PROMPT変数内で変数展開をする
-  setopt prompt_subst
-
-  PROMPT='
-%F{yellow}%d%f${vcs_info_msg_0_}
-%D{%Y-%m-%d %H:%M}> '
-  RPROMPT='as %F{green}%n@%m%f'
-# }}} プロンプト
-
 # {{{ エイリアス
   alias sudo='sudo '
 
@@ -124,10 +88,6 @@ setopt interactivecomments
   fi
 # }}} エイリアス
 
-# {{{ 拡張子とコマンドを結びつける
-  #alias -s {css,html,js,json,md,py,rb,scss,txt}=$EDITOR # 実行可能なファイルもエディタで開いてしまう問題がある。
-# }}} 拡張子とコマンドを結びつける
-
 # {{{ 関数
   :f() {
     local result
@@ -180,6 +140,42 @@ setopt interactivecomments
     result=$(cat ~/.fav_* | :fzf "$1") && print -z $result
   }
 # }}} 関数
+
+# {{{ プロンプト
+  # vcs_infoを読み込む
+  autoload -Uz vcs_info
+
+  +vi-git-info() {
+    hook_com[misc]+=" | $(git rev-list --count @{u}..HEAD 2> /dev/null)-$(git rev-list --count HEAD..@{u} 2> /dev/null) | $(git config user.name) <$(git config user.email)>"
+  }
+
+  zstyle ':vcs_info:git:*' check-for-changes true
+  zstyle ':vcs_info:git:*' unstagedstr " | %F{red}U%f"
+  zstyle ':vcs_info:git:*' stagedstr " | %F{green}C%f"
+  zstyle ':vcs_info:git+set-message:*' hooks git-info
+  zstyle ':vcs_info:git:*' formats " %b%u%c%m"
+  zstyle ':vcs_info:git:*' actionformats  " %b | %F{red}%a%f%u%c%m"
+
+  _vcs_precmd() {
+    vcs_info
+  }
+
+  # precmdフックで_vcs_precmd関数を実行する
+  #
+  # add-zsh-hook
+  # http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Manipulating-Hook-Functions
+  # precmd
+  # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
+  add-zsh-hook precmd _vcs_precmd
+
+  # PROMPT変数内で変数展開をする
+  setopt prompt_subst
+
+  PROMPT='
+%F{yellow}%d%f${vcs_info_msg_0_}
+%D{%Y-%m-%d %H:%M}> '
+  RPROMPT='as %F{green}%n@%m%f'
+# }}} プロンプト
 
 # {{{ フック
   # chpwd
