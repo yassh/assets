@@ -72,6 +72,8 @@ brew install youtube-dl
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew cask install airmail-beta
+brew cask install appcleaner
+brew cask install ccleaner
 brew cask install firefox --language=ja
 brew cask install fork
 brew cask install google-chrome
