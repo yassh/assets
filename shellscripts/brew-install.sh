@@ -56,7 +56,6 @@ brew install fish
 brew install fzf
 brew install go
 brew install hub
-brew install macvim --with-override-system-vim && brew linkapps macvim
 brew install micro
 brew install mpv --with-bundle && brew linkapps mpv
 brew install ranger
@@ -65,6 +64,7 @@ brew install the_silver_searcher
 brew install thefuck
 brew install tig
 brew install translate-shell
+brew install vim
 brew install webkit2png
 brew install youtube-dl
 
@@ -77,6 +77,7 @@ brew cask install fork
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install iterm2-beta
+brew cask install macvim
 brew cask install simplenote
 brew cask install sublime-text
 brew cask install ubar
