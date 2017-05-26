@@ -2,6 +2,8 @@
 
 echo "brew installを開始します。"
 
+brew update
+
 brew install ffmpeg \
 --with-chromaprint \
 --with-fdk-aac \
@@ -75,5 +77,19 @@ translate-shell \
 webkit2png \
 youtube-dl \
 ;
+
+# https://github.com/caskroom/homebrew-cask/blob/master/USAGE.md
+brew tap caskroom/cask
+brew tap caskroom/versions
+brew cask install airmail-beta
+brew cask install firefox --language=ja
+brew cask install fork
+brew cask install google-chrome
+brew cask install google-chrome-canary
+brew cask install iterm2-beta
+brew cask install simplenote
+brew cask install sublime-text
+brew cask install ubar
+brew cask install visual-studio-code
 
 echo "brew installを終了します。"
