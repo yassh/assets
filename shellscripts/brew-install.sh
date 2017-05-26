@@ -71,6 +71,7 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 brew cask install airmail-beta
 brew cask install appcleaner
+brew cask install beyond-compare
 brew cask install ccleaner
 brew cask install emacs
 brew cask install firefox --language=ja
@@ -83,6 +84,7 @@ brew cask install mpv
 brew cask install simplenote
 brew cask install sublime-text
 brew cask install ubar
+brew cask install virtualbox
 brew cask install visual-studio-code
 
 echo "brew installを終了します。"
