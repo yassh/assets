@@ -49,7 +49,7 @@ set ___fish_git_prompt_char_cleanstate '-'
   alias :ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias :ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
 
-  alias @='git log -p --graph --decorate --date=iso'
+  alias :gl='git log -p --graph --decorate --date=iso'
   alias :gf='git fetch'
   alias :gs='git status'
   alias :gd='git diff'
@@ -58,6 +58,8 @@ set ___fish_git_prompt_char_cleanstate '-'
   alias :gdcn='git diff --cached --name-only'
   alias :gdt='git difftool --dir-diff --no-symlink'
   alias :gc='git commit -v'
+  alias @=:gd
+  alias @@=:gdc
 
   alias :en='trans :en'
   alias :ja='trans :ja'
