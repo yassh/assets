@@ -93,7 +93,7 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeWinPos = "right"
 nnoremap <Leader>nt :<C-u>NERDTreeToggle<CR>
 nnoremap <Leader>nf :<C-u>NERDTreeFind<CR>
-autocmd VimEnter * if !argc() | NERDTree | endif " ファイルが指定されずにVimが起動したら、自動的にNERDTreeを開く
+"autocmd VimEnter * if !argc() | NERDTree | endif " ファイルが指定されずにVimが起動したら、自動的にNERDTreeを開く
 
 " https://github.com/Shougo/unite.vim
 Plug 'Shougo/unite.vim'
