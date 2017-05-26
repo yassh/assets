@@ -50,29 +50,23 @@ brew install ffmpeg \
 --without-xvid \
 ;
 
-brew install macvim --with-override-system-vim
-brew linkapps macvim
-brew install emacs --with-cocoa
-brew linkapps emacs
-brew install mpv --with-bundle
-brew linkapps mpv
-
-brew install \
-coreutils \
-fish \
-fzf \
-go \
-hub \
-micro \
-ranger \
-rmtrash \
-the_silver_searcher \
-thefuck \
-tig \
-translate-shell \
-webkit2png \
-youtube-dl \
-;
+brew install coreutils
+brew install emacs --with-cocoa && brew linkapps emacs
+brew install fish
+brew install fzf
+brew install go
+brew install hub
+brew install macvim --with-override-system-vim && brew linkapps macvim
+brew install micro
+brew install mpv --with-bundle && brew linkapps mpv
+brew install ranger
+brew install rmtrash
+brew install the_silver_searcher
+brew install thefuck
+brew install tig
+brew install translate-shell
+brew install webkit2png
+brew install youtube-dl
 
 # https://github.com/caskroom/homebrew-cask/blob/master/USAGE.md
 brew tap caskroom/cask
