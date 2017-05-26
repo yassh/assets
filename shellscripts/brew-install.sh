@@ -51,7 +51,6 @@ brew install ffmpeg \
 ;
 
 brew install coreutils
-brew install emacs --with-cocoa && brew linkapps emacs
 brew install fish
 brew install fzf
 brew install go
@@ -73,6 +72,7 @@ brew tap caskroom/versions
 brew cask install airmail-beta
 brew cask install appcleaner
 brew cask install ccleaner
+brew cask install emacs
 brew cask install firefox --language=ja
 brew cask install fork
 brew cask install google-chrome
