@@ -58,20 +58,16 @@ brew install mpv --with-bundle
 brew linkapps mpv
 
 brew install \
-colordiff \
 coreutils \
 fish \
 fzf \
-gibo \
 go \
 hub \
-jo \
 micro \
 ranger \
 rmtrash \
 the_silver_searcher \
 thefuck \
-tidy-html5 \
 tig \
 translate-shell \
 webkit2png \
