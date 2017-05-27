@@ -43,11 +43,6 @@ brew install ffmpeg \
 --with-xz \
 --with-zeromq \
 --with-zimg \
---without-lame \
---without-qtkit \
---without-securetransport \
---without-x264 \
---without-xvid \
 ;
 
 brew install coreutils
@@ -80,6 +75,7 @@ brew cask install fork
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install iterm2-beta
+brew cask install launchbar
 brew cask install macvim
 brew cask install mpv
 brew cask install simplenote
