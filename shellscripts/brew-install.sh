@@ -71,6 +71,7 @@ brew cask install caffeine
 brew cask install ccleaner
 brew cask install chatwork
 brew cask install cheatsheet
+brew cask install dictionaries
 brew cask install emacs
 brew cask install firefox --language=ja
 brew cask install fork
