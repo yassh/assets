@@ -69,9 +69,12 @@ brew cask install appcleaner
 brew cask install beyond-compare
 brew cask install caffeine
 brew cask install ccleaner
+brew cask install chatwork
+brew cask install cheatsheet
 brew cask install emacs
 brew cask install firefox --language=ja
 brew cask install fork
+brew cask install franz
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install iterm2-beta
@@ -81,7 +84,6 @@ brew cask install mpv
 brew cask install simplenote
 brew cask install sublime-text
 brew cask install table-tool
-brew cask install ubar
 brew cask install virtualbox
 brew cask install visual-studio-code
 
