@@ -19,7 +19,7 @@ setopt auto_pushd
 setopt interactivecomments
 
 # {{{ 環境変数
-  export EDITOR='emacs -nw'
+  export EDITOR=vim
   export GOPATH=~/.go
   export PATH=$GOPATH/bin:$PATH
   export PATH=~/.anyenv/bin:$PATH
@@ -39,7 +39,7 @@ setopt interactivecomments
   alias ls='ls -F --color' # `-F`は記号を付けるオプション
   alias ll='ls -a -l --time-style=long-iso'
 
-  alias e=$EDITOR
+  alias e='emacs -nw'
   alias q='q.js'
 
   alias :copy='copy.sh'

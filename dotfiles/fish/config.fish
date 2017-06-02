@@ -11,7 +11,7 @@ set ___fish_git_prompt_char_upstream_ahead '+'
 set ___fish_git_prompt_char_cleanstate '-'
 
 # {{{ 環境変数
-  set -x EDITOR 'emacs -nw'
+  set -x EDITOR vim
   set -x GOPATH ~/.go
   set -x PATH $GOPATH/bin $PATH
   set -x PATH ~/.anyenv/bin $PATH
@@ -29,7 +29,7 @@ set ___fish_git_prompt_char_cleanstate '-'
   alias ls='ls -F --color' # `-F`は記号を付けるオプション
   alias ll='ls -a -l --time-style=long-iso'
 
-  alias e=$EDITOR
+  alias e='emacs -nw'
   alias q='q.js'
 
   alias :copy='copy.sh'
