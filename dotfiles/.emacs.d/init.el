@@ -26,7 +26,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (emmet-mode git-gutter neotree zenburn-theme))))
+ '(package-selected-packages
+   (quote
+    (undo-tree emmet-mode git-gutter neotree zenburn-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -36,6 +38,7 @@
 
 (load-theme 'zenburn t)
 (global-set-key [f8] 'neotree-toggle)
+(global-undo-tree-mode t)
 (global-git-gutter-mode t)
 (add-hook 'sgml-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook  'emmet-mode)
