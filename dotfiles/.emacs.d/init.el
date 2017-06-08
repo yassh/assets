@@ -6,16 +6,22 @@
 
 ;; 行番号を表示する
 (require 'linum)
-(global-linum-mode 1)
+(global-linum-mode t)
 
 ;; 空白文字を可視化する
 ;; https://www.emacswiki.org/emacs/WhiteSpace
 (require 'whitespace)
 (setq whitespace-style '(face spaces tabs))
-(global-whitespace-mode 1)
+(global-whitespace-mode t)
 
 ;; 対応する括弧を強調表示する
 (show-paren-mode t)
+
+;; マウスによる操作を可能にする
+(xterm-mouse-mode t)
+(mouse-wheel-mode t)
+(global-set-key [mouse-4] '(lambda () (interactive) (scroll-down 3)))
+(global-set-key [mouse-5] '(lambda () (interactive) (scroll-up   3)))
 
 ;; MELPA
 (require 'package)
