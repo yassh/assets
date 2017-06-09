@@ -30,6 +30,7 @@ set ___fish_git_prompt_char_cleanstate '-'
   alias ll='ls -a -l --time-style=long-iso'
 
   alias e='emacs -nw'
+  alias r='ranger'
   alias q='q.js'
 
   alias :copy='copy.sh'
