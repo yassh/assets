@@ -112,7 +112,7 @@ Plug 'rakr/vim-one'
 
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
-"let g:lightline = { 'colorscheme': 'one' }
+let g:lightline = { 'colorscheme': 'solarized' }
 
 " https://github.com/nathanaelkane/vim-indent-guides
 Plug 'nathanaelkane/vim-indent-guides'
