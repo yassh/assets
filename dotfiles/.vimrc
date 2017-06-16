@@ -259,6 +259,12 @@ nnoremap <Leader><Leader> :<C-u>noh<CR>
 " http://www.johnhawthorn.com/2012/09/vi-escape-delays/
 set timeoutlen=1000 ttimeoutlen=0
 
+" ファイルを開いたときにカーソル位置を復元する
+" https://wiki.archlinuxjp.org/index.php/Vim
+if has("autocmd")
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
+
 :command! EchoPath :echo expand("%:p")
 :command! VimrcView :tab sview ~/.vimrc " http://vim-jp.org/vimdoc-ja/tabpage.html#:tab http://vim-jp.org/vimdoc-ja/windows.html#:sview
 :command! VimrcEdit :tabe ~/.vimrc " http://vim-jp.org/vimdoc-ja/tabpage.html#:tabe
