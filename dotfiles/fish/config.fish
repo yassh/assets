@@ -79,6 +79,10 @@ set ___fish_git_prompt_char_cleanstate '-'
   if test (uname) = 'Darwin'
     alias rm='rmtrash'
     alias photoshop='open -b com.adobe.Photoshop'
+
+     # 'open -b' だとコマンドラインオプションが使えないため、パスで指定
+    alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+    alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
   end
 # }}} エイリアス
 

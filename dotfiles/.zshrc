@@ -88,6 +88,10 @@ setopt interactivecomments
   if test $(uname) = 'Darwin'; then
     alias rm='rmtrash'
     alias photoshop='open -b com.adobe.Photoshop'
+
+     # 'open -b' だとコマンドラインオプションが使えないため、パスで指定
+    alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+    alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
   fi
 # }}} エイリアス
 
