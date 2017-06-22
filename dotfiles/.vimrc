@@ -126,6 +126,11 @@ Plug 'airblade/vim-gitgutter'
 " <Leader>M to open Magit buffer
 Plug 'jreybert/vimagit'
 
+" https://github.com/neomake/neomake
+Plug 'neomake/neomake'
+autocmd! BufWritePost * Neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
+
 " https://github.com/pangloss/vim-javascript
 " https://github.com/mxw/vim-jsx
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
