@@ -40,6 +40,7 @@ setopt interactivecomments
   alias ll='ls -a -l --time-style=long-iso'
 
   alias @="tig status"
+  alias @@="tig log"
   alias e='emacs -nw'
   alias r='ranger'
   alias q='q.js'
