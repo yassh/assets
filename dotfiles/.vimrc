@@ -130,6 +130,7 @@ Plug 'jreybert/vimagit'
 Plug 'neomake/neomake'
 autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_css_enabled_makers = ['stylelint']
 
 " https://github.com/pangloss/vim-javascript
 " https://github.com/mxw/vim-jsx
