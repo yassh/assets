@@ -39,6 +39,7 @@ setopt interactivecomments
   alias ls='ls -F --color' # `-F`は記号を付けるオプション
   alias ll='ls -a -l --time-style=long-iso'
 
+  alias @="tig status"
   alias e='emacs -nw'
   alias r='ranger'
   alias q='q.js'
@@ -68,8 +69,6 @@ setopt interactivecomments
   alias :gdcn='git diff --cached --name-only'
   alias :gdt='git difftool --dir-diff --no-symlink'
   alias :gc='git commit -v'
-  alias @=:gd
-  alias @@=:gdc
 
   alias :en='trans :en'
   alias :ja='trans :ja'
