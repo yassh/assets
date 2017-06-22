@@ -61,9 +61,10 @@ setopt interactivecomments
   alias :ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias :ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
 
-  alias :gl='git log -p --graph --decorate --date=iso'
-  alias :gf='git fetch'
   alias :gs='git status'
+  alias :gl='git log'
+  alias :gf='git fetch'
+  alias :gp='git pull'
   alias :gd='git diff'
   alias :gdn='git diff --name-only'
   alias :gdc='git diff --cached'
