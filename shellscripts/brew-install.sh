@@ -65,6 +65,7 @@ brew install youtube-dl
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew cask install airmail-beta
+brew cask install alfred
 brew cask install appcleaner
 brew cask install beyond-compare
 brew cask install caffeine
@@ -79,7 +80,6 @@ brew cask install franz
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install iterm2-beta
-brew cask install launchbar
 brew cask install macvim
 brew cask install mpv
 brew cask install simplenote
