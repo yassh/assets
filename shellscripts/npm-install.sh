@@ -4,7 +4,7 @@ echo "npm installを開始します。"
 
 npm install -g \
 browser-sync \
-csscomb \
+cspell \
 datauri \
 dev-ip \
 eslint \
@@ -15,9 +15,6 @@ gitopen \
 http-server \
 imagemin-cli \
 isutf8 \
-json \
-json2csv \
-jsonlint \
 npm-run-all \
 open-url \
 tldr \
