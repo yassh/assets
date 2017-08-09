@@ -82,9 +82,8 @@ setopt interactivecomments
   alias ru:en='trans ru:en'
   alias ru:ja='trans ru:ja'
 
-  alias ie9='VBoxManage startvm "IE9 - Win7"'
-  alias ie10='VBoxManage startvm "IE10 - Win7"'
-  alias ie11='VBoxManage startvm "IE11 - Win7"'
+  alias win7='VBoxManage startvm "IE11 - Win7"'
+  alias win10='VBoxManage startvm "MSEdge - Win10"'
 
   if test $(uname) = 'Darwin'; then
     alias rm='rmtrash'
