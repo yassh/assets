@@ -17,6 +17,7 @@ imagemin-cli \
 isutf8 \
 npm-run-all \
 open-url \
+prettier \
 tldr \
 ;
 
