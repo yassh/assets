@@ -70,6 +70,7 @@ brew cask install appcleaner
 brew cask install beyond-compare
 brew cask install caffeine
 brew cask install ccleaner
+brew cask install charles
 brew cask install chatwork
 brew cask install cheatsheet
 brew cask install dictionaries
@@ -85,6 +86,7 @@ brew cask install mpv
 brew cask install simplenote
 brew cask install sublime-text
 brew cask install table-tool
+brew cask install veracrypt
 brew cask install virtualbox
 brew cask install visual-studio-code
 
