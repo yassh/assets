@@ -13,7 +13,6 @@ eslint-plugin-import \
 fixpack \
 gitopen \
 http-server \
-imagemin-cli \
 isutf8 \
 npm-run-all \
 open-url \

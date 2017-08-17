@@ -80,9 +80,11 @@ brew cask install fork
 brew cask install franz
 brew cask install google-chrome
 brew cask install google-chrome-canary
+brew cask install imageoptim
 brew cask install iterm2-beta
 brew cask install macvim
 brew cask install mpv
+brew cask install pngquant
 brew cask install simplenote
 brew cask install sublime-text
 brew cask install table-tool
