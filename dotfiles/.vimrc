@@ -28,6 +28,8 @@ vmap V <Plug>(expand_region_shrink)
 " https://github.com/mattn/emmet-vim
 Plug 'mattn/webapi-vim' | Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key = '<Nop>'
+let g:user_emmet_expandabbr_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 nmap <Leader>ee <Plug>(emmet-expand-abbr)
 nmap <Leader>er <Plug>(emmet-remove-tag)
 
