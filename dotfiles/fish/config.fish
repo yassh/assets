@@ -31,6 +31,7 @@ set ___fish_git_prompt_char_cleanstate '-'
 
   alias @="tig status"
   alias @@="tig log"
+  alias v='vim -R'
   alias e='emacs -nw'
   alias r='ranger'
   alias q='q.js'

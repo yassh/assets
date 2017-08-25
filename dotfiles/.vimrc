@@ -153,6 +153,7 @@ let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/emmet/sni
 
 " マウスで操作できるようにする
 set mouse=a
+set ttymouse=sgr " これにより、マウスは223列を超えても機能する
 
 " 左右のカーソルキーで改行を越える移動を可能にする
 set whichwrap=b,s,h,l,<,>,[,],~
