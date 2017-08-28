@@ -46,6 +46,7 @@ done
 
 DOT_FILES=(
   fish
+  micro
   ranger
 )
 
