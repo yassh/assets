@@ -42,7 +42,7 @@ setopt interactivecomments
   alias @="tig status"
   alias @@="tig log"
   alias v='vim -R'
-  alias e='emacs -nw'
+  alias e='micro'
   alias r='ranger'
   alias q='q.js'
 
