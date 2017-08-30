@@ -1,17 +1,5 @@
 #!/bin/bash
 
-if type apt-get > /dev/null 2>&1; then
-  echo "apt-get installを開始します。"
-
-  sudo apt-get update
-
-  sudo apt-get install ranger
-  sudo apt-get install silversearcher-ag
-  sudo apt-get install tig
-
-  echo "apt-get installを終了します。"
-fi
-
 if type brew > /dev/null 2>&1; then
   echo "brew installを開始します。"
 
