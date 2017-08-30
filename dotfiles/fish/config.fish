@@ -32,8 +32,9 @@ set ___fish_git_prompt_char_cleanstate '-'
   alias @="tig status"
   alias @@="tig log"
   alias v='vim -R'
-  alias e='micro'
+  alias m='micro'
   alias r='ranger'
+  alias del='trash -r'
   alias q='q.js'
 
   alias :copy='copy.sh'
@@ -78,7 +79,6 @@ set ___fish_git_prompt_char_cleanstate '-'
   alias win10='VBoxManage startvm "MSEdge - Win10"'
 
   if test (uname) = 'Darwin'
-    alias rm='rmtrash'
     alias photoshop='open -b com.adobe.Photoshop'
 
      # 'open -b' だとコマンドラインオプションが使えないため、パスで指定

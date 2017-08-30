@@ -52,7 +52,6 @@ brew install go
 brew install hub
 brew install micro
 brew install ranger
-brew install rmtrash
 brew install the_silver_searcher
 brew install thefuck
 brew install tig

@@ -42,8 +42,9 @@ setopt interactivecomments
   alias @="tig status"
   alias @@="tig log"
   alias v='vim -R'
-  alias e='micro'
+  alias m='micro'
   alias r='ranger'
+  alias del='trash -r'
   alias q='q.js'
 
   alias :copy='copy.sh'
@@ -87,7 +88,6 @@ setopt interactivecomments
   alias win10='VBoxManage startvm "MSEdge - Win10"'
 
   if test $(uname) = 'Darwin'; then
-    alias rm='rmtrash'
     alias photoshop='open -b com.adobe.Photoshop'
 
      # 'open -b' だとコマンドラインオプションが使えないため、パスで指定
