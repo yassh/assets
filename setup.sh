@@ -11,7 +11,9 @@ if test ! -e ~/.anyenv; then
   git clone https://github.com/riywo/anyenv ~/.anyenv
 fi
 
-"$__DIR__/shellscripts/brew-install.sh"
+if test $(uname) = 'Darwin'; then
+  "$__DIR__/shellscripts/brew-install.sh"
+fi
 "$__DIR__/shellscripts/go-get.sh"
 "$__DIR__/shellscripts/npm-install.sh"
 "$__DIR__/shellscripts/pip-install.sh"
