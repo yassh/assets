@@ -7,6 +7,7 @@ if type apt-get > /dev/null 2>&1; then
 
   sudo apt-get install ranger
   sudo apt-get install silversearcher-ag
+  sudo apt-get install tig
 
   echo "apt-get installを終了します。"
 fi
