@@ -63,6 +63,7 @@ if type brew > /dev/null 2>&1; then
   brew install go
   brew install hub
   brew install micro
+  brew install pngquant
   brew install ranger
   brew install the_silver_searcher
   brew install thefuck
@@ -93,7 +94,6 @@ if type brew > /dev/null 2>&1; then
   brew cask install iterm2-beta
   brew cask install macvim
   brew cask install mpv
-  brew cask install pngquant
   brew cask install simplenote
   brew cask install sublime-text
   brew cask install table-tool
