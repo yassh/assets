@@ -16,6 +16,7 @@ set ___fish_git_prompt_char_cleanstate '-'
   set -x PATH $GOPATH/bin $PATH
   set -x PATH ~/.anyenv/bin $PATH
   set -x PATH ~/assets/shellscripts $PATH
+  set -x PATH ~/assets/pyscripts $PATH
   set -x PATH ~/assets/nodescripts $PATH
   set -x PATH ~/bin $PATH
 
