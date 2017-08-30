@@ -57,7 +57,6 @@ brew install thefuck
 brew install tig
 brew install translate-shell
 brew install vim
-brew install webkit2png
 brew install youtube-dl
 
 # https://github.com/caskroom/homebrew-cask/blob/master/USAGE.md
