@@ -66,7 +66,6 @@ if type brew > /dev/null 2>&1; then
   brew install pngquant
   brew install ranger
   brew install the_silver_searcher
-  brew install thefuck
   brew install tig
   brew install translate-shell
   brew install vim
