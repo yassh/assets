@@ -11,9 +11,6 @@ if test ! -e ~/.anyenv; then
   git clone https://github.com/riywo/anyenv ~/.anyenv
 fi
 
-"$__DIR__/shellscripts/package-install.sh"
-"$__DIR__/shellscripts/go-get.sh"
-"$__DIR__/shellscripts/npm-install.sh"
-"$__DIR__/shellscripts/pip-install.sh"
+"$__DIR__/pyscripts/package-install.py"
 
 cd "$__DIR__/nodescripts" && npm install
