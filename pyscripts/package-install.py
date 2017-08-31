@@ -16,7 +16,8 @@ if 'apt' in argv or 'all' in argv:
 if 'pip' in argv or 'all' in argv:
   print('pip installを開始します。')
   system('sudo pip install ' + ' '.join([
-    'pylint',
+    'autopep8',
+    'hacking',
     'thefuck',
   ]))
   print('pip installを終了します。')
