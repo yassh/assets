@@ -19,6 +19,7 @@ set ___fish_git_prompt_char_cleanstate '-'
   set -x PATH ~/assets/pyscripts $PATH
   set -x PATH ~/assets/nodescripts $PATH
   set -x PATH ~/bin $PATH
+  set -x FZF_DEFAULT_OPTS '--reverse --inline-info'
 
   if test (uname) = "Darwin"
     set -x PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
@@ -35,12 +36,9 @@ set ___fish_git_prompt_char_cleanstate '-'
   alias v='vim -R'
   alias m='micro'
   alias r='ranger'
-  alias del='trash -r'
   alias q='q.js'
 
   alias :copy='copy.sh'
-  alias :fzf='fzf.sh'
-  alias :ghq='ghq.sh'
   alias :npm='npm.sh'
   alias :serve='serve.sh'
   alias :q='q.js'
@@ -90,23 +88,23 @@ set ___fish_git_prompt_char_cleanstate '-'
 
 # {{{ 関数
   function :cd
-    find . -type d -maxdepth 1 | :fzf $argv | read --local result; and cd $result
-  end
-
-  function :g
-    :ghq $argv | read --local result; and cd $result
-  end
-
-  function :e
-    cat ~/.cmd_history | tac | :fzf $argv | read --local result; and commandline $result
+    find . -type d -maxdepth 1 | fzf -q "$argv" | read --local result; and cd $result
   end
 
   function :d
-    cat ~/.cd_history | tac | :fzf $argv | read --local result; and cd $result
+    cat ~/.cd_history | tac | fzf -q "$argv" | read --local result; and cd $result
+  end
+
+  function :g
+    ghq list | fzf -q "$argv" | read --local result; and cd (ghq root)/$result
+  end
+
+  function :e
+    cat ~/.cmd_history | tac | fzf -q "$argv" | read --local result; and commandline $result
   end
 
   function :fav
-    cat ~/.fav_* | tac | :fzf $argv | read --local result; and commandline $result
+    cat ~/.fav_* | tac | fzf -q "$argv" | read --local result; and commandline $result
   end
 # }}} 関数
 

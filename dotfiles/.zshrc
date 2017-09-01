@@ -27,6 +27,7 @@ setopt interactivecomments
   export PATH=~/assets/pyscripts:$PATH
   export PATH=~/assets/nodescripts:$PATH
   export PATH=~/bin:$PATH
+  export FZF_DEFAULT_OPTS='--reverse --inline-info'
 
   if test $(uname) = 'Darwin'; then
     export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
@@ -45,12 +46,9 @@ setopt interactivecomments
   alias v='vim -R'
   alias m='micro'
   alias r='ranger'
-  alias del='trash -r'
   alias q='q.js'
 
   alias :copy='copy.sh'
-  alias :fzf='fzf.sh'
-  alias :ghq='ghq.sh'
   alias :npm='npm.sh'
   alias :serve='serve.sh'
 
@@ -100,12 +98,12 @@ setopt interactivecomments
 # {{{ 関数
   :f() {
     local result
-    result=$(ag --hidden -g '' | :fzf "$1") && :copy "$(realpath $result)"
+    result=$(ag --hidden -g '' | fzf -q "$1") && :copy "$(realpath $result)"
   }
 
   :s() {
     local result
-    result=$(ag --noheading --nobreak . | :fzf "$1") && $EDITOR $(echo "$result" | perl -p -e 's/^(.*?):(\d+):(.*)$/+$2 $1/')
+    result=$(ag --noheading --nobreak . | fzf -q "$1") && $EDITOR $(echo "$result" | perl -p -e 's/^(.*?):(\d+):(.*)$/+$2 $1/')
   }
 
   # https://github.com/junegunn/fzf/wiki/examples#git
@@ -119,34 +117,32 @@ setopt interactivecomments
 
   :ios() {
     local device
-    device=$(xcrun instruments -s | grep "\(Simulator\)" | :fzf "$1") && xcrun instruments -w $device
+    device=$(xcrun instruments -s | grep "\(Simulator\)" | fzf -q "$1") && xcrun instruments -w $device
   }
 
   :cd() {
     local result
-    result=$(find . -type d -maxdepth 1 | :fzf "$1") && cd $result
-  }
-
-  :g() {
-    local result=$(:ghq "$*")
-    if [ -n "$result" ]; then
-      cd "$result"
-    fi
-  }
-
-  :e() {
-    local result
-    result=$(cat ~/.cmd_history | tac | :fzf "$1") && print -z $result
+    result=$(find . -type d -maxdepth 1 | fzf -q "$1") && cd $result
   }
 
   :d() {
     local result
-    result=$(cat ~/.cd_history | tac | :fzf "$1") && cd $result
+    result=$(cat ~/.cd_history | tac | fzf -q "$1") && cd $result
+  }
+
+  :g() {
+    local result
+    result=$(ghq list | fzf -q "$1") && cd $(ghq root)/$result
+  }
+
+  :e() {
+    local result
+    result=$(cat ~/.cmd_history | tac | fzf -q "$1") && print -z $result
   }
 
   :fav() {
     local result
-    result=$(cat ~/.fav_* | :fzf "$1") && print -z $result
+    result=$(cat ~/.fav_* | fzf -q "$1") && print -z $result
   }
 # }}} 関数
 
