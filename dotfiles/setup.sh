@@ -7,7 +7,6 @@ __DIR__="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 DOT_FILES=(
   .agignore
-  .cheat
   .fav_global
   .gitconfig
   .gitignore_global
