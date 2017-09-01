@@ -10,6 +10,11 @@ __home__ = path.expanduser('~')
 # setup dotfiles
 system(path.join(__dir__, 'dotfiles', 'setup.sh'))
 
+# setup fzf
+if not path.exists(path.join(__home__, '.fzf')):
+    system('git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf')
+    system('~/.fzf/install')
+
 # install anyenv
 if not path.exists(path.join(__home__, '.anyenv')):
     system('git clone https://github.com/riywo/anyenv ~/.anyenv')

@@ -1,0 +1,1 @@
+/Users/guimihanui/.fzf/shell/key-bindings.fish

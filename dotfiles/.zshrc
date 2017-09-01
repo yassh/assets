@@ -268,3 +268,5 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

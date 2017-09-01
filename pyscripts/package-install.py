@@ -26,7 +26,6 @@ if 'brew' in argv or 'all' in argv:
         system('brew install ' + ' '.join([
             'coreutils',
             'fish',
-            'fzf',
             'go',
             'hub',
             'micro',
