@@ -39,7 +39,6 @@ set ___fish_git_prompt_char_cleanstate '-'
   alias q='q.js'
 
   alias :copy='copy.sh'
-  alias :npm='npm.sh'
   alias :serve='serve.sh'
   alias :q='q.js'
 

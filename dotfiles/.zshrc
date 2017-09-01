@@ -49,7 +49,6 @@ setopt interactivecomments
   alias q='q.js'
 
   alias :copy='copy.sh'
-  alias :npm='npm.sh'
   alias :serve='serve.sh'
 
   alias :gitignore='cat ~/assets/configfiles/gitignore' # FIXME: ~/assets/configfiles/gitignoreを相対パスで記述できないか？
