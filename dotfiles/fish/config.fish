@@ -40,7 +40,6 @@ set ___fish_git_prompt_char_cleanstate '-'
 
   alias :copy='copy.sh'
   alias :serve='serve.sh'
-  alias :q='q.js'
 
   alias :gitignore='cat ~/assets/configfiles/gitignore' # FIXME: ~/assets/configfiles/gitignoreを相対パスで記述できないか？
   alias :editorconfig='cat ~/assets/configfiles/editorconfig' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
