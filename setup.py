@@ -15,10 +15,13 @@ system(path.join(__dir__, 'dotfiles', 'setup.sh'))
 if not path.exists(path.join(__home__, '.anyenv')):
     system('git clone https://github.com/riywo/anyenv ~/.anyenv')
 
-# install ndenv and Node.js
+# install ndenv
 if not which('ndenv'):
     system('anyenv install ndenv')
-    system('ndenv install v8 && ndenv global v8 && ndenv rehash')
+
+# install phpenv
+if not which('phpenv'):
+    system('anyenv install phpenv')
 
 # install nodescripts
 system('cd {} && npm install'.format(path.join(__dir__, 'nodescripts')))
