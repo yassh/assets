@@ -23,6 +23,7 @@ setopt interactivecomments
   export GOPATH=~/.go
   export PATH=$GOPATH/bin:$PATH
   export PATH=~/.anyenv/bin:$PATH
+  export PATH=~/assets/bin:$PATH
   export PATH=~/assets/shellscripts:$PATH
   export PATH=~/assets/pyscripts:$PATH
   export PATH=~/assets/nodescripts:$PATH
