@@ -47,17 +47,10 @@ setopt interactivecomments
   alias v='vim -R'
   alias m='micro'
   alias r='ranger'
-  alias q='q.js'
 
+  alias :q='q.js'
   alias :copy='copy.sh'
   alias :serve='serve.sh'
-
-  alias :gitignore='cat ~/assets/configfiles/gitignore' # FIXME: ~/assets/configfiles/gitignoreを相対パスで記述できないか？
-  alias :editorconfig='cat ~/assets/configfiles/editorconfig' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
-  alias :eslintrc='cat ~/assets/configfiles/eslintrc.yml' # FIXME: ~/assets/configfiles/editorconfigを相対パスで記述できないか？
-  alias :.gitignore=':gitignore > .gitignore'
-  alias :.editorconfig=':editorconfig > .editorconfig'
-  alias :.eslintrc=':eslintrc > .eslintrc.yml'
 
   alias :ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias :ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
@@ -143,6 +136,11 @@ setopt interactivecomments
   :fav() {
     local result
     result=$(cat ~/.fav_* | fzf -q "$1") && print -z $result
+  }
+
+  :tmpl() {
+    local result
+    result=$(find ~/assets/tmpl -type f | fzf -q "$1") && cat $result
   }
 # }}} 関数
 
