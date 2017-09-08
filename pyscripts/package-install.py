@@ -109,6 +109,7 @@ if 'cask' in argv or 'all' in argv:
             'iterm2-beta',
             'macvim',
             'mpv',
+            'paw',
             'simplenote',
             'sublime-text',
             'table-tool',
@@ -116,7 +117,6 @@ if 'cask' in argv or 'all' in argv:
             'veracrypt',
             'virtualbox',
             'visual-studio-code',
-            'xtrafinder',
         ]
         for cask in list:
             system('brew cask install ' + cask)
