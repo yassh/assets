@@ -89,7 +89,6 @@ if 'cask' in argv or 'all' in argv:
         system('brew tap caskroom/versions')
         system('brew update')
         list = [
-            'airmail-beta',
             'alfred',
             'appcleaner',
             'beyond-compare',
