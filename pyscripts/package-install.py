@@ -155,9 +155,9 @@ if 'npm' in argv or 'all' in argv:
             'cspell',
             'datauri',
             'dev-ip',
+            'eslint',
             'eslint-config-airbnb-base',
             'eslint-plugin-import',
-            'eslint',
             'fixpack',
             'gitopen',
             'http-server',
@@ -166,5 +166,7 @@ if 'npm' in argv or 'all' in argv:
             'open-url',
             'prettier',
             'tldr',
+            'tslint',
+            'tslint-config-airbnb',
         ]))
         print('npm installを終了します。')
