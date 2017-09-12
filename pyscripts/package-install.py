@@ -158,6 +158,7 @@ if 'npm' in argv or 'all' in argv:
             'eslint',
             'eslint-config-airbnb-base',
             'eslint-plugin-import',
+            'firebase-tools',
             'fixpack',
             'gitopen',
             'http-server',
