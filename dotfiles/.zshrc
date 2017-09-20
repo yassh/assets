@@ -197,13 +197,13 @@ setopt interactivecomments
   }
 # }}} フック
 
-# The Fuck
-# https://github.com/nvbn/thefuck
-eval "$(thefuck --alias shit)"
-
 # anyenv
 # https://github.com/riywo/anyenv
 eval "$(anyenv init -)"
+
+# The Fuck
+# https://github.com/nvbn/thefuck
+eval "$(thefuck --alias shit)"
 
 ###-begin-npm-completion-###
 #
