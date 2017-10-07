@@ -38,6 +38,7 @@ if 'brew' in argv or 'all' in argv:
             'vim',
             'youtube-dl',
         ]))
+        system('brew install aria2 --with-libssh2')
         system('brew install ffmpeg ' + ' '.join([
             '--with-chromaprint',
             '--with-fdk-aac',
