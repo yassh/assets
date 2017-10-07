@@ -107,6 +107,7 @@ if 'cask' in argv or 'all' in argv:
             'imageoptim',
             'inkdrop',
             'iterm2-beta',
+            'itsycal',
             'macvim',
             'marp',
             'moom',
