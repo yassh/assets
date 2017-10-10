@@ -95,6 +95,7 @@ if 'cask' in argv or 'all' in argv:
             'beyond-compare',
             'caffeine',
             'ccleaner',
+            'commander-one',
             'devdocs',
             'dictionaries',
             'emacs',
