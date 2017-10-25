@@ -199,7 +199,7 @@ setopt interactivecomments
 
 # anyenv
 # https://github.com/riywo/anyenv
-eval "$(anyenv init -)"
+eval "$(anyenv init - --no-rehash)" # `--no-rehash`を付けるとzshの起動が速くなる
 
 # The Fuck
 # https://github.com/nvbn/thefuck
