@@ -115,7 +115,6 @@ if 'cask' in argv or 'all' in argv:
             'moom',
             'mpv',
             'paw',
-            'simplenote',
             'sublime-text',
             'table-tool',
             'textexpander',
