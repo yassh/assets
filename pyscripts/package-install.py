@@ -118,7 +118,6 @@ if 'cask' in argv or 'all' in argv:
             'sublime-text',
             'table-tool',
             'textexpander',
-            'ticktick',
             'veracrypt',
             'virtualbox',
             'visual-studio-code',
