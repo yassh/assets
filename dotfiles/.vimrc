@@ -220,8 +220,8 @@ function! ToggleWrap()
 endfunction
 nnoremap <Leader>tw :<C-u>call ToggleWrap()<CR>
 
-" テキスト中の印で折り畳みを定義する
-set foldmethod=marker
+" インデントによる折り畳みをする
+set foldmethod=indent
 
 " ファイルを開いたときに折り畳みをしない
 set foldlevelstart=100
