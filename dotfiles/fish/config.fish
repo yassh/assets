@@ -71,6 +71,7 @@ set ___fish_git_prompt_char_cleanstate '-'
 
   if test (uname) = 'Darwin'
     alias photoshop='open -b com.adobe.Photoshop'
+    alias marp='open -b jp.yhatt.marp'
 
      # 'open -b' だとコマンドラインオプションが使えないため、パスで指定
     alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
