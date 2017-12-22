@@ -70,6 +70,7 @@ set ___fish_git_prompt_char_cleanstate '-'
   alias win10='VBoxManage startvm "MSEdge - Win10"'
 
   if test (uname) = 'Darwin'
+    alias o='open'
     alias photoshop='open -b com.adobe.Photoshop'
     alias marp='open -b jp.yhatt.marp'
 

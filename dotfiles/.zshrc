@@ -80,6 +80,7 @@ setopt interactivecomments
   alias win10='VBoxManage startvm "MSEdge - Win10"'
 
   if test $(uname) = 'Darwin'; then
+    alias o='open'
     alias photoshop='open -b com.adobe.Photoshop'
     alias marp='open -b jp.yhatt.marp'
 
