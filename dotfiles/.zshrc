@@ -199,6 +199,10 @@ setopt interactivecomments
   }
 # }}} フック
 
+# direnv
+# https://github.com/direnv/direnv
+eval "$(direnv hook zsh)"
+
 # anyenv
 # https://github.com/riywo/anyenv
 eval "$(anyenv init - --no-rehash)" # `--no-rehash`を付けるとzshの起動が速くなる
