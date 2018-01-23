@@ -11,7 +11,6 @@ if 'apt' in argv or 'all' in argv:
         print('apt-get installを開始します。')
         system('sudo apt-get update')
         system('sudo apt-get install -y ' + ' '.join([
-            'fish',
             'ranger',
             'silversearcher-ag',
             'tig',
@@ -27,7 +26,6 @@ if 'brew' in argv or 'all' in argv:
         system('brew install ' + ' '.join([
             'coreutils',
             'direnv',
-            'fish',
             'go',
             'hub',
             'micro',
