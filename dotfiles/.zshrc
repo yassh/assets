@@ -110,6 +110,22 @@ setopt interactivecomments
     git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
   }
 
+  :gcun() {
+    if test -n "$(git config user.name)"; then
+      git config user.name
+    else
+      echo $GIT_AUTHOR_NAME
+    fi
+  }
+
+  :gcue() {
+    if test -n "$(git config user.email)"; then
+      git config user.email
+    else
+      echo $GIT_AUTHOR_EMAIL
+    fi
+  }
+
   :ios() {
     local device
     device=$(xcrun instruments -s | grep "\(Simulator\)" | fzf -q "$1") && xcrun instruments -w $device
@@ -151,7 +167,7 @@ setopt interactivecomments
   autoload -Uz vcs_info
 
   +vi-git-info() {
-    hook_com[misc]+=" | $(git rev-list --count @{u}..HEAD 2> /dev/null)-$(git rev-list --count HEAD..@{u} 2> /dev/null) | $(git config user.name) <$(git config user.email)>"
+    hook_com[misc]+=" | $(git rev-list --count @{u}..HEAD 2> /dev/null)-$(git rev-list --count HEAD..@{u} 2> /dev/null) | $(:gcun) <$(:gcue)>"
   }
 
   zstyle ':vcs_info:git:*' check-for-changes true
