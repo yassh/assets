@@ -6,14 +6,6 @@
       "!!": "!!!+html[lang=${lang}]>(head>meta[charset=${charset}]+meta[http-equiv=X-UA-Compatible][content=IE=edge]+meta:vp+title{${1:Document}})+body"
     }
   },
-  "javascript": {
-    "snippets": {
-      "for": "for (var i = 0; i < ${1}.length; i++) {\n\t|\n}",
-      "class": "class ${1:Class} {\n\tconstructor() {\n\t\t|\n\t}\n}",
-      "subclass": "class ${1:Subclass} extends ${2:Class} {\n\tconstructor() {\n\t\tsuper();\n\t}\n}",
-      "pd": "preventDefault()"
-    }
-  },
   "variables": {
     "lang": "ja",
     "locale": "ja-JP"
