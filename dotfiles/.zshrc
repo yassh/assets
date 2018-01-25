@@ -30,6 +30,7 @@ setopt interactivecomments
   export PATH=~/bin:$PATH
   export FZF_DEFAULT_OPTS='--reverse --inline-info'
   export CD_HISTORY_FILE=~/.cd_history
+  export CMD_HISTORY_FILE=~/.cmd_history
 
   if test $(uname) = 'Darwin'; then
     export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
@@ -133,7 +134,7 @@ setopt interactivecomments
 
   :e() {
     local result
-    result=$(cat ~/.cmd_history | tac | fzf -q "$1") && print -z $result
+    result=$(cat $CMD_HISTORY_FILE | tac | fzf -q "$1") && print -z $result
   }
 
   :fav() {
@@ -199,7 +200,7 @@ setopt interactivecomments
   # "Executed when a history line has been read interactively, but before it is executed."
   # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
   zshaddhistory() {
-    echo $(echo $1) >> ~/.cmd_history # 改行を潰して保存する
+    echo $(echo $1) >> $CMD_HISTORY_FILE # 改行を潰して保存する
   }
 # }}} フック
 
