@@ -34,7 +34,6 @@ if 'brew' in argv or 'all' in argv:
             'the_silver_searcher',
             'tig',
             'translate-shell',
-            'vim',
             'youtube-dl',
         ]))
         system('brew install aria2 --with-libssh2')
@@ -77,6 +76,15 @@ if 'brew' in argv or 'all' in argv:
             '--with-xz',
             '--with-zeromq',
             '--with-zimg',
+        ]))
+        system('brew install vim ' + ' '.join([
+            # '--with-client-server',
+            '--with-gettext',
+            '--with-lua',
+            '--with-luajit',
+            '--with-override-system-vi',
+            '--with-python3',
+            '--with-tcl',
         ]))
         print('brew installを終了します。')
 
