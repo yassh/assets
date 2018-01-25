@@ -114,7 +114,7 @@ Plug 'rakr/vim-one'
 
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
-"let g:lightline = { 'colorscheme': 'solarized' }
+let g:lightline = { 'colorscheme': 'solarized' }
 
 " https://github.com/nathanaelkane/vim-indent-guides
 Plug 'nathanaelkane/vim-indent-guides'
@@ -165,10 +165,10 @@ set backspace=indent,eol,start
 set clipboard+=unnamed
 
 " カラースキームの設定
-colorscheme one
+"colorscheme one
 
 " 背景色の傾向
-set background=dark
+"set background=dark
 
 " シンタックスハイライト機能を有効にする
 syntax enable
