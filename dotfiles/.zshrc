@@ -192,7 +192,8 @@ setopt interactivecomments
     ls
 
     touch $CD_HISTORY_FILE
-    ruby -i -ne 'if $_ != `pwd` then puts $_ end' $CD_HISTORY_FILE
+    local cwd=$(pwd)
+    awk -v cwd="$cwd" -i inplace '$0 != cwd { print $0 }' $CD_HISTORY_FILE # cwdに一致する行を取り除く
     pwd >> $CD_HISTORY_FILE
   }
 
@@ -200,7 +201,10 @@ setopt interactivecomments
   # "Executed when a history line has been read interactively, but before it is executed."
   # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
   zshaddhistory() {
-    echo $(echo $1) >> $CMD_HISTORY_FILE # 改行を潰して保存する
+    touch $CMD_HISTORY_FILE
+    local cmd=$(echo $1) # 改行を潰す
+    awk -v cmd="$cmd" -i inplace '$0 != cmd { print $0 }' $CMD_HISTORY_FILE # cmdに一致する行を取り除く
+    echo "$cmd" >> $CMD_HISTORY_FILE
   }
 # }}} フック
 
