@@ -29,6 +29,7 @@ setopt interactivecomments
   export PATH=~/assets/nodescripts:$PATH
   export PATH=~/bin:$PATH
   export FZF_DEFAULT_OPTS='--reverse --inline-info'
+  export CD_HISTORY_FILE=~/.cd_history
 
   if test $(uname) = 'Darwin'; then
     export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
@@ -122,7 +123,7 @@ setopt interactivecomments
 
   :d() {
     local result
-    result=$(cat ~/.cd_history | tac | fzf -q "$1") && cd $result
+    result=$(cat $CD_HISTORY_FILE | tac | fzf -q "$1") && cd $result
   }
 
   :g() {
@@ -188,7 +189,10 @@ setopt interactivecomments
   # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
   chpwd() {
     ls
-    echo "$(realpath .)" >> ~/.cd_history
+
+    touch $CD_HISTORY_FILE
+    ruby -i -ne 'if $_ != `pwd` then puts $_ end' $CD_HISTORY_FILE
+    pwd >> $CD_HISTORY_FILE
   }
 
   # zshaddhistory
