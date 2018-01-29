@@ -54,6 +54,10 @@ setopt interactivecomments
   alias :copy='copy.sh'
   alias :serve='serve.sh'
 
+  alias :t='tree -L 1'
+  alias :tt='tree -L 2'
+  alias :ttt='tree -L 3'
+
   alias :ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias :ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
 
