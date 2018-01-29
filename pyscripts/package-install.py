@@ -25,7 +25,6 @@ if 'brew' in argv or 'all' in argv:
         system('brew update')
         system('brew install ' + ' '.join([
             'coreutils',
-            'direnv',
             'go',
             'hub',
             'micro',
