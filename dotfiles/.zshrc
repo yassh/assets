@@ -54,6 +54,7 @@ setopt interactivecomments
   alias :copy='copy.sh'
   alias :serve='serve.sh'
 
+  alias tree='tree -N' # 日本語が文字化けしないように`-N`オプションを付ける
   alias :t='tree -L 1'
   alias :tt='tree -L 2'
   alias :ttt='tree -L 3'
