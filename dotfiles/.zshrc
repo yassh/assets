@@ -44,34 +44,31 @@ setopt interactivecomments
   alias ls='ls -F --color' # `-F`は記号を付けるオプション
   alias ll='ls -a -l --time-style=long-iso'
 
-  alias @="tig status"
-  alias @@="tig log"
-  alias v='vim -R'
-  alias m='micro'
-  alias r='ranger'
-
   alias :q='q.js'
   alias :copy='copy.sh'
   alias :serve='serve.sh'
 
-  alias tree='tree -N' # 日本語が文字化けしないように`-N`オプションを付ける
-  alias :t='tree -L 1'
-  alias :tt='tree -L 2'
-  alias :ttt='tree -L 3'
-
   alias :ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
   alias :ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
 
-  alias :gs='git status'
-  alias :gl='git log'
-  alias :gf='git fetch'
-  alias :gp='git pull'
-  alias :gd='git diff'
-  alias :gdn='git diff --name-only'
-  alias :gdc='git diff --cached'
-  alias :gdcn='git diff --cached --name-only'
-  alias :gdt='git difftool --dir-diff --no-symlink'
-  alias :gc='git commit -v'
+  alias r='ranger'
+  alias m='micro'
+  alias v:r='vim -R'
+
+  alias tree='tree -N' # 日本語が文字化けしないように`-N`オプションを付ける
+  alias t:1='tree -L 1'
+  alias t:2='tree -L 2'
+  alias t:3='tree -L 3'
+
+  alias g:f='git fetch'
+  alias g:s='git status'
+  alias g:d='git diff'
+  alias g:dc='git diff --cached'
+  alias g:dt='git difftool --dir-diff --no-symlink'
+  alias g:a='git add'
+  alias g:c='git commit -v'
+  alias g:unstage='git reset -q @ --' # アンステージ
+  alias g:discard='git checkout --'
 
   alias :en='trans :en'
   alias :ja='trans :ja'
