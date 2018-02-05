@@ -103,7 +103,6 @@ if 'cask' in argv or 'all' in argv:
             'caffeine',
             'ccleaner',
             'charles',
-            'commander-one',
             'devdocs',
             'dictionaries',
             'emacs',
