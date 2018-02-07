@@ -152,6 +152,7 @@ if 'go' in argv or 'all' in argv:
         system('go get ' + ' '.join([
             'github.com/atotto/clipboard/cmd/gocopy',
             'github.com/atotto/clipboard/cmd/gopaste',
+            'github.com/kyoshidajp/ghkw',
             'github.com/motemen/ghq',
         ]))
         print('go getを終了します。')
