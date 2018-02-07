@@ -53,7 +53,10 @@ setopt interactivecomments
 
   alias r='ranger'
   alias m='micro'
-  alias v:r='vim -R'
+  alias e='vim'
+  alias e:r='vim -R'
+  alias v='gvim'
+  alias v:r='gvim -R'
 
   alias tree='tree -N' # 日本語が文字化けしないように`-N`オプションを付ける
   alias t:1='tree -L 1'
