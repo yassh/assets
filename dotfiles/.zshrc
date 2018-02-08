@@ -93,7 +93,7 @@ setopt interactivecomments
   alias g:f='git fetch'
   alias g:s='git status'
   alias g:d='git diff'
-  alias g:dc='git diff --cached'
+  alias g:d:c='git diff --cached'
   alias g:dt='git difftool --dir-diff --no-symlink'
   alias g:a='git add'
   alias g:c='git commit -v'
@@ -121,14 +121,14 @@ setopt interactivecomments
     result=$(find . -type d -maxdepth 1 | fzf -q "$1") && cd $result
   }
 
-  :d() {
-    local result
-    result=$(cat $CD_HISTORY_FILE | tac | fzf -q "$1") && cd $result
-  }
-
   :g() {
     local result
     result=$(ghq list | fzf -q "$1") && cd $(ghq root)/$result
+  }
+
+  :d() {
+    local result
+    result=$(cat $CD_HISTORY_FILE | tac | fzf -q "$1") && cd $result
   }
 
   :e() {
@@ -136,7 +136,7 @@ setopt interactivecomments
     result=$(cat $CMD_HISTORY_FILE | tac | fzf -q "$1") && print -z $result
   }
 
-  :fav() {
+  :c() {
     local result
     result=$(cat ~/.fav_* | fzf -q "$1") && print -z $result
   }
