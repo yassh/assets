@@ -98,6 +98,15 @@ setopt interactivecomments
 # }}} エイリアス
 
 # {{{ 関数
+  # https://github.com/junegunn/fzf/wiki/examples#git
+  g:co() {
+    local branches branch
+    branches=$(git branch --all | grep -v HEAD) &&
+    branch=$(echo "$branches" |
+             fzf -q "$1" --reverse -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+    git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+  }
+
   :f() {
     local result
     result=$(ag --hidden -g '' | fzf -q "$1") && :copy "$(realpath $result)"
@@ -106,15 +115,6 @@ setopt interactivecomments
   :s() {
     local result
     result=$(ag --noheading --nobreak . | fzf -q "$1") && $EDITOR $(echo "$result" | perl -p -e 's/^(.*?):(\d+):(.*)$/+$2 $1/')
-  }
-
-  # https://github.com/junegunn/fzf/wiki/examples#git
-  :gco() {
-    local branches branch
-    branches=$(git branch --all | grep -v HEAD) &&
-    branch=$(echo "$branches" |
-             fzf -q "$1" --reverse -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
-    git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
   }
 
   :ios() {
