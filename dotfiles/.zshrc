@@ -44,34 +44,26 @@ setopt interactivecomments
   alias ls='ls -F --color' # `-F`は記号を付けるオプション
   alias ll='ls -a -l --time-style=long-iso'
 
-  alias :q='q.js'
-  alias :copy='copy.sh'
-  alias :serve='serve.sh'
-
-  alias :ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
-  alias :ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
-
   alias r='ranger'
   alias m='micro'
   alias e='vim'
   alias e:r='vim -R'
   alias v='gvim'
   alias v:r='gvim -R'
+  alias s='ag -Q' # 文字列で全文検索
+  alias f='ag -g' # 正規表現でファイル名検索 ※-Qと-gを組み合わせられない。Issue: https://github.com/ggreer/the_silver_searcher/issues/1006
 
   alias tree='tree -N' # 日本語が文字化けしないように`-N`オプションを付ける
   alias t:1='tree -L 1'
   alias t:2='tree -L 2'
   alias t:3='tree -L 3'
 
-  alias g:f='git fetch'
-  alias g:s='git status'
-  alias g:d='git diff'
-  alias g:dc='git diff --cached'
-  alias g:dt='git difftool --dir-diff --no-symlink'
-  alias g:a='git add'
-  alias g:c='git commit -v'
-  alias g:unstage='git reset -q @ --' # アンステージ
-  alias g:discard='git checkout --'
+  alias :q='q.js'
+  alias :copy='copy.sh'
+  alias :serve='serve.sh'
+
+  alias :ydl='youtube-dl -f bestvideo+bestaudio/best -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
+  alias :ydla='youtube-dl -f bestaudio -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
 
   alias :en='trans :en'
   alias :ja='trans :ja'
@@ -97,7 +89,17 @@ setopt interactivecomments
   fi
 # }}} エイリアス
 
-# {{{ 関数
+# {{{ Git
+  alias g:f='git fetch'
+  alias g:s='git status'
+  alias g:d='git diff'
+  alias g:dc='git diff --cached'
+  alias g:dt='git difftool --dir-diff --no-symlink'
+  alias g:a='git add'
+  alias g:c='git commit -v'
+  alias g:unstage='git reset -q @ --' # アンステージ
+  alias g:discard='git checkout --'
+
   # https://github.com/junegunn/fzf/wiki/examples#git
   g:co() {
     local branches branch
@@ -106,17 +108,9 @@ setopt interactivecomments
              fzf -q "$1" --reverse -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
     git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
   }
+# }}} 関数
 
-  :f() {
-    local result
-    result=$(ag --hidden -g '' | fzf -q "$1") && :copy "$(realpath $result)"
-  }
-
-  :s() {
-    local result
-    result=$(ag --noheading --nobreak . | fzf -q "$1") && $EDITOR $(echo "$result" | perl -p -e 's/^(.*?):(\d+):(.*)$/+$2 $1/')
-  }
-
+# {{{ 関数
   :ios() {
     local device
     device=$(xcrun instruments -s | grep "\(Simulator\)" | fzf -q "$1") && xcrun instruments -w $device
