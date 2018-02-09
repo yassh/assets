@@ -140,7 +140,6 @@ if 'pip' in argv or 'all' in argv:
         system('sudo pip install ' + ' '.join([
             'autopep8',
             'hacking',
-            'thefuck',
         ]))
         print('pip installを終了します。')
 

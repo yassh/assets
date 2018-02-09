@@ -211,10 +211,6 @@ setopt interactivecomments
 # https://github.com/riywo/anyenv
 eval "$(anyenv init - --no-rehash)" # `--no-rehash`を付けるとzshの起動が速くなる
 
-# The Fuck
-# https://github.com/nvbn/thefuck
-eval "$(thefuck --alias shit)"
-
 ###-begin-npm-completion-###
 #
 # npm command completion script
