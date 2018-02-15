@@ -130,6 +130,7 @@ Plug 'jreybert/vimagit'
 
 " https://github.com/w0rp/ale
 Plug 'w0rp/ale'
+let g:ale_linters = { 'javascript': ['eslint', 'flow'] }
 
 " https://github.com/pangloss/vim-javascript
 " https://github.com/mxw/vim-jsx
