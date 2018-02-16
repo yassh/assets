@@ -188,8 +188,6 @@ setopt interactivecomments
   # "Executed whenever the current working directory is changed."
   # http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
   chpwd() {
-    ls
-
     touch $CD_HISTORY_FILE
     local cwd=$(pwd)
     awk -v cwd="$cwd" -i inplace '$0 != cwd { print $0 }' $CD_HISTORY_FILE # cwdに一致する行を取り除く
