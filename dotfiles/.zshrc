@@ -145,6 +145,15 @@ setopt interactivecomments
     local result
     result=$(find ~/assets/tmpl -type f | fzf -q "$1") && cat $result
   }
+
+  :r() {
+    local result
+    result=$(list:scripts | fzf -q "$1") && yarn run ${result%% *}
+  }
+
+  list:scripts() {
+    cat package.json | jq -r '.scripts | to_entries[] | "\(.key)\t\(.value)"' | column -t -s $'\t'
+  }
 # }}} 関数
 
 # {{{ プロンプト
