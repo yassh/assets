@@ -148,7 +148,7 @@ setopt interactivecomments
 
   :r() {
     local result
-    result=$(list:scripts | fzf -q "$1") && yarn run ${result%% *}
+    result=$(list:scripts | fzf -q "$1") && print -z yarn run ${result%% *}
   }
 
   list:scripts() {
