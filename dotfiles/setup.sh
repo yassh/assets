@@ -14,6 +14,8 @@ DOT_FILES=(
   .mpv
   .tigrc
   .vim
+  .prettierrc.js
+  .eslintrc.js
   .vimrc
   .zshrc
   emmet
