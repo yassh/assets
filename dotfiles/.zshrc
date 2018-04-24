@@ -46,10 +46,9 @@ setopt interactivecomments
 
   alias r='ranger'
   alias m='micro'
-  alias e='vim'
-  alias e:r='vim -R'
-  alias v='gvim'
-  alias v:r='gvim -R'
+  alias v='vim'
+  alias v:r='vim -R'
+  alias c='code .'
   alias s='ag -Q' # 文字列で全文検索
   alias f='ag -g' # 正規表現でファイル名検索 ※-Qと-gを組み合わせられない。Issue: https://github.com/ggreer/the_silver_searcher/issues/1006
 
