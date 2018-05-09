@@ -36,6 +36,7 @@ if 'brew' in argv or 'all' in argv:
             'tig',
             'translate-shell',
             'tree',
+            'yarn',
             'youtube-dl',
         ]))
         system('brew install aria2 --with-libssh2')
