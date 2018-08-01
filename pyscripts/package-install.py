@@ -36,6 +36,7 @@ if 'brew' in argv or 'all' in argv:
             'tig',
             'translate-shell',
             'tree',
+            'wget',
             'yarn',
             'youtube-dl',
         ]))
