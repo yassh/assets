@@ -176,6 +176,7 @@ if 'npm' in argv or 'all' in argv:
             'firebase-tools',
             'fixpack',
             'gitopen',
+            'gtop',
             'http-server',
             'isutf8',
             'npm-run-all',
