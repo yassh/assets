@@ -1,4 +1,5 @@
 {
   "CtrlD": "SpawnMultiCursor",
+  "CtrlG": "vcs.toggle",
   "CtrlP": "CommandMode"
 }
