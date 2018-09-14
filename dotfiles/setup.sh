@@ -11,6 +11,7 @@ DOT_FILES=(
   .gitconfig
   .gitignore_global
   .gvimrc
+  .hyper.js
   .mpv
   .tigrc
   .vim
