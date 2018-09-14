@@ -117,6 +117,7 @@ if 'cask' in argv or 'all' in argv:
             'google-chrome-canary',
             'google-chrome',
             'google-japanese-ime',
+            'hyper',
             'imageoptim',
             'iterm2-beta',
             'itsycal',
