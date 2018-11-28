@@ -114,8 +114,8 @@ if 'cask' in argv or 'all' in argv:
             'fork',
             'franz',
             'fuwari',
-            'google-chrome-canary',
             'google-chrome',
+            'google-chrome-canary',
             'google-japanese-ime',
             'hyper',
             'imageoptim',
@@ -132,6 +132,7 @@ if 'cask' in argv or 'all' in argv:
             'veracrypt',
             'virtualbox',
             'visual-studio-code',
+            'vivaldi',
         ]
         for cask in list:
             system('brew cask install ' + cask)
