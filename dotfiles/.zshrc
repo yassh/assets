@@ -44,7 +44,7 @@ setopt interactivecomments
   alias ls='ls -F --color' # `-F`は記号を付けるオプション
   alias ll='ls -a -l --time-style=long-iso'
 
-  alias c='code .'
+  alias c='code . -r'
   alias p='prettier --write --print-width 120 --no-semi --trailing-comma all'
   alias s='ag -Q' # 文字列で全文検索
   alias f='ag -g' # 正規表現でファイル名検索 ※-Qと-gを組み合わせられない。Issue: https://github.com/ggreer/the_silver_searcher/issues/1006
