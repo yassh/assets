@@ -125,6 +125,7 @@ if 'cask' in argv or 'all' in argv:
             'marp',
             'mpv',
             'notion',
+            'raindropio',
             'station',
             'sublime-text',
             'table-tool',
