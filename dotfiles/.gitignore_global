@@ -9,6 +9,9 @@ Thumbs.db
 # VS Code
 .vscode
 
+# https://marketplace.visualstudio.com/items?itemName=kdcro101.favorites
+.favorites.json
+
 # Node.js
 node_modules
 npm-debug.log
