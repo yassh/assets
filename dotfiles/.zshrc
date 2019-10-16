@@ -214,6 +214,10 @@ setopt interactivecomments
 # https://github.com/riywo/anyenv
 eval "$(anyenv init - --no-rehash)" # `--no-rehash`を付けるとzshの起動が速くなる
 
+# direnv
+# https://direnv.net/
+eval "$(direnv hook zsh)"
+
 ###-begin-npm-completion-###
 #
 # npm command completion script
