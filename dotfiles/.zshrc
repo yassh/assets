@@ -58,8 +58,8 @@ setopt interactivecomments
   alias :copy='copy.sh'
   alias :serve='serve.sh'
 
-  alias :ydl='youtube-dl -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime'
-  alias :ydla='youtube-dl -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime --extract-audio'
+  alias :ydl='youtube-dl -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime --all-subs'
+  alias :ydla='youtube-dl -o "%(upload_date)s %(title)s [%(extractor)s %(id)s].%(ext)s" --no-mtime --extract-audio --audio-format m4a'
 
   alias :en='trans :en'
   alias :ja='trans :ja'
