@@ -33,10 +33,3 @@ system('package-install.py all')
 if not path.exists(path.join(__home__, '.fzf')):
     system('git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf')
     system('~/.fzf/install')
-
-# install micro
-if not which('micro'):
-    if platform.startswith('linux'):
-        if not path.exists(path.join(__home__, 'bin')):
-            system('mkdir ~/bin')
-        system('curl -sL https://gist.githubusercontent.com/zyedidia/d4acfcc6acf2d0d75e79004fa5feaf24/raw/a43e603e62205e1074775d756ef98c3fc77f6f8d/install_micro.sh | bash -s linux64 ~/bin')
