@@ -11,10 +11,10 @@ if 'apt' in argv or 'all' in argv:
         print('apt-get installを開始します。')
         system('sudo apt-get update')
         system('sudo apt-get install -y ' + ' '.join([
-            'jq',
-            # 'ranger',
             'silversearcher-ag',
-            'tig',
+            # 'jq',
+            # 'ranger',
+            # 'tig',
         ]))
         print('apt-get installを終了します。')
 
@@ -28,18 +28,18 @@ if 'brew' in argv or 'all' in argv:
             'coreutils',
             'direnv',
             'go',
-            'hub',
-            'jq',
-            # 'micro',
-            'pngquant',
-            # 'ranger',
             'the_silver_searcher',
-            # 'tig',
             'translate-shell',
             'tree',
             'wget',
             'yarn',
             'youtube-dl',
+            # 'hub',
+            # 'jq',
+            # 'micro',
+            # 'pngquant',
+            # 'ranger',
+            # 'tig',
         ]))
         system('brew install aria2 --with-libssh2')
         system('brew install ffmpeg ' + ' '.join([
@@ -102,53 +102,42 @@ if 'cask' in argv or 'all' in argv:
         system('brew tap caskroom/versions')
         system('brew update')
         list = [
-            # 'alfred',
             'appcleaner',
             'beyond-compare',
-            # 'caffeine',
             'ccleaner',
-            # 'charles',
-            # 'devdocs',
-            # 'dictionaries',
             'firefox --language=ja',
             'fork',
-            # 'fuwari',
             'google-chrome',
             'google-japanese-ime',
             'hyper',
-            # 'imageoptim',
             'insomnia',
+            'macvim',
+            'mpv',
+            'notion',
+            'sublime-text',
+            'table-tool',
+            'textexpander',
+            'virtualbox',
+            'visual-studio-code',
+            # 'alfred',
+            # 'caffeine',
+            # 'charles',
+            # 'devdocs',
+            # 'dictionaries',
+            # 'fuwari',
+            # 'imageoptim',
             # 'iterm2-beta',
             # 'itsycal',
             # 'linear',
             # 'macdown',
-            'macvim',
             # 'marp',
-            'mpv',
-            'notion',
             # 'raindropio',
             # 'station',
-            'sublime-text',
-            'table-tool',
-            'tableplus',
-            'textexpander',
-            'virtualbox',
-            'visual-studio-code',
+            # 'tableplus',
         ]
         for cask in list:
             system('brew cask install ' + cask)
         print('brew cask installを終了します。')
-
-if 'pip' in argv or 'all' in argv:
-    if not which('pip'):
-        print('pipコマンドが存在しません。')
-    else:
-        print('pip installを開始します。')
-        system('sudo pip install ' + ' '.join([
-            'autopep8',
-            'hacking',
-        ]))
-        print('pip installを終了します。')
 
 if 'go' in argv or 'all' in argv:
     if not which('go'):
@@ -175,12 +164,12 @@ if 'npm' in argv or 'all' in argv:
             'dev-ip',
             'fixpack',
             'gitopen',
-            # 'gtop',
-            # 'html-validator-cli',
             'http-server',
             'isutf8',
             'open-url',
             'prettier',
-            'tldr',
+            # 'tldr',
+            # 'gtop',
+            # 'html-validator-cli',
         ]))
         print('npm installを終了します。')
