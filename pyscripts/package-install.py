@@ -112,6 +112,7 @@ if 'cask' in argv or 'all' in argv:
             'hyper',
             'insomnia',
             'macvim',
+            'mapture',
             'mpv',
             'notion',
             'sublime-text',
