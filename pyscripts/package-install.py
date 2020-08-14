@@ -115,6 +115,7 @@ if 'cask' in argv or 'all' in argv:
             'mapture',
             'mpv',
             'notion',
+            'slack',
             'sublime-text',
             'table-tool',
             'textexpander',
@@ -159,18 +160,19 @@ if 'npm' in argv or 'all' in argv:
     else:
         print('npm installを開始します。')
         system('npm install -g ' + ' '.join([
-            'browser-sync',
             'cspell',
             'datauri',
             'dev-ip',
-            'fixpack',
             'gitopen',
             'http-server',
-            'isutf8',
             'open-url',
             'prettier',
-            # 'tldr',
+            'uuid',
+            # 'browser-sync',
+            # 'fixpack',
             # 'gtop',
             # 'html-validator-cli',
+            # 'isutf8',
+            # 'tldr',
         ]))
         print('npm installを終了します。')
