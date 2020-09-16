@@ -132,11 +132,6 @@ setopt interactivecomments
     result=$(cat $CMD_HISTORY_FILE | tac | fzf -q "$1") && print -z $result
   }
 
-  :c() {
-    local result
-    result=$(cat ~/.fav_* | fzf -q "$1") && print -z $result
-  }
-
   :tmpl() {
     local result
     result=$(find ~/assets/tmpl -type f | fzf -q "$1") && cat $result
