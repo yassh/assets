@@ -10,12 +10,8 @@ DOT_FILES=(
   .fav_global
   .gitconfig
   .gitignore_global
-  .gvimrc
   .hyper.js
   .mpv
-  .tigrc
-  .vim
-  .vimrc
   .zshrc
   emmet
 )
