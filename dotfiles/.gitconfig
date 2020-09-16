@@ -20,17 +20,11 @@
 	default = simple
 [diff]
 	tool = bc3
-[difftool]
-	bc3 = trustExitCode
+[difftool "bc3"]
+	trustExitCode = true
 [merge]
 	tool = bc3
-[mergetool]
-	bc3 = trustExitCode
-[difftool "sourcetree"]
-	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
-	path = -ro
-[mergetool "sourcetree"]
-	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+[mergetool "bc3"]
 	trustExitCode = true
 [hub]
 	protocol = https
