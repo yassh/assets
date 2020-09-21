@@ -28,3 +28,5 @@
 	trustExitCode = true
 [hub]
 	protocol = https
+[pull]
+	rebase = false
