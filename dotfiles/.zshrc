@@ -54,6 +54,8 @@ setopt interactivecomments
   alias t:2='tree -L 2'
   alias t:3='tree -L 3'
 
+  alias bat="bat --theme ansi-light"
+
   alias :q='q.js'
   alias :copy='copy.sh'
   alias :serve='serve.sh'
