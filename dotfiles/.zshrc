@@ -18,6 +18,12 @@ setopt auto_pushd
 # コマンドラインでも`#`で始まるコメントを使用可能にする
 setopt interactivecomments
 
+# {{{ plugins
+  if test $(uname) = 'Darwin'; then
+    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  fi
+# }}} plugins
+
 # {{{ 環境変数
   export EDITOR=vim
   export GOPATH=~/.go
