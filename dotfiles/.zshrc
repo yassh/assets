@@ -28,7 +28,6 @@ setopt interactivecomments
   export EDITOR=vim
   export GOPATH=~/.go
   export PATH=$GOPATH/bin:$PATH
-  export PATH=~/.anyenv/bin:$PATH
   export PATH=~/assets/bin:$PATH
   export PATH=~/assets/shellscripts:$PATH
   export PATH=~/assets/pyscripts:$PATH
@@ -239,9 +238,13 @@ setopt interactivecomments
   }
 # }}} フック
 
-# anyenv
-# https://github.com/riywo/anyenv
-eval "$(anyenv init - --no-rehash)" # `--no-rehash`を付けるとzshの起動が速くなる
+# nodenv
+# https://github.com/nodenv/nodenv
+eval "$(nodenv init -)"
+
+# goenv
+# https://github.com/syndbg/goenv
+eval "$(goenv init -)"
 
 # direnv
 # https://direnv.net/
