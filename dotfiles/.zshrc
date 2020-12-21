@@ -238,13 +238,9 @@ setopt interactivecomments
   }
 # }}} フック
 
-# nodenv
-# https://github.com/nodenv/nodenv
-eval "$(nodenv init -)"
-
-# goenv
-# https://github.com/syndbg/goenv
-eval "$(goenv init -)"
+# anyenv
+# https://github.com/anyenv/anyenv
+eval "$(anyenv init -)"
 
 # direnv
 # https://direnv.net/
