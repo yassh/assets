@@ -49,6 +49,7 @@ setopt interactivecomments
   alias ls='ls -F --color' # `-F`は記号を付けるオプション
   alias ll='ls -a -l --time-style=long-iso'
 
+  alias l='lazygit --use-config-dir ~/.lazygit'
   alias c='code .'
   alias p='prettier --write --no-semi --trailing-comma all'
   alias s='ag -Q' # 文字列で全文検索

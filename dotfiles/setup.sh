@@ -10,6 +10,7 @@ DOT_FILES=(
   .gitconfig
   .gitignore_global
   .hyper.js
+  .lazygit
   .mpv
   .zshrc
   emmet
