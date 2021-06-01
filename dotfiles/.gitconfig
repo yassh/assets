@@ -17,7 +17,7 @@
 [include]
 	path = .gitconfig_local
 [push]
-	default = current
+	default = simple
 [diff]
 	tool = bc3
 [difftool "bc3"]
